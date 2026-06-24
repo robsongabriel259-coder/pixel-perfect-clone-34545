@@ -420,16 +420,16 @@ function Landing() {
             {/* Básico */}
             <div className="rounded-2xl border-2 border-purple-deep/20 p-6 flex flex-col shadow-lg bg-white">
               <h3 className="text-center font-black uppercase" style={{ fontSize: "28px" }}>Acesso Básico</h3>
-              <p className="text-center text-purple-deep/70 mt-1" style={{ fontSize: "18px", lineHeight: "18px" }}>Para quem quer as 210 rodas prontas para imprimir e aplicar.</p>
-              <img src={wheel} alt="" loading="lazy" width={512} height={512} className="w-40 h-40 object-cover mx-auto my-4 rounded-xl" />
-              <p className="text-center" style={{ fontSize: "18px", lineHeight: "18px" }}>✓ 210 Rodas de matemática prontas para imprimir e aplicar (em PDF)</p>
-              <div className="text-center my-4">
+              <p className="text-center text-purple-deep/70 mt-1 mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>Para quem quer as 210 rodas prontas para imprimir e aplicar.</p>
+              <img src={wheel} alt="" loading="lazy" width={512} height={512} className="w-40 h-40 object-cover mx-auto mb-[30px] rounded-xl" />
+              <p className="text-center mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>✓ 210 Rodas de matemática prontas para imprimir e aplicar (em PDF)</p>
+              <div className="text-center mb-[30px]">
                 <div className="text-sm font-bold">R$</div>
                 <div className="text-5xl font-black text-neon-dark leading-none">17,90</div>
                 <div className="mt-1" style={{ fontSize: "18px", lineHeight: "18px" }}>ou 3X de R$ 6,92 no cartão</div>
               </div>
-              <a href={CHECKOUT_BASIC} target="_blank" rel="noopener noreferrer" className="btn-cta btn-cta-hover text-sm w-full">ESCOLHER ACESSO BASICO</a>
-              <p className="text-center mt-4 uppercase" style={{ fontSize: "22px", lineHeight: "22px", fontWeight: 600, color: "red", textShadow: "0px 3px 6px rgba(255, 0, 0, 0.5)" }}>
+              <a href={CHECKOUT_BASIC} target="_blank" rel="noopener noreferrer" className="btn-cta btn-cta-hover text-sm w-full mb-[30px]">ESCOLHER ACESSO BASICO</a>
+              <p className="text-center uppercase" style={{ fontSize: "22px", lineHeight: "22px", fontWeight: 600, color: "red", textShadow: "0px 3px 6px rgba(255, 0, 0, 0.5)" }}>
                 Atenção: temos uma oferta ainda mais vantajosa para você! Veja logo abaixo
               </p>
               <ArrowDownCircle className="mx-auto mt-2" size={40} color="red" />

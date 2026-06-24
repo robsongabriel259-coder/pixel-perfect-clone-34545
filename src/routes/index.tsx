@@ -397,11 +397,9 @@ function Landing() {
 
           <div className="grid md:grid-cols-3 gap-5 mt-[30px]">
             {BONUSES.map((b) => (
-              <div key={b.n} className="bg-purple-card rounded-2xl border-2 border-neon/30 p-5 text-left">
-                <div className="text-neon font-black text-sm">BÔNUS {b.n}</div>
-                <h3 className="font-black uppercase text-base mt-1">{b.title}</h3>
-                <div className="badge-top mt-3" style={{ background: "var(--neon)", color: "#0a2410", borderColor: "#0a2410" }}>{b.cards}</div>
-                <p className="text-white/80 text-sm mt-3 leading-snug">{b.desc}</p>
+              <div key={b.n} className="rounded-2xl border-2 border-orange-badge bg-white p-3 text-left flex flex-col">
+                <img src={b.img} alt={`Bônus ${b.n}`} loading="lazy" className="w-full h-auto rounded-xl" />
+                <p className="text-white/90 text-sm mt-3 leading-snug text-center" style={{ color: "#fff" }}>{b.desc}</p>
               </div>
             ))}
           </div>

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import heroMockup from "@/assets/hero-mockup.jpg.asset.json";
 import tagSuperior from "@/assets/tag-superior.png.asset.json";
 import bundle from "@/assets/bundle.png";
@@ -42,24 +42,79 @@ function WheelCard({ tag, title, desc }: { tag: string; title: string; desc: str
 function WheelsCarousel() {
   const ref = useRef<HTMLDivElement>(null);
   const [idx, setIdx] = useState(0);
+  const isPausedRef = useRef(false);
+  const pauseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const rafRef = useRef<number | null>(null);
+
+  const wheels = [...WHEELS, ...WHEELS];
+
+  const getOriginalIndex = (scrollLeft: number, cardW: number) => {
+    const i = Math.round(scrollLeft / cardW) % WHEELS.length;
+    return i < 0 ? i + WHEELS.length : i;
+  };
+
   const scrollTo = (i: number) => {
     const el = ref.current;
     if (!el) return;
     const card = el.children[i] as HTMLElement | undefined;
     if (card) el.scrollTo({ left: card.offsetLeft - (el.clientWidth - card.clientWidth) / 2, behavior: "smooth" });
   };
+
   const go = (dir: number) => {
-    const next = Math.max(0, Math.min(WHEELS.length - 1, idx + dir));
-    setIdx(next);
-    scrollTo(next);
+    const el = ref.current;
+    if (!el) return;
+    const cardW = (el.children[0] as HTMLElement)?.clientWidth ?? 1;
+    const currentOriginal = getOriginalIndex(el.scrollLeft, cardW);
+    const nextOriginal = (currentOriginal + dir + WHEELS.length) % WHEELS.length;
+    setIdx(nextOriginal);
+    scrollTo(nextOriginal);
   };
+
   const onScroll = () => {
     const el = ref.current;
     if (!el) return;
     const cardW = (el.children[0] as HTMLElement)?.clientWidth ?? 1;
-    const i = Math.round(el.scrollLeft / cardW);
+    const i = getOriginalIndex(el.scrollLeft, cardW);
     if (i !== idx) setIdx(i);
   };
+
+  const pauseAutoScroll = () => {
+    isPausedRef.current = true;
+    if (pauseTimerRef.current) clearTimeout(pauseTimerRef.current);
+    pauseTimerRef.current = setTimeout(() => {
+      isPausedRef.current = false;
+    }, 3000);
+  };
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const speed = 0.8;
+    const half = el.scrollWidth / 2;
+
+    const scroll = () => {
+      if (!el || isPausedRef.current) {
+        rafRef.current = requestAnimationFrame(scroll);
+        return;
+      }
+
+      el.scrollLeft += speed;
+      if (el.scrollLeft >= half) {
+        el.scrollLeft -= half;
+      }
+
+      rafRef.current = requestAnimationFrame(scroll);
+    };
+
+    rafRef.current = requestAnimationFrame(scroll);
+
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      if (pauseTimerRef.current) clearTimeout(pauseTimerRef.current);
+    };
+  }, []);
+
   return (
     <section className="bg-white py-12">
       <div className="max-w-6xl mx-auto px-2">
@@ -70,29 +125,27 @@ function WheelsCarousel() {
           <button
             type="button"
             aria-label="Anterior"
-            onClick={() => go(-1)}
+            onClick={() => { pauseAutoScroll(); go(-1); }}
             className="absolute -left-3 md:-left-4 top-1/2 -translate-y-1/2 z-10 text-purple-deep text-5xl md:text-6xl font-light select-none disabled:opacity-30"
-            disabled={idx === 0}
           >
             ‹
           </button>
           <button
             type="button"
             aria-label="Próximo"
-            onClick={() => go(1)}
+            onClick={() => { pauseAutoScroll(); go(1); }}
             className="absolute -right-3 md:-right-4 top-1/2 -translate-y-1/2 z-10 text-purple-deep text-5xl md:text-6xl font-light select-none disabled:opacity-30"
-            disabled={idx === WHEELS.length - 1}
           >
             ›
           </button>
           <div
             ref={ref}
             onScroll={onScroll}
-            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none"
+            className="flex overflow-x-auto scrollbar-none"
             style={{ scrollbarWidth: "none" }}
           >
-            {WHEELS.map((w, i) => (
-              <div key={i} className="snap-center shrink-0 w-full flex justify-center">
+            {wheels.map((w, i) => (
+              <div key={i} className="shrink-0 w-full flex justify-center">
                 <img src={w.src} alt={w.alt} loading="lazy" className="w-full h-auto" />
               </div>
             ))}
@@ -103,7 +156,7 @@ function WheelsCarousel() {
             <button
               key={i}
               aria-label={`Ir para ${i + 1}`}
-              onClick={() => { setIdx(i); scrollTo(i); }}
+              onClick={() => { pauseAutoScroll(); setIdx(i); scrollTo(i); }}
               className={`w-2 h-2 rounded-full transition-colors ${i === idx ? "bg-purple-deep" : "bg-purple-deep/25"}`}
             />
           ))}

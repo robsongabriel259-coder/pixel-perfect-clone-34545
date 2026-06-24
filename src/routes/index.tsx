@@ -432,6 +432,7 @@ function Landing() {
               <p className="text-center mt-4 uppercase" style={{ fontSize: "22px", lineHeight: "22px", fontWeight: 600, color: "red", textShadow: "0px 3px 6px rgba(255, 0, 0, 0.5)" }}>
                 Atenção: temos uma oferta ainda mais vantajosa para você! Veja logo abaixo
               </p>
+              <ArrowDownCircle className="mx-auto mt-2" size={40} color="red" />
             </div>
 
             {/* Pro Premium */}

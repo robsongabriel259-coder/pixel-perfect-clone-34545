@@ -157,7 +157,7 @@ function WheelsCarousel() {
           >
             {wheels.map((w, i) => (
               <div key={i} className="shrink-0 w-full flex justify-center">
-                <img src={w.src} alt={w.alt} loading="lazy" decoding="async" width={700} height={962} className="w-full h-auto" />
+                <img src={w.src} alt={w.alt} loading="lazy" decoding="async" width={600} height={825} className="w-full h-auto" />
               </div>
             ))}
           </div>
@@ -272,8 +272,8 @@ function Landing() {
           <img
             src={heroMockup.url}
             alt="Rodas matemáticas mockup"
-            width={1024}
-            height={1024}
+            width={680}
+            height={762}
             fetchPriority="high"
             decoding="async"
             className="w-full max-w-[288px] md:max-w-[336px] drop-shadow-2xl"
@@ -339,7 +339,7 @@ function Landing() {
           </p>
 
           <div className="flex justify-center mt-8">
-            <img src={mockupRodas.url} alt="Material completo Rodas Matemáticas" loading="lazy" decoding="async" width={917} height={1000} className="w-full max-w-[432px] h-auto" />
+            <img src={mockupRodas.url} alt="Material completo Rodas Matemáticas" loading="lazy" decoding="async" width={880} height={960} className="w-full max-w-[432px] h-auto" />
           </div>
 
           <div className="mt-10 max-w-3xl mx-auto bg-white text-purple-deep rounded-2xl border-4 border-orange-badge p-6 md:p-8 flex items-center gap-4">
@@ -378,7 +378,7 @@ function Landing() {
             🎁 Você vai receber ao adquirir seu produto 🎁
           </h2>
           <div className="grid md:grid-cols-2 gap-6 items-start">
-            <img src={mockupCompleto.url} alt="Mockup material completo Rodas Matemáticas" loading="lazy" decoding="async" width={1024} height={1024} className="w-[85%] mx-auto h-auto" />
+            <img src={mockupCompleto.url} alt="Mockup material completo Rodas Matemáticas" loading="lazy" decoding="async" width={700} height={700} className="w-[85%] mx-auto h-auto" />
             <div className="bg-white text-purple-deep rounded-2xl p-6 border-2 border-orange-badge">
               <div className="bg-orange-badge text-white text-center font-black uppercase py-2 rounded-md mb-4 border-2 border-[#2a1300]">
                 ITEM 01
@@ -407,7 +407,7 @@ function Landing() {
             {BONUSES.map((b) => (
               <div key={b.n} className="flex flex-col">
                 <div className="rounded-2xl border-2 border-orange-badge overflow-hidden bg-white">
-                  <img src={b.img} alt={`Bônus ${b.n}`} loading="lazy" decoding="async" width={800} height={800} className="w-full h-auto block" />
+                  <img src={b.img} alt={`Bônus ${b.n}`} loading="lazy" decoding="async" width={708} height={1000} className="w-full h-auto block" />
                 </div>
                 <p className="text-white text-center mt-4 leading-snug" style={{ fontSize: "16px" }}>{b.desc}</p>
               </div>
@@ -452,7 +452,7 @@ function Landing() {
               <p className="text-center text-purple-deep/70 mt-1 mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>Para quem quer as 210 rodas e os 3 bônus para revisar e acompanhar.</p>
               <div className="bg-purple-deep rounded-xl p-3 mb-[30px]">
                 <div className="text-center text-white text-xs font-bold mb-2">MATERIAL COMPLETO</div>
-                <img src={bundle} alt="" loading="lazy" width={1024} height={768} className="w-full rounded-md" />
+                <img src={bundle} alt="" loading="lazy" decoding="async" width={900} height={675} className="w-full h-auto rounded-md" />
               </div>
               <div className="text-center mb-[30px]">
                 <div className="text-sm line-through text-purple-deep/60">R$ 39,90</div>

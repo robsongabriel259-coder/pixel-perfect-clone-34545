@@ -247,7 +247,7 @@ function Landing() {
   useEffect(() => {
     const win = window as Window & {
       __lpEventsSent?: Record<string, boolean>;
-      fbq?: (...args: any[]) => void;
+      fbq?: (...args: unknown[]) => void;
     };
 
     win.__lpEventsSent = win.__lpEventsSent || {};

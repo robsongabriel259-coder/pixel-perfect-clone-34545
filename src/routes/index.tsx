@@ -3,10 +3,10 @@ import { ArrowDownCircle } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import heroMockup from "@/assets/hero-mockup.jpg.asset.json";
 import tagSuperior from "@/assets/tag-superior.png.asset.json";
-import bundle from "@/assets/bundle.png";
+import bundle from "@/assets/bundle.webp";
 import mockupRodas from "@/assets/mockup-rodas.jpg.asset.json";
 import mockupCompleto from "@/assets/mockup-rodas-completo.jpg.asset.json";
-import kids from "@/assets/kids.png";
+import kids from "@/assets/kids.webp";
 import wheel from "@/assets/capa-front.jpg.asset.json";
 import wheel01 from "@/assets/wheels/wheel-01.jpg.asset.json";
 import wheel02 from "@/assets/wheels/wheel-02.jpg.asset.json";
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
   component: Landing,
   head: () => ({
     links: [
-      { rel: "preload", as: "image", href: heroMockup.url, fetchpriority: "high" } as any,
+      { rel: "preload", as: "image", href: heroMockup.url, type: "image/webp", fetchpriority: "high" } as any,
     ],
   }),
 });

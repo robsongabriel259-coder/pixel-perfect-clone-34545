@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroMockup from "@/assets/hero-mockup.jpg.asset.json";
+import tagSuperior from "@/assets/tag-superior.png.asset.json";
 import bundle from "@/assets/bundle.png";
 import kids from "@/assets/kids.png";
 import wheel from "@/assets/wheel-sample.jpg";
@@ -104,20 +105,14 @@ function Landing() {
       {/* HERO */}
       <section className="pt-5 pb-10 bg-purple-deep relative">
         <div className="max-w-md md:max-w-3xl mx-auto px-5 pt-2 flex flex-col items-center text-center gap-5">
-          <div className="inline-flex items-center gap-1 bg-white text-purple-deep font-black px-5 py-2 rounded-full text-[15px] md:text-lg shadow-md relative">
-            <svg width="14" height="14" viewBox="0 0 18 18" fill="none" className="shrink-0" aria-hidden="true">
-              <path d="M9 0L10.5 7.5L18 9L10.5 10.5L9 18L7.5 10.5L0 9L7.5 7.5L9 0Z" fill="#f97316"/>
-            </svg>
-            <span className="relative inline-block leading-tight">
-              +200 Rodas Matemáticas
-              <svg className="absolute left-0 w-full -bottom-1" height="6" viewBox="0 0 200 6" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M0 3 Q 50 6, 100 3 T 200 3" stroke="#f97316" strokeWidth="3" fill="none" strokeLinecap="round"/>
-              </svg>
-            </span>
-            <svg width="14" height="14" viewBox="0 0 18 18" fill="none" className="shrink-0" aria-hidden="true">
-              <path d="M9 0L10.5 7.5L18 9L10.5 10.5L9 18L7.5 10.5L0 9L7.5 7.5L9 0Z" fill="#22c55e"/>
-            </svg>
-          </div>
+          <img
+            src={tagSuperior.url}
+            alt="+200 Rodas Matemáticas"
+            width={600}
+            height={120}
+            className="w-auto h-10 md:h-12"
+          />
+
 
           <img
             src={heroMockup.url}

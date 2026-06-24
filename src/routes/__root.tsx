@@ -80,213 +80,89 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="preconnect" href="https://cdn.utmify.com.br" />
-        <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
         <link rel="preconnect" href="https://connect.facebook.net" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        <link rel="preconnect" href="https://cdn.utmify.com.br" />
+        <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
-(function () {
-  if (window.__utmfyPixelInstalled) return;
-  window.__utmfyPixelInstalled = true;
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1044829704880739');
+fbq('track','PageView');
+`.trim(),
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+(function(){
+  if (window.__utmfyInstalled) return;
+  window.__utmfyInstalled = true;
+  window.pixelId = "6a39e17a693fbb4e2be2af2c";
+  var s = document.createElement("script");
+  s.setAttribute("async","");
+  s.setAttribute("defer","");
+  s.setAttribute("src","https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(s);
+})();
+`.trim(),
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+(function(){
+  if (window.__lpPixelInit) return;
+  window.__lpPixelInit = true;
+  window.__lpPixelEvents = window.__lpPixelEvents || {};
 
-  var UTMFY_PIXEL_ID = "6a39e17a693fbb4e2be2af2c";
-  var META_PIXEL_ID = "1044829704880739";
-  var UTMFY_SCRIPT_SRC = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
-  var UTMFY_EVENTS_PATH = "tracking.utmify.com.br/tracking/v1/events";
-  var CHECKOUT_EVENT = "Initiate" + "Checkout";
-  var SALE_EVENT = "Pur" + "chase";
-
-  window.pixelId = UTMFY_PIXEL_ID;
-  window.__pixelEventsSent = window.__pixelEventsSent || {};
-  window.__metaPixelsInitialized = window.__metaPixelsInitialized || {};
-  window.__priceSectionViewed = false;
-
-  function eventKey(eventName) {
-    if (eventName === "ViewContent") return "viewcontent_precos";
-    if (eventName === "Lead") return "lead_qualificado_checkout";
-    return String(eventName || "").toLowerCase();
+  function trackOnce(key, eventName, params){
+    if (window.__lpPixelEvents[key]) return;
+    window.__lpPixelEvents[key] = true;
+    if (typeof fbq === "function") fbq("track", eventName, params || {});
   }
 
-  function shouldBlockFbq(argsLike) {
-    var args = Array.prototype.slice.call(argsLike || []);
-    var command = args[0];
-    var eventName = args[1];
-
-    if (command === "init") {
-      if (window.__metaPixelsInitialized[eventName]) return true;
-      window.__metaPixelsInitialized[eventName] = true;
-      return false;
-    }
-
-    if (command === "track" || command === "trackCustom") {
-      if (eventName === CHECKOUT_EVENT || eventName === SALE_EVENT) return true;
-      if (eventName === "ViewContent" && !window.__priceSectionViewed) return true;
-
-      var key = eventKey(eventName);
-      if (window.__pixelEventsSent[key]) return true;
-      window.__pixelEventsSent[key] = true;
-    }
-
-    return false;
-  }
-
-  function installFbqGuards() {
-    if (typeof window.fbq !== "function") return;
-
-    if (window.fbq.queue && !window.fbq.queue.__utmfyGuarded) {
-      var originalPush = window.fbq.queue.push;
-      window.fbq.queue.push = function () {
-        if (shouldBlockFbq(arguments[0])) return this.length;
-        return originalPush.apply(this, arguments);
-      };
-      window.fbq.queue.__utmfyGuarded = true;
-    }
-
-    if (window.fbq.callMethod && !window.fbq.__utmfyCallMethodGuarded) {
-      var originalCallMethod = window.fbq.callMethod;
-      window.fbq.callMethod = function () {
-        if (shouldBlockFbq(arguments)) return;
-        return originalCallMethod.apply(this, arguments);
-      };
-      window.fbq.__utmfyCallMethodGuarded = true;
-    }
-  }
-
-  if (typeof window.fbq !== "function") {
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-  }
-
-  installFbqGuards();
-  window.fbq("init", META_PIXEL_ID);
-
-  var guardTimer = setInterval(installFbqGuards, 50);
-  setTimeout(function () {
-    clearInterval(guardTimer);
-    installFbqGuards();
-  }, 10000);
-
-  if (window.fetch && !window.fetch.__utmfyGuarded) {
-    var originalFetch = window.fetch;
-    var guardedFetch = function (input, init) {
-      try {
-        var url = typeof input === "string" ? input : input && input.url;
-        var body = init && init.body;
-
-        if (url && url.indexOf(UTMFY_EVENTS_PATH) !== -1 && body) {
-          var payload = JSON.parse(body);
-          var type = payload && payload.type;
-          var blocked = type === CHECKOUT_EVENT || type === SALE_EVENT || (type === "ViewContent" && !window.__priceSectionViewed);
-
-          if (blocked) {
-            return Promise.resolve(new Response(JSON.stringify({
-              lead: { _id: null },
-              event: { _id: null },
-              sendWebEvents: false
-            }), {
-              status: 200,
-              headers: { "Content-Type": "application/json" }
-            }));
-          }
-        }
-      } catch (error) {}
-
-      return originalFetch.apply(this, arguments);
-    };
-
-    guardedFetch.__utmfyGuarded = true;
-    window.fetch = guardedFetch;
-  }
-
-  function firePixelOnce(key, eventName, params) {
-    if (window.__pixelEventsSent[key]) return;
-
-    function sendEvent() {
-      installFbqGuards();
-      if (typeof window.fbq === "function") {
-        window.fbq("track", eventName, params || {});
-        return !!window.__pixelEventsSent[key];
-      }
-      return false;
-    }
-
-    if (!sendEvent()) {
-      var attempts = 0;
-      var waitForPixel = setInterval(function () {
-        attempts++;
-        if (sendEvent() || attempts >= 20) clearInterval(waitForPixel);
-      }, 150);
-    }
-  }
-
-  firePixelOnce("pageview", "PageView", {
-    page_location: window.location.href,
-    page_title: document.title
-  });
-
-  if (!document.querySelector('script[src="' + UTMFY_SCRIPT_SRC + '"]')) {
-    var a = document.createElement("script");
-    a.setAttribute("async", "");
-    a.setAttribute("defer", "");
-    a.setAttribute("src", UTMFY_SCRIPT_SRC);
-    document.head.appendChild(a);
-  }
-
-  document.addEventListener("click", function (e) {
-    var target = e.target;
-    var link = target && target.closest ? target.closest(".checkout-link") : null;
-    if (!link) return;
-
-    var url = link.getAttribute("data-checkout-url") || link.getAttribute("href");
-    if (!url || url === "#") return;
-
-    e.preventDefault();
-    e.stopImmediatePropagation();
-
-    firePixelOnce("lead_qualificado_checkout", "Lead", {
-      content_name: "Lead Qualificado",
-      content_category: "Clique para Checkout",
-      lead_type: "qualified_checkout_click",
-      page_location: window.location.href
-    });
-
-    setTimeout(function () {
-      window.location.href = url;
-    }, 200);
-  }, true);
-
-  document.addEventListener("DOMContentLoaded", function () {
+  function setup(){
     var priceSection = document.getElementById("secao-precos");
-
     if (priceSection && "IntersectionObserver" in window) {
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
           if (entry.isIntersecting) {
-            window.__priceSectionViewed = true;
-            firePixelOnce("viewcontent_precos", "ViewContent", {
+            trackOnce("viewcontent_precos", "ViewContent", {
               content_name: "Sessao de Precos",
-              content_category: "Landing Page",
-              page_location: window.location.href
+              content_category: "Landing Page"
             });
-            observer.disconnect();
+            obs.disconnect();
           }
         });
       }, { threshold: 0.35 });
-
-      observer.observe(priceSection);
+      obs.observe(priceSection);
     }
 
-  });
+    document.addEventListener("click", function(event){
+      var target = event.target;
+      var button = target && target.closest ? target.closest(".checkout-link") : null;
+      if (!button) return;
+      var checkoutUrl = button.getAttribute("href");
+      if (!checkoutUrl || checkoutUrl === "#") return;
+      event.preventDefault();
+      trackOnce("lead_qualificado", "Lead", {
+        content_name: "Lead Qualificado",
+        content_category: "Clique para Checkout",
+        lead_type: "qualified_checkout_click"
+      });
+      setTimeout(function(){ window.location.href = checkoutUrl; }, 150);
+    }, true);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setup);
+  } else {
+    setup();
+  }
 })();
-            `.trim(),
+`.trim(),
           }}
         />
         <HeadContent />

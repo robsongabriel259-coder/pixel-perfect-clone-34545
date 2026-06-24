@@ -32,6 +32,80 @@ function WheelCard({ tag, title, desc }: { tag: string; title: string; desc: str
   );
 }
 
+function WheelsCarousel() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [idx, setIdx] = useState(0);
+  const scrollTo = (i: number) => {
+    const el = ref.current;
+    if (!el) return;
+    const card = el.children[i] as HTMLElement | undefined;
+    if (card) el.scrollTo({ left: card.offsetLeft - (el.clientWidth - card.clientWidth) / 2, behavior: "smooth" });
+  };
+  const go = (dir: number) => {
+    const next = Math.max(0, Math.min(WHEELS.length - 1, idx + dir));
+    setIdx(next);
+    scrollTo(next);
+  };
+  const onScroll = () => {
+    const el = ref.current;
+    if (!el) return;
+    const cardW = (el.children[0] as HTMLElement)?.clientWidth ?? 1;
+    const i = Math.round(el.scrollLeft / cardW);
+    if (i !== idx) setIdx(i);
+  };
+  return (
+    <section className="bg-white py-12">
+      <div className="max-w-6xl mx-auto px-2">
+        <h2 className="text-center text-purple-deep font-black text-2xl md:text-3xl uppercase mb-8 px-4">
+          Conheça algumas das 210 rodas<br className="hidden md:block" /> matemáticas que você vai receber
+        </h2>
+        <div className="relative">
+          <button
+            type="button"
+            aria-label="Anterior"
+            onClick={() => go(-1)}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 text-purple-deep text-4xl md:text-5xl font-light px-2 select-none disabled:opacity-30"
+            disabled={idx === 0}
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            aria-label="Próximo"
+            onClick={() => go(1)}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 text-purple-deep text-4xl md:text-5xl font-light px-2 select-none disabled:opacity-30"
+            disabled={idx === WHEELS.length - 1}
+          >
+            ›
+          </button>
+          <div
+            ref={ref}
+            onScroll={onScroll}
+            className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-none px-10"
+            style={{ scrollbarWidth: "none" }}
+          >
+            {WHEELS.map((w) => (
+              <div key={w.title} className="snap-center shrink-0 w-full flex justify-center">
+                <WheelCard {...w} />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="flex justify-center gap-2 mt-4">
+          {WHEELS.map((_, i) => (
+            <button
+              key={i}
+              aria-label={`Ir para ${i + 1}`}
+              onClick={() => { setIdx(i); scrollTo(i); }}
+              className={`w-2 h-2 rounded-full transition-colors ${i === idx ? "bg-purple-deep" : "bg-purple-deep/25"}`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const WHEELS = [
   { tag: "EDUCAÇÃO INFANTIL", title: "RODA DOS NÚMEROS", desc: "Atividade lúdica para reconhecer numerais e quantidades com a criança." },
   { tag: "1º ANO/2º ANO", title: "ADIÇÃO E SUBTRAÇÃO", desc: "Roda completa para praticar contas básicas de forma visual." },

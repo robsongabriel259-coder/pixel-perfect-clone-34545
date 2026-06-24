@@ -249,7 +249,7 @@ function Landing() {
 
       {/* HERO */}
       <section className="pt-5 pb-10 bg-purple-deep relative">
-        <div className="max-w-md md:max-w-3xl mx-auto px-5 pt-2 flex flex-col items-center text-center gap-5">
+        <div className="max-w-md md:max-w-3xl mx-auto px-1 md:px-5 pt-2 flex flex-col items-center text-center gap-5">
           <img
             src={tagSuperior.url}
             alt="+200 Rodas Matemáticas"
@@ -271,15 +271,8 @@ function Landing() {
             PARA ALUNOS DE 04 A 10 ANOS
           </div>
 
-          <h1 className="text-[24px] leading-[24px] font-black py-3 mt-4">
-            Tenha +200 rodas matemáticas<br />
-            para anotações visuais preenchíveis<br />
-            e organizadas para alunos da<br />
-            educação infantil ao 5° ano<br />
-            divididas ano a ano.<br />
-            Basta escolher, imprimir e aplicar.<br />
-            Material pronto para reforçar<br />
-            o aprendizado.
+          <h1 className="text-[24px] leading-[24px] font-black py-3 mt-4 text-balance -mx-3 md:mx-0 px-3 md:px-0">
+            Tenha +200 rodas matemáticas para anotações visuais preenchíveis e organizadas para alunos da educação infantil ao 5° ano divididas ano a ano. Basta escolher, imprimir e aplicar. Material pronto para reforçar o aprendizado.
           </h1>
 
 

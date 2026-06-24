@@ -66,12 +66,12 @@ function WheelsCarousel() {
         <h2 className="text-center text-purple-deep font-black text-2xl md:text-3xl uppercase mb-8 px-4">
           Conheça algumas das 210 rodas<br className="hidden md:block" /> matemáticas que você vai receber
         </h2>
-        <div className="relative">
+        <div className="relative mx-auto max-w-[320px] md:max-w-[360px]">
           <button
             type="button"
             aria-label="Anterior"
             onClick={() => go(-1)}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 text-purple-deep text-4xl md:text-5xl font-light px-2 select-none disabled:opacity-30"
+            className="absolute -left-8 md:-left-12 top-1/2 -translate-y-1/2 z-10 text-purple-deep text-4xl md:text-5xl font-light select-none disabled:opacity-30"
             disabled={idx === 0}
           >
             ‹
@@ -80,7 +80,7 @@ function WheelsCarousel() {
             type="button"
             aria-label="Próximo"
             onClick={() => go(1)}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 text-purple-deep text-4xl md:text-5xl font-light px-2 select-none disabled:opacity-30"
+            className="absolute -right-8 md:-right-12 top-1/2 -translate-y-1/2 z-10 text-purple-deep text-4xl md:text-5xl font-light select-none disabled:opacity-30"
             disabled={idx === WHEELS.length - 1}
           >
             ›
@@ -88,12 +88,12 @@ function WheelsCarousel() {
           <div
             ref={ref}
             onScroll={onScroll}
-            className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-none px-10"
+            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none"
             style={{ scrollbarWidth: "none" }}
           >
             {WHEELS.map((w, i) => (
               <div key={i} className="snap-center shrink-0 w-full flex justify-center">
-                <img src={w.src} alt={w.alt} loading="lazy" className="w-full max-w-[340px] h-auto" />
+                <img src={w.src} alt={w.alt} loading="lazy" className="w-full h-auto" />
               </div>
             ))}
           </div>

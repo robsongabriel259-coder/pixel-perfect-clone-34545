@@ -12,4 +12,10 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    build: {
+      // Inline assets up to ~80 KB so the hero LCP image ships as a data URI in the SSR HTML
+      assetsInlineLimit: 81920,
+    },
+  },
 });

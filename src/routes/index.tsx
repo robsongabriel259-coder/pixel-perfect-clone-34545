@@ -5,6 +5,13 @@ import tagSuperior from "@/assets/tag-superior.png.asset.json";
 import bundle from "@/assets/bundle.png";
 import kids from "@/assets/kids.png";
 import wheel from "@/assets/wheel-sample.jpg";
+import wheel01 from "@/assets/wheels/wheel-01.jpg.asset.json";
+import wheel02 from "@/assets/wheels/wheel-02.jpg.asset.json";
+import wheel03 from "@/assets/wheels/wheel-03.jpg.asset.json";
+import wheel04 from "@/assets/wheels/wheel-04.jpg.asset.json";
+import wheel05 from "@/assets/wheels/wheel-05.jpg.asset.json";
+import wheel06 from "@/assets/wheels/wheel-06.jpg.asset.json";
+import wheel07 from "@/assets/wheels/wheel-07.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Landing,
@@ -84,9 +91,9 @@ function WheelsCarousel() {
             className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-none px-10"
             style={{ scrollbarWidth: "none" }}
           >
-            {WHEELS.map((w) => (
-              <div key={w.title} className="snap-center shrink-0 w-full flex justify-center">
-                <WheelCard {...w} />
+            {WHEELS.map((w, i) => (
+              <div key={i} className="snap-center shrink-0 w-full flex justify-center">
+                <img src={w.src} alt={w.alt} loading="lazy" className="w-full max-w-[340px] h-auto" />
               </div>
             ))}
           </div>
@@ -107,10 +114,13 @@ function WheelsCarousel() {
 }
 
 const WHEELS = [
-  { tag: "EDUCAÇÃO INFANTIL", title: "RODA DOS NÚMEROS", desc: "Atividade lúdica para reconhecer numerais e quantidades com a criança." },
-  { tag: "1º ANO/2º ANO", title: "ADIÇÃO E SUBTRAÇÃO", desc: "Roda completa para praticar contas básicas de forma visual." },
-  { tag: "2º ANO/3º ANO", title: "MULTIPLICAÇÃO", desc: "A criança preenche cada fatia da roda com o resultado da multiplicação." },
-  { tag: "4º ANO/5º ANO", title: "FRAÇÕES E DECIMAIS", desc: "Anotação visual para registrar e revisar frações e números decimais." },
+  { src: wheel01.url, alt: "Primeiros números aos 4 — Educação Infantil" },
+  { src: wheel02.url, alt: "Descubra os lados aos 5 — Educação Infantil" },
+  { src: wheel03.url, alt: "Simetria divertida aos 6 — 1º Ano" },
+  { src: wheel04.url, alt: "Que horas são? aos 7 — 2º Ano" },
+  { src: wheel05.url, alt: "Probabilidade aos 8 — 3º Ano" },
+  { src: wheel06.url, alt: "Explore as chances aos 9 — 4º Ano" },
+  { src: wheel07.url, alt: "Domine o tempo aos 10 — 5º Ano" },
 ];
 
 const BENEFITS = [

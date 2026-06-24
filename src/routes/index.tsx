@@ -271,15 +271,15 @@ function Landing() {
             PARA ALUNOS DE 04 A 10 ANOS
           </div>
 
-          <h1 className="text-xl md:text-3xl font-black uppercase leading-[0.95] py-3 mt-4">
-            TENHA + 200 RODAS<br />
-            MATEMÁTICAS PREENCHÍVEIS<br />
-            E ORGANIZADAS DA<br />
-            EDUCAÇÃO INFANTIL AO 5º<br />
-            ANO, PARA ENSINAR,<br />
-            PRATICAR E REVISAR<br />
-            CONTEÚDOS SEM CRIAR<br />
-            ATIVIDADES DO ZERO.
+          <h1 className="text-xl md:text-3xl font-black leading-[0.95] py-3 mt-4">
+            Tenha +200 rodas matemáticas<br />
+            para anotações visuais preenchíveis<br />
+            e organizadas para alunos da<br />
+            educação infantil ao 5° ano<br />
+            divididas ano a ano.<br />
+            Basta escolher, imprimir e aplicar.<br />
+            Material pronto para reforçar<br />
+            o aprendizado.
           </h1>
 
 

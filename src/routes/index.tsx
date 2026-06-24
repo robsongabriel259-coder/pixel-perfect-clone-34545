@@ -104,10 +104,19 @@ function Landing() {
       {/* HERO */}
       <section className="pt-12 pb-10 bg-purple-deep relative">
         <div className="max-w-md md:max-w-3xl mx-auto px-5 pt-4 flex flex-col items-center text-center gap-5">
-          <div className="bg-white text-purple-deep font-black px-6 py-2 rounded-full text-lg md:text-2xl shadow-md">
-            <span className="relative inline-block">
-              +200 <span className="underline decoration-orange-badge decoration-[3px] underline-offset-2">Rodas Matemáticas</span>
+          <div className="inline-flex items-center gap-1 bg-white text-purple-deep font-black px-5 py-2 rounded-full text-[15px] md:text-lg shadow-md relative">
+            <svg width="14" height="14" viewBox="0 0 18 18" fill="none" className="shrink-0" aria-hidden="true">
+              <path d="M9 0L10.5 7.5L18 9L10.5 10.5L9 18L7.5 10.5L0 9L7.5 7.5L9 0Z" fill="#f97316"/>
+            </svg>
+            <span className="relative inline-block leading-tight">
+              +200 Rodas Matemáticas
+              <svg className="absolute left-0 w-full -bottom-1" height="6" viewBox="0 0 200 6" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0 3 Q 50 6, 100 3 T 200 3" stroke="#f97316" strokeWidth="3" fill="none" strokeLinecap="round"/>
+              </svg>
             </span>
+            <svg width="14" height="14" viewBox="0 0 18 18" fill="none" className="shrink-0" aria-hidden="true">
+              <path d="M9 0L10.5 7.5L18 9L10.5 10.5L9 18L7.5 10.5L0 9L7.5 7.5L9 0Z" fill="#22c55e"/>
+            </svg>
           </div>
 
           <img

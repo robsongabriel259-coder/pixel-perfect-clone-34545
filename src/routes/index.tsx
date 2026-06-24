@@ -101,26 +101,42 @@ function Landing() {
       </div>
 
       {/* HERO */}
-      <section className="pt-14 md:pt-12 pb-10 bg-purple-deep relative">
-        <div className="max-w-6xl mx-auto px-4 pt-4 grid md:grid-cols-2 gap-6 items-center">
-          <div className="flex flex-col items-start gap-4">
-            <span className="badge-top">+200 Rodas Matemáticas</span>
-            <h1 className="text-2xl md:text-4xl font-black uppercase leading-tight">
-              Transforme cada conteúdo em um mapa visual construído pelos alunos com anotações.
-            </h1>
-            <p className="text-white/85 text-sm md:text-base">
-              Tenha +200 rodas matemáticas preenchíveis, organizadas da Educação Infantil ao 5º ano, para ensinar, praticar e revisar conteúdos sem criar atividades do zero.
-            </p>
-            <div className="bg-orange-badge text-[#2a1300] font-extrabold px-4 py-1.5 rounded-md text-sm border-2 border-[#2a1300]">
-              Apenas R$ 17,90
-            </div>
-            <CtaButton />
+      <section className="pt-12 pb-10 bg-purple-deep relative">
+        <div className="max-w-md md:max-w-3xl mx-auto px-5 pt-4 flex flex-col items-center text-center gap-5">
+          <div className="bg-white text-purple-deep font-black px-6 py-2 rounded-full text-lg md:text-2xl shadow-md">
+            <span className="relative inline-block">
+              +200 <span className="underline decoration-orange-badge decoration-[3px] underline-offset-2">Rodas Matemáticas</span>
+            </span>
           </div>
-          <div className="flex justify-center">
-            <img src={heroMockup} alt="Rodas matemáticas mockup" width={1024} height={1024} className="w-full max-w-md drop-shadow-2xl" />
+
+          <img
+            src={heroMockup}
+            alt="Rodas matemáticas mockup"
+            width={1024}
+            height={1024}
+            className="w-full max-w-sm md:max-w-md drop-shadow-2xl"
+          />
+
+          <div className="btn-cta text-xs md:text-sm cursor-default !py-2 !px-5">
+            PARA ALUNOS DE 04 A 10 ANOS
           </div>
+
+          <h1 className="text-xl md:text-3xl font-black uppercase leading-tight px-2">
+            Tenha + 200 rodas matemáticas preenchíveis e organizadas da Educação Infantil ao 5º ano, para ensinar, praticar e revisar conteúdos sem criar atividades do zero.
+          </h1>
+
+          <p className="text-white/90 text-sm md:text-base px-2">
+            Transforme cada cinteúdo em um mapa visual construido pelos alunos com anotações.
+          </p>
+
+          <div className="text-orange-soft font-extrabold text-lg md:text-xl">
+            Apenas R$ 17,90
+          </div>
+
+          <CtaButton />
         </div>
       </section>
+
 
       {/* WHEELS CAROUSEL */}
       <section className="bg-purple-deep pb-12">

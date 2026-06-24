@@ -88,6 +88,83 @@ function RootShell({ children }: { children: ReactNode }) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
+var LANDING_META_PIXEL_ID = '1044829704880739';
+
+window.__landingMetaPixelInitialized = false;
+window.__landingMetaEventsSent = window.__landingMetaEventsSent || {};
+window.__landingMetaManualCall = false;
+
+window.__sendLandingMetaBeacon = function(eventName, params, eventId) {
+  try {
+    var query = new URLSearchParams({
+      id: LANDING_META_PIXEL_ID,
+      ev: eventName,
+      dl: window.location.href,
+      rl: document.referrer || '',
+      if: 'false',
+      ts: String(Date.now()),
+      sw: String(window.screen && window.screen.width ? window.screen.width : ''),
+      sh: String(window.screen && window.screen.height ? window.screen.height : ''),
+      v: '2.9.345',
+      r: 'stable',
+      eid: eventId
+    });
+
+    if (params) {
+      Object.keys(params).forEach(function(key) {
+        if (params[key] !== undefined && params[key] !== null) {
+          query.append('cd[' + key + ']', String(params[key]));
+        }
+      });
+    }
+
+    new Image(1, 1).src = 'https://www.facebook.com/tr?' + query.toString();
+  } catch (error) {}
+};
+
+window.__shouldBlockLandingFbqCall = function(args) {
+  var command = args && args[0];
+  var value = args && args[1];
+
+  if (command === 'init' && value === LANDING_META_PIXEL_ID && window.__landingMetaPixelInitialized) {
+    return true;
+  }
+
+  if (command === 'track' && (value === 'InitiateCheckout' || value === 'Purchase')) {
+    return true;
+  }
+
+  if (
+    !window.__landingMetaManualCall &&
+    command === 'track' &&
+    window.__landingMetaEventsSent &&
+    window.__landingMetaEventsSent[value]
+  ) {
+    return true;
+  }
+
+  return false;
+};
+
+window.__trackLandingMeta = function(eventName, params) {
+  if (window.__landingMetaEventsSent[eventName]) return;
+
+  var eventId = 'lp_' + eventName + '_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+  window.__landingMetaEventsSent[eventName] = true;
+
+  try {
+    if (typeof window.fbq === 'function') {
+      window.__landingMetaManualCall = true;
+      window.fbq('track', eventName, params || {}, { eventID: eventId });
+      window.__landingMetaManualCall = false;
+    }
+  } catch (error) {
+    window.__landingMetaManualCall = false;
+  }
+
+  window.__sendLandingMetaBeacon(eventName, params || {}, eventId);
+};
+
 !function(f,b,e,v,n,t,s){
   if(f.fbq)return;
   n=f.fbq=function(){
@@ -105,8 +182,37 @@ function RootShell({ children }: { children: ReactNode }) {
   s.parentNode.insertBefore(t,s);
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
+if (window.fbq && window.fbq.queue) {
+  var landingOriginalQueuePush = window.fbq.queue.push.bind(window.fbq.queue);
+  window.fbq.queue.push = function(args) {
+    if (window.__shouldBlockLandingFbqCall(args)) return window.fbq.queue.length;
+    return landingOriginalQueuePush(args);
+  };
+}
+
 fbq('init', '1044829704880739');
-fbq('track', 'PageView');
+window.__landingMetaPixelInitialized = true;
+
+(function waitForLandingFbqCallMethod() {
+  var attempts = 0;
+  var interval = setInterval(function() {
+    attempts += 1;
+
+    if (window.fbq && window.fbq.callMethod && !window.fbq.__landingDeduped) {
+      var originalCallMethod = window.fbq.callMethod;
+      window.fbq.callMethod = function() {
+        if (window.__shouldBlockLandingFbqCall(arguments)) return;
+        return originalCallMethod.apply(window.fbq, arguments);
+      };
+      window.fbq.__landingDeduped = true;
+      clearInterval(interval);
+    }
+
+    if (attempts >= 80) clearInterval(interval);
+  }, 50);
+})();
+
+window.__trackLandingMeta('PageView');
 `.trim(),
           }}
         />

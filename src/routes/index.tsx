@@ -20,7 +20,7 @@ function CtaButton({ href = "#planos", children = "QUERO ADQUIRIR O MEU" }: { hr
 
 function WheelCard({ tag, title, desc }: { tag: string; title: string; desc: string }) {
   return (
-    <div className="rounded-2xl bg-[--purple-card] border-2 border-[--neon]/40 p-4 shadow-lg flex flex-col gap-3 min-w-[240px] md:min-w-0">
+    <div className="rounded-2xl bg-purple-card border-2 border-neon/40 p-4 shadow-lg flex flex-col gap-3 min-w-[240px] md:min-w-0">
       <span className="badge-top self-start" style={{ background: "#e02d6b", color: "#fff", borderColor: "#fff" }}>{tag}</span>
       <div className="rounded-xl overflow-hidden bg-white aspect-square">
         <img src={wheel} alt={title} loading="lazy" width={512} height={512} className="w-full h-full object-cover" />
@@ -94,14 +94,14 @@ const FAQ = [
 
 function Landing() {
   return (
-    <main className="bg-[--purple-deep] text-white overflow-x-hidden">
+    <main className="bg-purple-deep text-white overflow-x-hidden">
       {/* Top fixed bar */}
-      <div className="fixed top-0 inset-x-0 z-50 bg-gradient-to-r from-[--neon-dark] to-[--neon] text-[#0a2410] text-center py-2 px-3 font-extrabold text-xs md:text-sm tracking-wide border-b-2 border-[#0a2410]">
+      <div className="fixed top-0 inset-x-0 z-50 bg-gradient-to-r from-neon-dark to-neon text-[#0a2410] text-center py-2 px-3 font-extrabold text-xs md:text-sm tracking-wide border-b-2 border-[#0a2410]">
         RODAS MATEMÁTICAS PRONTAS PARA IMPRIMIR E APLICAR
       </div>
 
       {/* HERO */}
-      <section className="pt-14 md:pt-12 pb-10 bg-[--purple-deep] relative">
+      <section className="pt-14 md:pt-12 pb-10 bg-purple-deep relative">
         <div className="max-w-6xl mx-auto px-4 pt-4 grid md:grid-cols-2 gap-6 items-center">
           <div className="flex flex-col items-start gap-4">
             <span className="badge-top">+200 Rodas Matemáticas</span>
@@ -111,7 +111,7 @@ function Landing() {
             <p className="text-white/85 text-sm md:text-base">
               Tenha +200 rodas matemáticas preenchíveis, organizadas da Educação Infantil ao 5º ano, para ensinar, praticar e revisar conteúdos sem criar atividades do zero.
             </p>
-            <div className="bg-[--orange-badge] text-[#2a1300] font-extrabold px-4 py-1.5 rounded-md text-sm border-2 border-[#2a1300]">
+            <div className="bg-orange-badge text-[#2a1300] font-extrabold px-4 py-1.5 rounded-md text-sm border-2 border-[#2a1300]">
               Apenas R$ 17,90
             </div>
             <CtaButton />
@@ -123,7 +123,7 @@ function Landing() {
       </section>
 
       {/* WHEELS CAROUSEL */}
-      <section className="bg-[--purple-deep] pb-12">
+      <section className="bg-purple-deep pb-12">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-center text-white font-black text-xl md:text-2xl uppercase mb-6">
             Conheça algumas das 210 rodas<br className="hidden md:block" /> matemáticas que você vai receber
@@ -140,13 +140,13 @@ function Landing() {
       </section>
 
       {/* PRONTO PARA APLICAR */}
-      <section className="bg-[--purple-dark] py-14">
+      <section className="bg-purple-dark py-14">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-black uppercase">
-            <span className="text-[--neon]">Você receberá um material</span><br />
-            <span className="text-white underline decoration-[--neon] decoration-4 underline-offset-4">pronto para aplicar</span>
+            <span className="text-neon">Você receberá um material</span><br />
+            <span className="text-white underline decoration-neon decoration-4 underline-offset-4">pronto para aplicar</span>
           </h2>
-          <p className="text-[--neon] mt-4 italic font-semibold text-sm md:text-base">
+          <p className="text-neon mt-4 italic font-semibold text-sm md:text-base">
             Tudo organizado por ano escolar e conteúdo para facilitar
           </p>
           <p className="text-white/80 text-sm md:text-base">
@@ -155,7 +155,7 @@ function Landing() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
             {BENEFITS.map((b) => (
-              <div key={b.title} className="bg-[--purple-card] rounded-2xl p-5 border-2 border-white/10 flex flex-col items-center text-center gap-2">
+              <div key={b.title} className="bg-purple-card rounded-2xl p-5 border-2 border-white/10 flex flex-col items-center text-center gap-2">
                 <div className="text-4xl">{b.icon}</div>
                 <h3 className="font-extrabold text-sm uppercase">{b.title}</h3>
                 <p className="text-white/75 text-xs leading-snug">{b.desc}</p>
@@ -172,7 +172,7 @@ function Landing() {
             <img src={bundle} alt="Material completo" loading="lazy" width={1024} height={768} className="w-full max-w-xl" />
           </div>
 
-          <div className="mt-10 max-w-3xl mx-auto bg-white text-[--purple-deep] rounded-2xl border-4 border-[--orange-badge] p-6 md:p-8 flex items-center gap-4">
+          <div className="mt-10 max-w-3xl mx-auto bg-white text-purple-deep rounded-2xl border-4 border-orange-badge p-6 md:p-8 flex items-center gap-4">
             <img src={kids} alt="" loading="lazy" width={120} height={120} className="hidden md:block w-24 h-24 object-contain" />
             <p className="font-black uppercase text-sm md:text-lg text-center flex-1">
               Este material ajuda a criança a transformar a matemática em uma anotação visual leve, clara e prática.
@@ -184,12 +184,12 @@ function Landing() {
       </section>
 
       {/* IDEAL PARA VOCÊ */}
-      <section className="bg-[--purple-deep] py-14">
+      <section className="bg-purple-deep py-14">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-white text-xl md:text-2xl font-black uppercase mb-8">Ideal para você que deseja:</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {IDEAL.map((b) => (
-              <div key={b.title} className="bg-[--purple-card] rounded-2xl p-5 border-2 border-[--neon]/30 flex flex-col items-center text-center gap-2">
+              <div key={b.title} className="bg-purple-card rounded-2xl p-5 border-2 border-neon/30 flex flex-col items-center text-center gap-2">
                 <div className="text-4xl">{b.icon}</div>
                 <h3 className="font-extrabold text-xs md:text-sm uppercase">{b.title}</h3>
                 <p className="text-white/75 text-xs leading-snug">{b.desc}</p>
@@ -202,32 +202,32 @@ function Landing() {
       </section>
 
       {/* VOCÊ VAI RECEBER */}
-      <section className="bg-[--purple-dark] py-14">
+      <section className="bg-purple-dark py-14">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-center font-black uppercase text-lg md:text-2xl mb-8">
             🎁 Você vai receber ao adquirir seu produto 🎁
           </h2>
           <div className="grid md:grid-cols-2 gap-6 items-start">
             <img src={kids} alt="Crianças usando o material" loading="lazy" width={768} height={512} className="w-full rounded-2xl bg-white p-2" />
-            <div className="bg-white text-[--purple-deep] rounded-2xl p-6 border-2 border-[--orange-badge]">
-              <div className="bg-[--orange-badge] text-white text-center font-black uppercase py-2 rounded-md mb-4 border-2 border-[#2a1300]">
+            <div className="bg-white text-purple-deep rounded-2xl p-6 border-2 border-orange-badge">
+              <div className="bg-orange-badge text-white text-center font-black uppercase py-2 rounded-md mb-4 border-2 border-[#2a1300]">
                 ITEM 01
               </div>
               <ul className="space-y-2 text-sm">
                 {ITEM_LIST.map((i) => (
-                  <li key={i} className="flex gap-2"><span className="text-[--neon-dark] font-black">✓</span>{i}</li>
+                  <li key={i} className="flex gap-2"><span className="text-neon-dark font-black">✓</span>{i}</li>
                 ))}
               </ul>
-              <p className="text-center font-black uppercase mt-4 text-[--neon-dark]">E muito mais...</p>
+              <p className="text-center font-black uppercase mt-4 text-neon-dark">E muito mais...</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* BÔNUS */}
-      <section className="bg-[--purple-deep] py-14">
+      <section className="bg-purple-deep py-14">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-[--neon] font-black uppercase text-xl md:text-2xl">
+          <h2 className="text-neon font-black uppercase text-xl md:text-2xl">
             E para facilitar ainda<br />mais a aplicação
           </h2>
           <p className="text-white/80 italic mt-3">Você também vai receber…</p>
@@ -235,8 +235,8 @@ function Landing() {
 
           <div className="grid md:grid-cols-3 gap-5 mt-8">
             {BONUSES.map((b) => (
-              <div key={b.n} className="bg-[--purple-card] rounded-2xl border-2 border-[--neon]/30 p-5 text-left">
-                <div className="text-[--neon] font-black text-sm">BÔNUS {b.n}</div>
+              <div key={b.n} className="bg-purple-card rounded-2xl border-2 border-neon/30 p-5 text-left">
+                <div className="text-neon font-black text-sm">BÔNUS {b.n}</div>
                 <h3 className="font-black uppercase text-base mt-1">{b.title}</h3>
                 <div className="badge-top mt-3" style={{ background: "var(--neon)", color: "#0a2410", borderColor: "#0a2410" }}>{b.cards}</div>
                 <p className="text-white/80 text-sm mt-3 leading-snug">{b.desc}</p>
@@ -248,46 +248,46 @@ function Landing() {
       </section>
 
       {/* PLANOS */}
-      <section id="planos" className="bg-white text-[--purple-deep] py-14">
+      <section id="planos" className="bg-white text-purple-deep py-14">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-center font-black uppercase text-xl md:text-2xl mb-10">
             Escolha a melhor opção<br />para você
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {/* Básico */}
-            <div className="rounded-2xl border-2 border-[--purple-deep]/20 p-6 flex flex-col shadow-lg bg-white">
+            <div className="rounded-2xl border-2 border-purple-deep/20 p-6 flex flex-col shadow-lg bg-white">
               <h3 className="text-center font-black uppercase text-lg">Acesso Básico</h3>
-              <p className="text-center text-xs text-[--purple-deep]/70 mt-1">Para quem quer as 210 rodas prontas para imprimir e aplicar.</p>
+              <p className="text-center text-xs text-purple-deep/70 mt-1">Para quem quer as 210 rodas prontas para imprimir e aplicar.</p>
               <img src={wheel} alt="" loading="lazy" width={512} height={512} className="w-40 h-40 object-cover mx-auto my-4 rounded-xl" />
               <p className="text-center text-xs">✓ 210 Rodas de matemática prontas para imprimir e aplicar (em PDF)</p>
               <div className="text-center my-4">
                 <div className="text-sm font-bold">R$</div>
-                <div className="text-5xl font-black text-[--neon-dark] leading-none">17,90</div>
+                <div className="text-5xl font-black text-neon-dark leading-none">17,90</div>
                 <div className="text-xs mt-1">ou 3X de R$ 6,92 no cartão</div>
               </div>
               <a href={CHECKOUT_BASIC} target="_blank" rel="noopener noreferrer" className="btn-cta btn-cta-hover text-sm w-full">ESCOLHER ACESSO BASICO</a>
-              <p className="text-center text-[10px] mt-4 text-[--purple-deep]/70 uppercase">
+              <p className="text-center text-[10px] mt-4 text-purple-deep/70 uppercase">
                 Atenção: temos uma oferta ainda mais vantajosa para você! Veja logo abaixo
               </p>
             </div>
 
             {/* Pro Premium */}
-            <div className="relative rounded-2xl border-4 border-[--neon-dark] p-6 flex flex-col shadow-2xl bg-white">
+            <div className="relative rounded-2xl border-4 border-neon-dark p-6 flex flex-col shadow-2xl bg-white">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 badge-top" style={{ background: "var(--orange-badge)", color: "#fff", borderColor: "#2a1300" }}>
                 MAIS ESCOLHIDO
               </div>
               <h3 className="text-center font-black uppercase text-lg mt-2">Acesso</h3>
-              <h3 className="text-center font-black uppercase text-2xl text-[--neon-dark]">Pro Premium</h3>
-              <p className="text-center text-xs text-[--purple-deep]/70 mt-1">Para quem quer as 210 rodas e os 3 bônus para revisar e acompanhar.</p>
-              <div className="bg-[--purple-deep] rounded-xl p-3 my-4">
+              <h3 className="text-center font-black uppercase text-2xl text-neon-dark">Pro Premium</h3>
+              <p className="text-center text-xs text-purple-deep/70 mt-1">Para quem quer as 210 rodas e os 3 bônus para revisar e acompanhar.</p>
+              <div className="bg-purple-deep rounded-xl p-3 my-4">
                 <div className="text-center text-white text-xs font-bold mb-2">MATERIAL COMPLETO</div>
                 <img src={bundle} alt="" loading="lazy" width={1024} height={768} className="w-full rounded-md" />
               </div>
               <div className="text-center my-2">
-                <div className="text-sm line-through text-[--purple-deep]/60">R$ 39,90</div>
-                <span className="inline-block bg-[--orange-badge] text-white text-xs font-black px-2 py-0.5 rounded">30% OFF</span>
+                <div className="text-sm line-through text-purple-deep/60">R$ 39,90</div>
+                <span className="inline-block bg-orange-badge text-white text-xs font-black px-2 py-0.5 rounded">30% OFF</span>
                 <div className="text-sm font-bold mt-1">R$</div>
-                <div className="text-5xl font-black text-[--neon-dark] leading-none">27,90</div>
+                <div className="text-5xl font-black text-neon-dark leading-none">27,90</div>
                 <div className="text-xs mt-1">ou 6X de R$ 6,52 no cartão</div>
               </div>
               <p className="text-center text-[11px] font-bold uppercase mb-3">
@@ -295,7 +295,7 @@ function Landing() {
               </p>
               <ul className="space-y-1.5 text-xs mb-4">
                 {PREMIUM_LIST.map((i) => (
-                  <li key={i} className="flex gap-2"><span className="text-[--neon-dark] font-black">✓</span>{i}</li>
+                  <li key={i} className="flex gap-2"><span className="text-neon-dark font-black">✓</span>{i}</li>
                 ))}
               </ul>
               <a href={CHECKOUT_PRO} target="_blank" rel="noopener noreferrer" className="btn-cta btn-cta-hover text-sm w-full">ESCOLHER ACESSO PRO PREMIUM</a>
@@ -305,7 +305,7 @@ function Landing() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-[--purple-deep] py-14">
+      <section className="bg-purple-deep py-14">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-center font-black uppercase text-2xl md:text-3xl">Perguntas Frequentes</h2>
           <p className="text-center text-white/70 mt-2 mb-8 text-sm">Suas principais dúvidas respondidas abaixo</p>
@@ -316,7 +316,7 @@ function Landing() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[--purple-dark] py-10 px-4 text-center text-white/70 text-xs leading-relaxed">
+      <footer className="bg-purple-dark py-10 px-4 text-center text-white/70 text-xs leading-relaxed">
         <p className="font-bold mb-2">"Copyright © 2026 | Todos os direitos reservados.</p>
         <p className="max-w-2xl mx-auto">
           Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.
@@ -331,15 +331,15 @@ function Landing() {
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="bg-white rounded-xl overflow-hidden text-[--purple-deep]">
+    <div className="bg-white rounded-xl overflow-hidden text-purple-deep">
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between text-left px-5 py-4 font-bold text-sm md:text-base"
       >
         <span>{q}</span>
-        <span className="text-[--neon-dark] text-2xl font-black shrink-0 ml-3">{open ? "−" : "+"}</span>
+        <span className="text-neon-dark text-2xl font-black shrink-0 ml-3">{open ? "−" : "+"}</span>
       </button>
-      {open && <div className="px-5 pb-4 text-sm text-[--purple-deep]/80">{a}</div>}
+      {open && <div className="px-5 pb-4 text-sm text-purple-deep/80">{a}</div>}
     </div>
   );
 }

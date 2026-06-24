@@ -59,7 +59,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/PqSH7qHpLlfy6FxqZg92POUpmnH2/social-images/social-1782322155707-Logo_11zon.webp" },
     ],
     links: [
-      { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -69,6 +68,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         onLoad: "this.media='all'",
       } as any,
     ],
+    styles: [{ children: appCss }] as any,
   }),
   shellComponent: RootShell,
   component: RootComponent,

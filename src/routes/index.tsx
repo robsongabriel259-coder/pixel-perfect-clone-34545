@@ -249,7 +249,7 @@ function Landing() {
 
       {/* HERO */}
       <section className="pt-5 pb-10 bg-purple-deep relative">
-        <div className="max-w-md md:max-w-3xl mx-auto px-5 pt-2 flex flex-col items-center text-center gap-5">
+        <div className="max-w-md md:max-w-3xl mx-auto px-3 md:px-5 pt-2 flex flex-col items-center text-center gap-5">
           <img
             src={tagSuperior.url}
             alt="+200 Rodas Matemáticas"

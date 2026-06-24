@@ -21,6 +21,11 @@ import bonus03 from "@/assets/bonus-03.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Landing,
+  head: () => ({
+    links: [
+      { rel: "preload", as: "image", href: heroMockup.url, fetchpriority: "high" } as any,
+    ],
+  }),
 });
 
 const CHECKOUT_BASIC = "https://pay.wiapy.com/TGNuxQv8M3?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
@@ -37,7 +42,7 @@ function WheelCard({ tag, title, desc }: { tag: string; title: string; desc: str
     <div className="rounded-2xl bg-purple-card border-2 border-neon/40 p-4 shadow-lg flex flex-col gap-3 min-w-[240px] md:min-w-0">
       <span className="badge-top self-start" style={{ background: "#e02d6b", color: "#fff", borderColor: "#fff" }}>{tag}</span>
       <div className="rounded-xl overflow-hidden bg-white aspect-square">
-        <img src={wheel.url} alt={title} loading="lazy" className="w-full h-full object-cover" />
+        <img src={wheel.url} alt={title} loading="lazy" decoding="async" width={500} height={500} className="w-full h-full object-cover" />
       </div>
       <h3 className="text-white font-extrabold text-sm uppercase">{title}</h3>
       <p className="text-white/80 text-xs leading-snug">{desc}</p>
@@ -152,7 +157,7 @@ function WheelsCarousel() {
           >
             {wheels.map((w, i) => (
               <div key={i} className="shrink-0 w-full flex justify-center">
-                <img src={w.src} alt={w.alt} loading="lazy" className="w-full h-auto" />
+                <img src={w.src} alt={w.alt} loading="lazy" decoding="async" width={700} height={962} className="w-full h-auto" />
               </div>
             ))}
           </div>
@@ -269,6 +274,8 @@ function Landing() {
             alt="Rodas matemáticas mockup"
             width={1024}
             height={1024}
+            fetchPriority="high"
+            decoding="async"
             className="w-full max-w-[288px] md:max-w-[336px] drop-shadow-2xl"
           />
 
@@ -332,7 +339,7 @@ function Landing() {
           </p>
 
           <div className="flex justify-center mt-8">
-            <img src={mockupRodas.url} alt="Material completo Rodas Matemáticas" loading="lazy" className="w-full max-w-[432px]" />
+            <img src={mockupRodas.url} alt="Material completo Rodas Matemáticas" loading="lazy" decoding="async" width={917} height={1000} className="w-full max-w-[432px] h-auto" />
           </div>
 
           <div className="mt-10 max-w-3xl mx-auto bg-white text-purple-deep rounded-2xl border-4 border-orange-badge p-6 md:p-8 flex items-center gap-4">
@@ -371,7 +378,7 @@ function Landing() {
             🎁 Você vai receber ao adquirir seu produto 🎁
           </h2>
           <div className="grid md:grid-cols-2 gap-6 items-start">
-            <img src={mockupCompleto.url} alt="Mockup material completo Rodas Matemáticas" loading="lazy" className="w-[85%] mx-auto h-auto" />
+            <img src={mockupCompleto.url} alt="Mockup material completo Rodas Matemáticas" loading="lazy" decoding="async" width={1024} height={1024} className="w-[85%] mx-auto h-auto" />
             <div className="bg-white text-purple-deep rounded-2xl p-6 border-2 border-orange-badge">
               <div className="bg-orange-badge text-white text-center font-black uppercase py-2 rounded-md mb-4 border-2 border-[#2a1300]">
                 ITEM 01
@@ -400,7 +407,7 @@ function Landing() {
             {BONUSES.map((b) => (
               <div key={b.n} className="flex flex-col">
                 <div className="rounded-2xl border-2 border-orange-badge overflow-hidden bg-white">
-                  <img src={b.img} alt={`Bônus ${b.n}`} loading="lazy" className="w-full h-auto block" />
+                  <img src={b.img} alt={`Bônus ${b.n}`} loading="lazy" decoding="async" width={800} height={800} className="w-full h-auto block" />
                 </div>
                 <p className="text-white text-center mt-4 leading-snug" style={{ fontSize: "16px" }}>{b.desc}</p>
               </div>
@@ -421,7 +428,7 @@ function Landing() {
             <div className="rounded-2xl border-2 border-purple-deep/20 p-6 flex flex-col shadow-lg bg-white">
               <h3 className="text-center font-black uppercase" style={{ fontSize: "28px" }}>Acesso Básico</h3>
               <p className="text-center text-purple-deep/70 mt-1 mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>Para quem quer as 210 rodas prontas para imprimir e aplicar.</p>
-              <img src={wheel.url} alt="" loading="lazy" className="w-[134px] mx-auto mb-[30px] rounded-xl" />
+              <img src={wheel.url} alt="" loading="lazy" decoding="async" width={500} height={500} className="w-[134px] h-auto mx-auto mb-[30px] rounded-xl" />
               <p className="text-center mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>✓ 210 Rodas de matemática prontas para imprimir e aplicar (em PDF)</p>
               <div className="text-center mb-[30px]">
                 <div className="text-sm font-bold">R$</div>

@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
 const CHECKOUT_BASIC = "https://pay.wiapy.com/TGNuxQv8M3?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
 const CHECKOUT_PRO = "https://pay.wiapy.com/v9vc0UDffDz?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
 
-function CtaButton({ href = "#planos", children = "QUERO ADQUIRIR O MEU" }: { href?: string; children?: React.ReactNode }) {
+function CtaButton({ href = "#secao-precos", children = "QUERO ADQUIRIR O MEU" }: { href?: string; children?: React.ReactNode }) {
   return (
     <a href={href} className="btn-cta btn-cta-hover text-sm md:text-base">{children}</a>
   );
@@ -413,7 +413,7 @@ function Landing() {
       </section>
 
       {/* PLANOS */}
-      <section id="planos" className="bg-white text-purple-deep py-14">
+      <section id="secao-precos" className="bg-white text-purple-deep py-14">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-center font-black uppercase mb-10" style={{ fontSize: "28px", lineHeight: "28px" }}>
             Escolha a melhor opção<br />para você
@@ -430,7 +430,7 @@ function Landing() {
                 <div className="text-5xl font-black text-neon-dark leading-none">17,90</div>
                 <div className="mt-1" style={{ fontSize: "18px", lineHeight: "18px" }}>ou 3X de R$ 6,92 no cartão</div>
               </div>
-              <a href={CHECKOUT_BASIC} target="_blank" rel="noopener noreferrer" className="btn-cta btn-cta-hover text-sm w-full mb-[30px] !bg-white !text-black !border-black/20 !shadow-[0_4px_0_rgba(0,0,0,0.15),0_4px_12px_rgba(0,0,0,0.1)]">ESCOLHER ACESSO BASICO</a>
+              <a href={CHECKOUT_BASIC} target="_blank" rel="noopener noreferrer" className="checkout-link btn-cta btn-cta-hover text-sm w-full mb-[30px] !bg-white !text-black !border-black/20 !shadow-[0_4px_0_rgba(0,0,0,0.15),0_4px_12px_rgba(0,0,0,0.1)]">ESCOLHER ACESSO BASICO</a>
               <p className="text-center uppercase" style={{ fontSize: "22px", lineHeight: "22px", fontWeight: 600, color: "red", textShadow: "0px 3px 6px rgba(255, 0, 0, 0.5)" }}>
                 Atenção: temos uma oferta ainda mais vantajosa para você! Veja logo abaixo
               </p>
@@ -464,7 +464,7 @@ function Landing() {
                   <li key={i} className="flex gap-2 mb-2"><span className="text-neon-dark font-black">✓</span>{i}</li>
                 ))}
               </ul>
-              <a href={CHECKOUT_PRO} target="_blank" rel="noopener noreferrer" className="btn-cta btn-cta-hover text-sm w-full mb-[30px]">ESCOLHER ACESSO PRO PREMIUM</a>
+              <a href={CHECKOUT_PRO} target="_blank" rel="noopener noreferrer" className="checkout-link btn-cta btn-cta-hover text-sm w-full mb-[30px]">ESCOLHER ACESSO PRO PREMIUM</a>
             </div>
           </div>
         </div>

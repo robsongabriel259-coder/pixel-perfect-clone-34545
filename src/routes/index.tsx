@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDownCircle } from "lucide-react";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import heroMockup from "@/assets/hero-mockup.webp";
 import tagSuperior from "@/assets/tag-superior.png.asset.json";
 import bundle from "@/assets/bundle.webp";
@@ -243,7 +243,74 @@ const FAQ = [
   { q: "Como vou ter acesso ao Material?", a: "Assim que o seu pagamento for concluído, enviaremos um email com todos os dados de login para você acessar e baixar o material." },
 ];
 
+declare global {
+  interface Window {
+    fbq?: (...args: any[]) => void;
+    __fbqEventsSent?: Record<string, boolean>;
+  }
+}
+
+function usePixelEvents() {
+  const trackOnce = useCallback((eventName: string, fn: () => void) => {
+    if (!window.__fbqEventsSent) window.__fbqEventsSent = {};
+    if (window.__fbqEventsSent[eventName]) return;
+    window.__fbqEventsSent[eventName] = true;
+    fn();
+  }, []);
+
+  useEffect(() => {
+    // ViewContent: quando a seção de preços entra na viewport
+    const priceSection = document.getElementById("secao-precos");
+    if (!priceSection) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            trackOnce("ViewContent", () => {
+              if (typeof window.fbq === "function") {
+                window.fbq("track", "ViewContent");
+              }
+            });
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(priceSection);
+
+    // Lead: quando clica nos botões de checkout
+    const handleCheckoutClick = (e: Event) => {
+      const target = e.currentTarget as HTMLAnchorElement;
+      const href = target.getAttribute("href") || "";
+      const variant = href.includes("v9vc0UDffDz") ? "pro" : "basic";
+      trackOnce(`Lead_${variant}`, () => {
+        if (typeof window.fbq === "function") {
+          window.fbq("track", "Lead", {
+            content_name: variant === "pro" ? "Acesso Pro Premium" : "Acesso Básico",
+          });
+        }
+      });
+    };
+
+    const checkoutLinks = document.querySelectorAll<HTMLAnchorElement>(".checkout-link");
+    checkoutLinks.forEach((link) => {
+      link.addEventListener("click", handleCheckoutClick);
+    });
+
+    return () => {
+      observer.disconnect();
+      checkoutLinks.forEach((link) => {
+        link.removeEventListener("click", handleCheckoutClick);
+      });
+    };
+  }, [trackOnce]);
+}
+
 function Landing() {
+  usePixelEvents();
+
   return (
     <main className="bg-purple-deep text-white overflow-x-hidden">
       {/* Top bar — purple bg with neon green stacked text */}

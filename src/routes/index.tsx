@@ -102,8 +102,8 @@ function Landing() {
 
 
       {/* HERO */}
-      <section className="pt-12 pb-10 bg-purple-deep relative">
-        <div className="max-w-md md:max-w-3xl mx-auto px-5 pt-4 flex flex-col items-center text-center gap-5">
+      <section className="pt-5 pb-10 bg-purple-deep relative">
+        <div className="max-w-md md:max-w-3xl mx-auto px-5 pt-2 flex flex-col items-center text-center gap-5">
           <div className="inline-flex items-center gap-1 bg-white text-purple-deep font-black px-5 py-2 rounded-full text-[15px] md:text-lg shadow-md relative">
             <svg width="14" height="14" viewBox="0 0 18 18" fill="none" className="shrink-0" aria-hidden="true">
               <path d="M9 0L10.5 7.5L18 9L10.5 10.5L9 18L7.5 10.5L0 9L7.5 7.5L9 0Z" fill="#f97316"/>

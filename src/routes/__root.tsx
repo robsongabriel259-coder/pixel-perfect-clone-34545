@@ -80,6 +80,99 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
+        <link rel="preconnect" href="https://cdn.utmify.com.br" />
+        <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+window.pixelId = "6a39e17a693fbb4e2be2af2c";
+
+var a = document.createElement("script");
+a.setAttribute("async", "");
+a.setAttribute("defer", "");
+a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+document.head.appendChild(a);
+
+window.__pixelEventsSent = window.__pixelEventsSent || {};
+
+function firePixelOnce(key, eventName, params) {
+  if (window.__pixelEventsSent[key]) return;
+  window.__pixelEventsSent[key] = true;
+
+  var eventParams = params || {};
+
+  function sendEvent() {
+    if (typeof window.fbq === "function") {
+      window.fbq("track", eventName, eventParams);
+      return true;
+    }
+    return false;
+  }
+
+  if (!sendEvent()) {
+    var attempts = 0;
+    var waitForPixel = setInterval(function () {
+      attempts++;
+      if (sendEvent() || attempts >= 20) {
+        clearInterval(waitForPixel);
+      }
+    }, 150);
+  }
+}
+
+firePixelOnce("pageview", "PageView", {
+  page_location: window.location.href,
+  page_title: document.title
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var priceSection = document.getElementById("secao-precos");
+
+  if (priceSection && "IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          firePixelOnce("viewcontent_precos", "ViewContent", {
+            content_name: "Sessao de Precos",
+            content_category: "Landing Page",
+            page_location: window.location.href
+          });
+          observer.disconnect();
+        }
+      });
+    }, {
+      threshold: 0.35
+    });
+
+    observer.observe(priceSection);
+  }
+
+  var checkoutLinks = document.querySelectorAll(".checkout-link");
+
+  checkoutLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      var url = link.getAttribute("href");
+
+      if (!url || url === "#") return;
+
+      e.preventDefault();
+
+      firePixelOnce("lead_qualificado_checkout", "Lead", {
+        content_name: "Lead Qualificado",
+        content_category: "Clique para Checkout",
+        lead_type: "qualified_checkout_click",
+        page_location: window.location.href
+      });
+
+      setTimeout(function () {
+        window.location.href = url;
+      }, 200);
+    });
+  });
+});
+            `.trim(),
+          }}
+        />
         <HeadContent />
       </head>
       <body>{children}<Scripts /></body>

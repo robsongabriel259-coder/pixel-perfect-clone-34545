@@ -441,28 +441,28 @@ function Landing() {
                 MAIS ESCOLHIDO
               </div>
               <h3 className="text-center font-black uppercase mt-2" style={{ fontSize: "28px", lineHeight: "26px" }}>Acesso</h3>
-              <h3 className="text-center font-black uppercase text-neon-dark" style={{ fontSize: "28px", lineHeight: "26px" }}>Pro Premium</h3>
-              <p className="text-center text-purple-deep/70 mt-1" style={{ fontSize: "18px", lineHeight: "18px" }}>Para quem quer as 210 rodas e os 3 bônus para revisar e acompanhar.</p>
-              <div className="bg-purple-deep rounded-xl p-3 my-4">
+              <h3 className="text-center font-black uppercase text-neon-dark mb-[30px]" style={{ fontSize: "28px", lineHeight: "26px" }}>Pro Premium</h3>
+              <p className="text-center text-purple-deep/70 mt-1 mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>Para quem quer as 210 rodas e os 3 bônus para revisar e acompanhar.</p>
+              <div className="bg-purple-deep rounded-xl p-3 mb-[30px]">
                 <div className="text-center text-white text-xs font-bold mb-2">MATERIAL COMPLETO</div>
                 <img src={bundle} alt="" loading="lazy" width={1024} height={768} className="w-full rounded-md" />
               </div>
-              <div className="text-center my-2">
+              <div className="text-center mb-[30px]">
                 <div className="text-sm line-through text-purple-deep/60">R$ 39,90</div>
                 <span className="inline-block bg-orange-badge text-white text-xs font-black px-2 py-0.5 rounded">30% OFF</span>
                 <div className="text-sm font-bold mt-1">R$</div>
                 <div className="text-5xl font-black text-neon-dark leading-none">27,90</div>
                 <div className="mt-1" style={{ fontSize: "18px", lineHeight: "18px" }}>ou 6X de R$ 6,52 no cartão</div>
               </div>
-              <p className="text-center text-[11px] font-bold uppercase mb-3">
+              <p className="text-center text-[11px] font-bold uppercase mb-[30px]">
                 Tudo do ACESSO básico + BONUS EXCLUSIVOS EM PDF (Receba Imediatamente)
               </p>
-              <ul className="mb-4" style={{ fontSize: "18px", lineHeight: "18px" }}>
+              <ul className="mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>
                 {PREMIUM_LIST.map((i) => (
                   <li key={i} className="flex gap-2 mb-2"><span className="text-neon-dark font-black">✓</span>{i}</li>
                 ))}
               </ul>
-              <a href={CHECKOUT_PRO} target="_blank" rel="noopener noreferrer" className="btn-cta btn-cta-hover text-sm w-full">ESCOLHER ACESSO PRO PREMIUM</a>
+              <a href={CHECKOUT_PRO} target="_blank" rel="noopener noreferrer" className="btn-cta btn-cta-hover text-sm w-full mb-[30px]">ESCOLHER ACESSO PRO PREMIUM</a>
             </div>
           </div>
         </div>

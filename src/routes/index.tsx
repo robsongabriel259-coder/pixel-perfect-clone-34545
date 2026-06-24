@@ -438,8 +438,8 @@ function Landing() {
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 badge-top" style={{ background: "var(--orange-badge)", color: "#fff", borderColor: "#2a1300" }}>
                 MAIS ESCOLHIDO
               </div>
-              <h3 className="text-center font-black uppercase mt-2" style={{ fontSize: "28px" }}>Acesso</h3>
-              <h3 className="text-center font-black uppercase text-neon-dark" style={{ fontSize: "28px" }}>Pro Premium</h3>
+              <h3 className="text-center font-black uppercase mt-2" style={{ fontSize: "28px", lineHeight: "26px" }}>Acesso</h3>
+              <h3 className="text-center font-black uppercase text-neon-dark" style={{ fontSize: "28px", lineHeight: "26px" }}>Pro Premium</h3>
               <p className="text-center text-xs text-purple-deep/70 mt-1">Para quem quer as 210 rodas e os 3 bônus para revisar e acompanhar.</p>
               <div className="bg-purple-deep rounded-xl p-3 my-4">
                 <div className="text-center text-white text-xs font-bold mb-2">MATERIAL COMPLETO</div>

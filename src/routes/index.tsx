@@ -332,7 +332,7 @@ function Landing() {
 
           <div className="mt-10 max-w-3xl mx-auto bg-white text-purple-deep rounded-2xl border-4 border-orange-badge p-6 md:p-8 flex items-center gap-4">
             <img src={kids} alt="" loading="lazy" width={120} height={120} className="hidden md:block w-24 h-24 object-contain" />
-            <p className="font-black uppercase text-[30px] text-center flex-1 leading-[0.6]">
+            <p className="font-black uppercase text-center flex-1" style={{ fontSize: "28px", lineHeight: "28px" }}>
               Este material ajuda a criança a transformar a matemática em uma anotação visual leve, clara e prática.
             </p>
           </div>

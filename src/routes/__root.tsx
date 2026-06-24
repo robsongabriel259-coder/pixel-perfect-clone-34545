@@ -68,16 +68,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         onLoad: "this.media='all'",
       } as any,
     ],
-    scripts: [
-      {
-        children: `window.pixelId = "6a39e17a693fbb4e2be2af2c";
-var a = document.createElement("script");
-a.setAttribute("async", "");
-a.setAttribute("defer", "");
-a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-document.head.appendChild(a);`,
-      } as any,
-    ],
     styles: [{ children: appCss }] as any,
   }),
   shellComponent: RootShell,

@@ -108,6 +108,13 @@ function WheelsCarousel() {
             />
           ))}
         </div>
+        <div className="flex justify-center mt-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 shadow-sm">
+            <span aria-hidden className="text-cyan-500 text-xl leading-none font-bold">←</span>
+            <span className="text-purple-deep font-extrabold text-xs tracking-wide">ARRASTE PARA O LADO</span>
+            <span aria-hidden className="text-base leading-none">🫳</span>
+          </div>
+        </div>
       </div>
     </section>
   );

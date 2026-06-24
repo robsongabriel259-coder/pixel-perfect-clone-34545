@@ -425,7 +425,7 @@ function Landing() {
               <div className="text-center my-4">
                 <div className="text-sm font-bold">R$</div>
                 <div className="text-5xl font-black text-neon-dark leading-none">17,90</div>
-                <div className="text-xs mt-1">ou 3X de R$ 6,92 no cartão</div>
+                <div className="mt-1" style={{ fontSize: "20px", lineHeight: "20px" }}>ou 3X de R$ 6,92 no cartão</div>
               </div>
               <a href={CHECKOUT_BASIC} target="_blank" rel="noopener noreferrer" className="btn-cta btn-cta-hover text-sm w-full">ESCOLHER ACESSO BASICO</a>
               <p className="text-center text-[10px] mt-4 text-purple-deep/70 uppercase">

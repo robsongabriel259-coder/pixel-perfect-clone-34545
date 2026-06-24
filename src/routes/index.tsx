@@ -272,8 +272,8 @@ function Landing() {
           <img
             src={heroMockup.url}
             alt="Rodas matemáticas mockup"
-            width={680}
-            height={762}
+            width={580}
+            height={650}
             fetchPriority="high"
             decoding="async"
             className="w-full max-w-[288px] md:max-w-[336px] drop-shadow-2xl"

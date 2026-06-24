@@ -307,10 +307,10 @@ function Landing() {
               PRONTO PARA<br />APLICAR
             </span>
           </h2>
-          <p className="text-neon mt-8 italic font-extrabold text-base md:text-lg leading-snug">
+          <p className="text-neon mt-8 italic font-extrabold text-[22px] leading-tight">
             Tudo organizado por ano<br />escolar e conteúdo para<br />facilitar
           </p>
-          <p className="text-white/85 text-sm md:text-base mt-4 leading-snug">
+          <p className="text-white/85 text-lg md:text-xl mt-4 leading-snug">
             sua rotina e transformar cada aula<br />em uma anotação matemática<br />visual.
           </p>
 

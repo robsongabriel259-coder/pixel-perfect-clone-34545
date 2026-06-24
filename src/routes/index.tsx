@@ -7,7 +7,7 @@ import bundle from "@/assets/bundle.png";
 import mockupRodas from "@/assets/mockup-rodas.jpg.asset.json";
 import mockupCompleto from "@/assets/mockup-rodas-completo.jpg.asset.json";
 import kids from "@/assets/kids.png";
-import wheel from "@/assets/wheel-sample.jpg";
+import wheel from "@/assets/capa-front.jpg.asset.json";
 import wheel01 from "@/assets/wheels/wheel-01.jpg.asset.json";
 import wheel02 from "@/assets/wheels/wheel-02.jpg.asset.json";
 import wheel03 from "@/assets/wheels/wheel-03.jpg.asset.json";
@@ -37,7 +37,7 @@ function WheelCard({ tag, title, desc }: { tag: string; title: string; desc: str
     <div className="rounded-2xl bg-purple-card border-2 border-neon/40 p-4 shadow-lg flex flex-col gap-3 min-w-[240px] md:min-w-0">
       <span className="badge-top self-start" style={{ background: "#e02d6b", color: "#fff", borderColor: "#fff" }}>{tag}</span>
       <div className="rounded-xl overflow-hidden bg-white aspect-square">
-        <img src={wheel} alt={title} loading="lazy" width={512} height={512} className="w-full h-full object-cover" />
+        <img src={wheel.url} alt={title} loading="lazy" className="w-full h-full object-cover" />
       </div>
       <h3 className="text-white font-extrabold text-sm uppercase">{title}</h3>
       <p className="text-white/80 text-xs leading-snug">{desc}</p>
@@ -421,7 +421,7 @@ function Landing() {
             <div className="rounded-2xl border-2 border-purple-deep/20 p-6 flex flex-col shadow-lg bg-white">
               <h3 className="text-center font-black uppercase" style={{ fontSize: "28px" }}>Acesso Básico</h3>
               <p className="text-center text-purple-deep/70 mt-1 mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>Para quem quer as 210 rodas prontas para imprimir e aplicar.</p>
-              <img src={wheel} alt="" loading="lazy" width={512} height={512} className="w-40 h-40 object-cover mx-auto mb-[30px] rounded-xl" />
+              <img src={wheel.url} alt="" loading="lazy" className="w-48 mx-auto mb-[30px] rounded-xl" />
               <p className="text-center mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>✓ 210 Rodas de matemática prontas para imprimir e aplicar (em PDF)</p>
               <div className="text-center mb-[30px]">
                 <div className="text-sm font-bold">R$</div>

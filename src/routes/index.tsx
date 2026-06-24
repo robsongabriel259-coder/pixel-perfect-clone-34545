@@ -137,7 +137,7 @@ function Landing() {
             ATIVIDADES DO ZERO.
           </h1>
 
-          <p className="text-white/90 text-sm md:text-base px-2">
+          <p className="text-white/90 text-[1.05rem] md:text-[1.2rem] font-medium px-2">
             Transforme cada cinteúdo em um mapa visual construido pelos alunos com anotações.
           </p>
 

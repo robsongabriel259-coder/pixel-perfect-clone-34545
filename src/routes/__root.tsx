@@ -42,6 +42,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+const FB_PIXEL_ID = "1044829704880739";
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -69,6 +71,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       } as any,
     ],
     styles: [{ children: appCss }] as any,
+    scripts: [
+      {
+        type: "text/javascript",
+        children: `
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '${FB_PIXEL_ID}');
+fbq('track', 'PageView');
+        `,
+      } as any,
+      {
+        type: "text/javascript",
+        children: `window.__fbqEventsSent = window.__fbqEventsSent || {};`,
+      } as any,
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,

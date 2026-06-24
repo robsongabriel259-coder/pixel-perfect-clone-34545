@@ -419,9 +419,9 @@ function Landing() {
             {/* Básico */}
             <div className="rounded-2xl border-2 border-purple-deep/20 p-6 flex flex-col shadow-lg bg-white">
               <h3 className="text-center font-black uppercase" style={{ fontSize: "28px" }}>Acesso Básico</h3>
-              <p className="text-center text-xs text-purple-deep/70 mt-1">Para quem quer as 210 rodas prontas para imprimir e aplicar.</p>
+              <p className="text-center text-purple-deep/70 mt-1" style={{ fontSize: "20px", lineHeight: "20px" }}>Para quem quer as 210 rodas prontas para imprimir e aplicar.</p>
               <img src={wheel} alt="" loading="lazy" width={512} height={512} className="w-40 h-40 object-cover mx-auto my-4 rounded-xl" />
-              <p className="text-center text-xs">✓ 210 Rodas de matemática prontas para imprimir e aplicar (em PDF)</p>
+              <p className="text-center" style={{ fontSize: "20px", lineHeight: "20px" }}>✓ 210 Rodas de matemática prontas para imprimir e aplicar (em PDF)</p>
               <div className="text-center my-4">
                 <div className="text-sm font-bold">R$</div>
                 <div className="text-5xl font-black text-neon-dark leading-none">17,90</div>

@@ -120,7 +120,7 @@ function Landing() {
           </div>
 
           <img
-            src={heroMockup}
+            src={heroMockup.url}
             alt="Rodas matemáticas mockup"
             width={1024}
             height={1024}

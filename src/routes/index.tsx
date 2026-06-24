@@ -119,7 +119,7 @@ function Landing() {
             alt="Rodas matemáticas mockup"
             width={1024}
             height={1024}
-            className="w-full max-w-sm md:max-w-md drop-shadow-2xl"
+            className="w-full max-w-[288px] md:max-w-[336px] drop-shadow-2xl"
           />
 
           <div className="btn-cta text-xs md:text-sm cursor-default !py-2 !px-5">

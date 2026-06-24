@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import heroMockup from "@/assets/hero-mockup.png";
+import heroMockup from "@/assets/hero-mockup.jpg.asset.json";
 import bundle from "@/assets/bundle.png";
 import kids from "@/assets/kids.png";
 import wheel from "@/assets/wheel-sample.jpg";
@@ -120,7 +120,7 @@ function Landing() {
           </div>
 
           <img
-            src={heroMockup}
+            src={heroMockup.url}
             alt="Rodas matemáticas mockup"
             width={1024}
             height={1024}

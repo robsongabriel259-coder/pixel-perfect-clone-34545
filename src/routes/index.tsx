@@ -217,9 +217,9 @@ const ITEM_LIST = [
 ];
 
 const BONUSES = [
-  { n: "01", title: "REVISÃO MATEMÁTICA EM 5 MIN", cards: "20 CARTÕES", desc: "Revise em 5 minutos o que foi esquecido e reforce os pontos que ainda geram dúvidas." },
-  { n: "02", title: "EXPLIQUE COMO VOCÊ PENSOU", cards: "20 CARTÕES", desc: "Descubra onde a criança se confunde e ajude-a a explicar o próprio raciocínio." },
-  { n: "03", title: "ACOMPANHAMENTO DA APRENDIZAGEM", cards: "20 CARTÕES", desc: "Identifique avanços e dificuldades antes que pequenas dúvidas atrasem a aprendizagem." },
+  { n: "01", img: bonus01.url, desc: "Revise em 5 minutos o que foi esquecido e reforce os pontos que ainda geram dúvidas." },
+  { n: "02", img: bonus02.url, desc: "Descubra onde a criança se confunde e ajude-a a explicar o próprio raciocínio." },
+  { n: "03", img: bonus03.url, desc: "Identifique avanços e dificuldades antes que pequenas dúvidas atrasem a aprendizagem." },
 ];
 
 const PREMIUM_LIST = [

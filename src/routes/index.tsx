@@ -114,10 +114,13 @@ function WheelsCarousel() {
 }
 
 const WHEELS = [
-  { tag: "EDUCAÇÃO INFANTIL", title: "RODA DOS NÚMEROS", desc: "Atividade lúdica para reconhecer numerais e quantidades com a criança." },
-  { tag: "1º ANO/2º ANO", title: "ADIÇÃO E SUBTRAÇÃO", desc: "Roda completa para praticar contas básicas de forma visual." },
-  { tag: "2º ANO/3º ANO", title: "MULTIPLICAÇÃO", desc: "A criança preenche cada fatia da roda com o resultado da multiplicação." },
-  { tag: "4º ANO/5º ANO", title: "FRAÇÕES E DECIMAIS", desc: "Anotação visual para registrar e revisar frações e números decimais." },
+  { src: wheel01.url, alt: "Primeiros números aos 4 — Educação Infantil" },
+  { src: wheel02.url, alt: "Descubra os lados aos 5 — Educação Infantil" },
+  { src: wheel03.url, alt: "Simetria divertida aos 6 — 1º Ano" },
+  { src: wheel04.url, alt: "Que horas são? aos 7 — 2º Ano" },
+  { src: wheel05.url, alt: "Probabilidade aos 8 — 3º Ano" },
+  { src: wheel06.url, alt: "Explore as chances aos 9 — 4º Ano" },
+  { src: wheel07.url, alt: "Domine o tempo aos 10 — 5º Ano" },
 ];
 
 const BENEFITS = [

@@ -402,7 +402,7 @@ function Landing() {
               </div>
             ))}
           </div>
-          <div className="mt-8"><CtaButton /></div>
+          <div className="mt-[30px]"><CtaButton /></div>
         </div>
       </section>
 

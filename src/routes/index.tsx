@@ -319,7 +319,7 @@ function Landing() {
               <div key={b.title} className="bg-white rounded-2xl p-6 border-2 border-orange-500 flex flex-col items-center text-center gap-3 shadow-lg">
                 <div className="text-5xl">{b.icon}</div>
                 <h3 className="font-extrabold text-lg uppercase text-[#1a1147] leading-tight">{b.title}</h3>
-                <p className="text-[#1a1147]/75 text-sm leading-snug">{b.desc}</p>
+                <p className="text-[#1a1147] text-[17px] font-medium leading-snug">{b.desc}</p>
               </div>
             ))}
           </div>

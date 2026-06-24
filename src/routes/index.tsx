@@ -392,7 +392,7 @@ function Landing() {
           <p className="text-white/80 italic mt-[30px]" style={{ fontSize: "26px", lineHeight: "26px" }}>Você também vai receber…</p>
           <div className="badge-top mt-[30px] mx-auto" style={{ background: "var(--orange-badge)", color: "#fff", fontSize: "26px", lineHeight: "26px" }}>03 BÔNUS EXCLUSIVOS</div>
 
-          <div className="grid md:grid-cols-3 gap-5 mt-8">
+          <div className="grid md:grid-cols-3 gap-5 mt-[30px]">
             {BONUSES.map((b) => (
               <div key={b.n} className="bg-purple-card rounded-2xl border-2 border-neon/30 p-5 text-left">
                 <div className="text-neon font-black text-sm">BÔNUS {b.n}</div>

@@ -84,87 +84,10 @@ function RootShell({ children }: { children: ReactNode }) {
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
         <link rel="preconnect" href="https://cdn.utmify.com.br" />
         <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
-        {/* Meta Pixel Base */}
+        {/* Meta Pixel Oficial */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-var LANDING_META_PIXEL_ID = '1044829704880739';
-
-window.__landingMetaPixelInitialized = false;
-window.__landingMetaEventsSent = window.__landingMetaEventsSent || {};
-window.__landingMetaManualCall = false;
-
-window.__sendLandingMetaBeacon = function(eventName, params, eventId) {
-  try {
-    var query = new URLSearchParams({
-      id: LANDING_META_PIXEL_ID,
-      ev: eventName,
-      dl: window.location.href,
-      rl: document.referrer || '',
-      if: 'false',
-      ts: String(Date.now()),
-      sw: String(window.screen && window.screen.width ? window.screen.width : ''),
-      sh: String(window.screen && window.screen.height ? window.screen.height : ''),
-      v: '2.9.345',
-      r: 'stable',
-      eid: eventId
-    });
-
-    if (params) {
-      Object.keys(params).forEach(function(key) {
-        if (params[key] !== undefined && params[key] !== null) {
-          query.append('cd[' + key + ']', String(params[key]));
-        }
-      });
-    }
-
-    new Image(1, 1).src = 'https://www.facebook.com/tr?' + query.toString();
-  } catch (error) {}
-};
-
-window.__shouldBlockLandingFbqCall = function(args) {
-  var command = args && args[0];
-  var value = args && args[1];
-
-  if (command === 'init' && value === LANDING_META_PIXEL_ID && window.__landingMetaPixelInitialized) {
-    return true;
-  }
-
-  if (command === 'track' && (value === 'InitiateCheckout' || value === 'Purchase')) {
-    return true;
-  }
-
-  if (
-    !window.__landingMetaManualCall &&
-    command === 'track' &&
-    window.__landingMetaEventsSent &&
-    window.__landingMetaEventsSent[value]
-  ) {
-    return true;
-  }
-
-  return false;
-};
-
-window.__trackLandingMeta = function(eventName, params) {
-  if (window.__landingMetaEventsSent[eventName]) return;
-
-  var eventId = 'lp_' + eventName + '_' + Date.now() + '_' + Math.random().toString(36).slice(2);
-  window.__landingMetaEventsSent[eventName] = true;
-
-  try {
-    if (typeof window.fbq === 'function') {
-      window.__landingMetaManualCall = true;
-      window.fbq('track', eventName, params || {}, { eventID: eventId });
-      window.__landingMetaManualCall = false;
-    }
-  } catch (error) {
-    window.__landingMetaManualCall = false;
-  }
-
-  window.__sendLandingMetaBeacon(eventName, params || {}, eventId);
-};
-
 !function(f,b,e,v,n,t,s){
   if(f.fbq)return;
   n=f.fbq=function(){
@@ -182,50 +105,27 @@ window.__trackLandingMeta = function(eventName, params) {
   s.parentNode.insertBefore(t,s);
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-if (window.fbq && window.fbq.queue) {
-  var landingOriginalQueuePush = window.fbq.queue.push.bind(window.fbq.queue);
-  window.fbq.queue.push = function(args) {
-    if (window.__shouldBlockLandingFbqCall(args)) return window.fbq.queue.length;
-    return landingOriginalQueuePush(args);
-  };
-}
-
 fbq('init', '1044829704880739');
-window.__landingMetaPixelInitialized = true;
-
-(function waitForLandingFbqCallMethod() {
-  var attempts = 0;
-  var interval = setInterval(function() {
-    attempts += 1;
-
-    if (window.fbq && window.fbq.callMethod && !window.fbq.__landingDeduped) {
-      var originalCallMethod = window.fbq.callMethod;
-      window.fbq.callMethod = function() {
-        if (window.__shouldBlockLandingFbqCall(arguments)) return;
-        return originalCallMethod.apply(window.fbq, arguments);
-      };
-      window.fbq.__landingDeduped = true;
-      clearInterval(interval);
-    }
-
-    if (attempts >= 80) clearInterval(interval);
-  }, 50);
-})();
-
-window.__trackLandingMeta('PageView');
+fbq('track', 'PageView', {
+  page_location: window.location.href,
+  page_title: document.title
+});
 `.trim(),
           }}
         />
+        <noscript>
+          <img height="1" width="1" style={{ display: "none" }} src="https://www.facebook.com/tr?id=1044829704880739&ev=PageView&noscript=1" alt="" />
+        </noscript>
         {/* UTMFY Pixel */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
 window.pixelId = "6a39e17a693fbb4e2be2af2c";
-var utmfyScript = document.createElement("script");
-utmfyScript.setAttribute("async", "");
-utmfyScript.setAttribute("defer", "");
-utmfyScript.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-document.head.appendChild(utmfyScript);
+var utmfyPixel = document.createElement("script");
+utmfyPixel.setAttribute("async", "");
+utmfyPixel.setAttribute("defer", "");
+utmfyPixel.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+document.head.appendChild(utmfyPixel);
 `.trim(),
           }}
         />
@@ -237,12 +137,98 @@ document.head.appendChild(utmfyScript);
           async
           defer
         />
+        {/* Eventos da landing */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+(function () {
+  window.__lpPixelEventsSent = window.__lpPixelEventsSent || {};
+
+  function trackOnce(key, eventName, params) {
+    if (window.__lpPixelEventsSent[key]) return;
+    window.__lpPixelEventsSent[key] = true;
+
+    if (typeof window.fbq === "function") {
+      window.fbq("track", eventName, params || {});
+      console.log("Meta Pixel event fired:", eventName, params || {});
+    }
+  }
+
+  function setupViewContentObserver() {
+    var attempts = 0;
+
+    var waitForPriceSection = setInterval(function () {
+      attempts++;
+      var priceSection = document.getElementById("secao-precos");
+
+      if (priceSection) {
+        clearInterval(waitForPriceSection);
+
+        if ("IntersectionObserver" in window) {
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                trackOnce("viewcontent_precos", "ViewContent", {
+                  content_name: "Sessao de Precos",
+                  content_category: "Landing Page",
+                  page_location: window.location.href
+                });
+                observer.disconnect();
+              }
+            });
+          }, {
+            threshold: 0.35
+          });
+
+          observer.observe(priceSection);
+        }
+      }
+
+      if (attempts >= 40) {
+        clearInterval(waitForPriceSection);
+      }
+    }, 250);
+  }
+
+  document.addEventListener("click", function (event) {
+    var checkoutElement = event.target.closest(".checkout-link");
+
+    if (!checkoutElement) return;
+
+    var checkoutUrl = checkoutElement.getAttribute("href");
+
+    if (!checkoutUrl || checkoutUrl === "#") {
+      trackOnce("lead_qualificado_checkout", "Lead", {
+        content_name: "Lead Qualificado",
+        content_category: "Clique para Checkout",
+        lead_type: "qualified_checkout_click",
+        page_location: window.location.href
+      });
+      return;
+    }
+
+    event.preventDefault();
+
+    trackOnce("lead_qualificado_checkout", "Lead", {
+      content_name: "Lead Qualificado",
+      content_category: "Clique para Checkout",
+      lead_type: "qualified_checkout_click",
+      page_location: window.location.href
+    });
+
+    setTimeout(function () {
+      window.location.href = checkoutUrl;
+    }, 180);
+  }, true);
+
+  setupViewContentObserver();
+})();
+`.trim(),
+          }}
+        />
         <HeadContent />
       </head>
       <body>
-        <noscript>
-          <img height="1" width="1" style={{ display: "none" }} src="https://www.facebook.com/tr?id=1044829704880739&ev=PageView&noscript=1" alt="" />
-        </noscript>
         {children}
         <Scripts />
       </body>

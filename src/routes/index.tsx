@@ -3,6 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import heroMockup from "@/assets/hero-mockup.jpg.asset.json";
 import tagSuperior from "@/assets/tag-superior.png.asset.json";
 import bundle from "@/assets/bundle.png";
+import mockupRodas from "@/assets/mockup-rodas.jpg.asset.json";
 import kids from "@/assets/kids.png";
 import wheel from "@/assets/wheel-sample.jpg";
 import wheel01 from "@/assets/wheels/wheel-01.jpg.asset.json";
@@ -336,7 +337,7 @@ function Landing() {
           </p>
 
           <div className="flex justify-center mt-8">
-            <img src={bundle} alt="Material completo" loading="lazy" width={1024} height={768} className="w-full max-w-xl" />
+            <img src={mockupRodas.url} alt="Material completo Rodas Matemáticas" loading="lazy" className="w-full max-w-xl" />
           </div>
 
           <div className="mt-10 max-w-3xl mx-auto bg-white text-purple-deep rounded-2xl border-4 border-orange-badge p-6 md:p-8 flex items-center gap-4">

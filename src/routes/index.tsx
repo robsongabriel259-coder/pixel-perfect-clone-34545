@@ -37,7 +37,7 @@ function WheelCard({ tag, title, desc }: { tag: string; title: string; desc: str
     <div className="rounded-2xl bg-purple-card border-2 border-neon/40 p-4 shadow-lg flex flex-col gap-3 min-w-[240px] md:min-w-0">
       <span className="badge-top self-start" style={{ background: "#e02d6b", color: "#fff", borderColor: "#fff" }}>{tag}</span>
       <div className="rounded-xl overflow-hidden bg-white aspect-square">
-        <img src={wheel} alt={title} loading="lazy" width={512} height={512} className="w-full h-full object-cover" />
+        <img src={wheel.url} alt={title} loading="lazy" className="w-full h-full object-cover" />
       </div>
       <h3 className="text-white font-extrabold text-sm uppercase">{title}</h3>
       <p className="text-white/80 text-xs leading-snug">{desc}</p>

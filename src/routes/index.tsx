@@ -418,7 +418,7 @@ function Landing() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Básico */}
             <div className="rounded-2xl border-2 border-purple-deep/20 p-6 flex flex-col shadow-lg bg-white">
-              <h3 className="text-center font-black uppercase text-lg">Acesso Básico</h3>
+              <h3 className="text-center font-black uppercase" style={{ fontSize: "28px" }}>Acesso Básico</h3>
               <p className="text-center text-xs text-purple-deep/70 mt-1">Para quem quer as 210 rodas prontas para imprimir e aplicar.</p>
               <img src={wheel} alt="" loading="lazy" width={512} height={512} className="w-40 h-40 object-cover mx-auto my-4 rounded-xl" />
               <p className="text-center text-xs">✓ 210 Rodas de matemática prontas para imprimir e aplicar (em PDF)</p>
@@ -438,8 +438,8 @@ function Landing() {
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 badge-top" style={{ background: "var(--orange-badge)", color: "#fff", borderColor: "#2a1300" }}>
                 MAIS ESCOLHIDO
               </div>
-              <h3 className="text-center font-black uppercase text-lg mt-2">Acesso</h3>
-              <h3 className="text-center font-black uppercase text-2xl text-neon-dark">Pro Premium</h3>
+              <h3 className="text-center font-black uppercase mt-2" style={{ fontSize: "28px" }}>Acesso</h3>
+              <h3 className="text-center font-black uppercase text-neon-dark" style={{ fontSize: "28px" }}>Pro Premium</h3>
               <p className="text-center text-xs text-purple-deep/70 mt-1">Para quem quer as 210 rodas e os 3 bônus para revisar e acompanhar.</p>
               <div className="bg-purple-deep rounded-xl p-3 my-4">
                 <div className="text-center text-white text-xs font-bold mb-2">MATERIAL COMPLETO</div>

@@ -80,18 +80,6 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="preconnect" href="https://cdn.utmify.com.br" />
-        <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.pixelId = "6a39e17a693fbb4e2be2af2c";
-var a = document.createElement("script");
-a.setAttribute("async", "");
-a.setAttribute("defer", "");
-a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-document.head.appendChild(a);`,
-          }}
-        />
         <HeadContent />
       </head>
       <body>{children}<Scripts /></body>

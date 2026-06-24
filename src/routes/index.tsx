@@ -271,7 +271,7 @@ function Landing() {
             PARA ALUNOS DE 04 A 10 ANOS
           </div>
 
-          <h1 className="text-xl md:text-3xl font-black uppercase leading-[0.95] py-3 mt-5">
+          <h1 className="text-xl md:text-3xl font-black uppercase leading-[0.95] py-3 mt-4">
             TENHA + 200 RODAS<br />
             MATEMÁTICAS PREENCHÍVEIS<br />
             E ORGANIZADAS DA<br />

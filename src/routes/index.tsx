@@ -5,6 +5,13 @@ import tagSuperior from "@/assets/tag-superior.png.asset.json";
 import bundle from "@/assets/bundle.png";
 import kids from "@/assets/kids.png";
 import wheel from "@/assets/wheel-sample.jpg";
+import wheel01 from "@/assets/wheels/wheel-01.jpg.asset.json";
+import wheel02 from "@/assets/wheels/wheel-02.jpg.asset.json";
+import wheel03 from "@/assets/wheels/wheel-03.jpg.asset.json";
+import wheel04 from "@/assets/wheels/wheel-04.jpg.asset.json";
+import wheel05 from "@/assets/wheels/wheel-05.jpg.asset.json";
+import wheel06 from "@/assets/wheels/wheel-06.jpg.asset.json";
+import wheel07 from "@/assets/wheels/wheel-07.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Landing,

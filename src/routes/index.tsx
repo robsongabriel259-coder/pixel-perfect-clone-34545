@@ -14,6 +14,9 @@ import wheel04 from "@/assets/wheels/wheel-04.jpg.asset.json";
 import wheel05 from "@/assets/wheels/wheel-05.jpg.asset.json";
 import wheel06 from "@/assets/wheels/wheel-06.jpg.asset.json";
 import wheel07 from "@/assets/wheels/wheel-07.jpg.asset.json";
+import bonus01 from "@/assets/bonus-01.jpg.asset.json";
+import bonus02 from "@/assets/bonus-02.jpg.asset.json";
+import bonus03 from "@/assets/bonus-03.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Landing,

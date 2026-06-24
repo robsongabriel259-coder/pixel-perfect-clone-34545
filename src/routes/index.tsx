@@ -314,15 +314,16 @@ function Landing() {
             sua rotina e transformar cada aula<br />em uma anotação matemática<br />visual.
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+          <div className="grid grid-cols-1 gap-5 mt-10 max-w-sm mx-auto">
             {BENEFITS.map((b) => (
-              <div key={b.title} className="bg-purple-card rounded-2xl p-5 border-2 border-white/10 flex flex-col items-center text-center gap-2">
-                <div className="text-4xl">{b.icon}</div>
-                <h3 className="font-extrabold text-sm uppercase">{b.title}</h3>
-                <p className="text-white/75 text-xs leading-snug">{b.desc}</p>
+              <div key={b.title} className="bg-white rounded-2xl p-6 border-2 border-orange-500 flex flex-col items-center text-center gap-3 shadow-lg">
+                <div className="text-5xl">{b.icon}</div>
+                <h3 className="font-extrabold text-lg uppercase text-[#1a1147] leading-tight">{b.title}</h3>
+                <p className="text-[#1a1147]/75 text-sm leading-snug">{b.desc}</p>
               </div>
             ))}
           </div>
+
 
           <p className="mt-12 text-white text-lg md:text-xl font-bold">
             Mais do que atividades: <span className="italic">anotações matemáticas</span><br />

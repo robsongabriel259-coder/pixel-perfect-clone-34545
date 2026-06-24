@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "asset_id": "21225936-a839-4f2b-9c9a-141ca921299e",
+  "asset_id": "46af8cc6-5432-4d43-a9ba-f93b65f6094f",
   "project_id": "86876cf8-1e64-4105-8edf-184afb5c9a0e",
-  "url": "/__l5e/assets-v1/21225936-a839-4f2b-9c9a-141ca921299e/wheel-03.jpg",
-  "r2_key": "a/v1/86876cf8-1e64-4105-8edf-184afb5c9a0e/21225936-a839-4f2b-9c9a-141ca921299e/wheel-03.jpg",
-  "original_filename": "wheel-03.jpg",
-  "size": 80654,
-  "content_type": "image/jpeg",
-  "created_at": "2026-06-24T14:36:36Z"
+  "url": "/__l5e/assets-v1/46af8cc6-5432-4d43-a9ba-f93b65f6094f/wheel-03.webp",
+  "r2_key": "a/v1/86876cf8-1e64-4105-8edf-184afb5c9a0e/46af8cc6-5432-4d43-a9ba-f93b65f6094f/wheel-03.webp",
+  "original_filename": "wheel-03.webp",
+  "size": 59998,
+  "content_type": "image/webp",
+  "created_at": "2026-06-24T18:43:39Z"
 }

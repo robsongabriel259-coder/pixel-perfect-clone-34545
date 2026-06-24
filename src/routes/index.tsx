@@ -91,9 +91,9 @@ function WheelsCarousel() {
             className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-none px-10"
             style={{ scrollbarWidth: "none" }}
           >
-            {WHEELS.map((w) => (
-              <div key={w.title} className="snap-center shrink-0 w-full flex justify-center">
-                <WheelCard {...w} />
+            {WHEELS.map((w, i) => (
+              <div key={i} className="snap-center shrink-0 w-full flex justify-center">
+                <img src={w.src} alt={w.alt} loading="lazy" className="w-full max-w-[340px] h-auto" />
               </div>
             ))}
           </div>

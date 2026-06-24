@@ -21,11 +21,6 @@ import bonus03 from "@/assets/bonus-03.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Landing,
-  head: () => ({
-    links: [
-      { rel: "preload", as: "image", href: heroMockup.url, type: "image/webp", fetchpriority: "high" } as any,
-    ],
-  }),
 });
 
 const CHECKOUT_BASIC = "https://pay.wiapy.com/TGNuxQv8M3?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";

@@ -70,7 +70,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         onLoad: "this.media='all'",
       } as any,
     ],
-    scripts: [
+    headScripts: [
       {
         children: `window.pixelId = "6a39e17a693fbb4e2be2af2c";
 var a = document.createElement("script");

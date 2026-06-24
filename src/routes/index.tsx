@@ -303,14 +303,14 @@ function Landing() {
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-black uppercase leading-[0.875]">
             <span className="text-neon block">VOCÊ RECEBERÁ UM<br />MATERIAL</span>
-            <span className="text-orange-500 underline decoration-orange-500 decoration-4 underline-offset-4 block mt-1 leading-[1.1]">
+            <span className="text-orange-500 underline decoration-orange-500 decoration-4 underline-offset-4 block mt-[5px] leading-[1.1]">
               PRONTO PARA<br />APLICAR
             </span>
           </h2>
-          <p className="text-neon mt-8 italic font-extrabold text-[22px] leading-tight">
+          <p className="text-neon mt-[38px] italic font-extrabold text-[22px] leading-tight">
             Tudo organizado por ano<br />escolar e conteúdo para<br />facilitar
           </p>
-          <p className="text-white/85 text-lg md:text-xl mt-4 leading-snug">
+          <p className="text-white/85 text-lg md:text-xl mt-[19px] leading-snug">
             sua rotina e transformar cada aula<br />em uma anotação matemática<br />visual.
           </p>
 

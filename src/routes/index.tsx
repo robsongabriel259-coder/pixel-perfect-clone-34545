@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDownCircle } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
-import heroMockup from "@/assets/hero-mockup.jpg.asset.json";
+import heroMockup from "@/assets/hero-mockup.webp";
 import tagSuperior from "@/assets/tag-superior.png.asset.json";
 import bundle from "@/assets/bundle.webp";
 import mockupRodas from "@/assets/mockup-rodas.jpg.asset.json";
@@ -21,11 +21,6 @@ import bonus03 from "@/assets/bonus-03.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Landing,
-  head: () => ({
-    links: [
-      { rel: "preload", as: "image", href: heroMockup.url, type: "image/webp", fetchpriority: "high" } as any,
-    ],
-  }),
 });
 
 const CHECKOUT_BASIC = "https://pay.wiapy.com/TGNuxQv8M3?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
@@ -270,7 +265,7 @@ function Landing() {
 
 
           <img
-            src={heroMockup.url}
+            src={heroMockup}
             alt="Rodas matemáticas mockup"
             width={504}
             height={565}

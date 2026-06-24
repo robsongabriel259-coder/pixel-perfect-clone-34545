@@ -310,7 +310,7 @@ function Landing() {
           <p className="text-neon mt-[38px] italic font-extrabold text-[22px] leading-tight">
             Tudo organizado por ano<br />escolar e conteúdo para<br />facilitar
           </p>
-          <p className="text-white/85 text-lg md:text-xl mt-[19px] leading-snug">
+          <p className="text-white text-lg md:text-xl mt-[19px] leading-snug font-medium">
             sua rotina e transformar cada aula<br />em uma anotação matemática<br />visual.
           </p>
 

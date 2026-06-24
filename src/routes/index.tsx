@@ -301,7 +301,7 @@ function Landing() {
       {/* PRONTO PARA APLICAR */}
       <section className="bg-purple-dark py-14">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-black uppercase leading-tight">
+          <h2 className="text-3xl md:text-4xl font-black uppercase leading-[0.875]">
             <span className="text-neon block">VOCÊ RECEBERÁ UM<br />MATERIAL</span>
             <span className="text-orange-500 underline decoration-orange-500 decoration-4 underline-offset-4 block mt-1">
               PRONTO PARA<br />APLICAR

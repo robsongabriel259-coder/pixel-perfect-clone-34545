@@ -352,19 +352,19 @@ function Landing() {
       </section>
 
       {/* IDEAL PARA VOCÊ */}
-      <section className="bg-purple-deep py-14">
+      <section className="bg-white py-14">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-white text-xl md:text-2xl font-black uppercase mb-8">Ideal para você que deseja:</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <h2 className="text-purple-deep text-2xl md:text-3xl font-black uppercase mb-8">Ideal para você que deseja:</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {IDEAL.map((b) => (
-              <div key={b.title} className="bg-purple-card rounded-2xl p-5 border-2 border-neon/30 flex flex-col items-center text-center gap-2">
-                <div className="text-4xl">{b.icon}</div>
-                <h3 className="font-extrabold text-xs md:text-sm uppercase">{b.title}</h3>
-                <p className="text-white/75 text-xs leading-snug">{b.desc}</p>
+              <div key={b.title} className="bg-purple-deep rounded-2xl p-8 border-2 border-orange-badge flex flex-col items-center text-center gap-4">
+                <div className="text-5xl">{b.icon}</div>
+                <h3 className="font-black text-base md:text-lg uppercase text-neon">{b.title}</h3>
+                <p className="text-white text-sm md:text-base leading-snug">{b.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-white/80 mt-6 text-sm">Pouco tempo por dia que faz toda a diferença.</p>
+          <p className="text-purple-deep mt-8 text-base font-semibold">Pouco tempo por dia que faz toda a diferença.</p>
           <div className="mt-6"><CtaButton /></div>
         </div>
       </section>

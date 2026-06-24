@@ -89,7 +89,6 @@ function RootShell({ children }: { children: ReactNode }) {
             __html: `
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','1044829704880739');
-fbq('track','PageView');
 `.trim(),
           }}
         />
@@ -115,13 +114,38 @@ fbq('track','PageView');
 (function(){
   if (window.__lpPixelInit) return;
   window.__lpPixelInit = true;
+  var pixelId = "1044829704880739";
   window.__lpPixelEvents = window.__lpPixelEvents || {};
+  window.__lpPixelBeacons = window.__lpPixelBeacons || [];
 
-  function trackOnce(key, eventName, params){
+  function trackMetaOnce(key, eventName, params){
     if (window.__lpPixelEvents[key]) return;
     window.__lpPixelEvents[key] = true;
-    if (typeof fbq === "function") fbq("track", eventName, params || {});
+
+    var query = new URLSearchParams();
+    query.set("id", pixelId);
+    query.set("ev", eventName);
+    query.set("dl", window.location.href);
+    query.set("rl", document.referrer || "");
+    query.set("if", "false");
+    query.set("ts", String(Date.now()));
+    query.set("v", "2.9.345");
+    query.set("r", "stable");
+
+    if (params) {
+      Object.keys(params).forEach(function(name){
+        query.set("cd[" + name + "]", String(params[name]));
+      });
+    }
+
+    var img = new Image(1, 1);
+    img.alt = "";
+    img.style.display = "none";
+    img.src = "https://www.facebook.com/tr/?" + query.toString();
+    window.__lpPixelBeacons.push(img);
   }
+
+  trackMetaOnce("pageview", "PageView");
 
   function setup(){
     var priceSection = document.getElementById("secao-precos");
@@ -129,7 +153,7 @@ fbq('track','PageView');
       var obs = new IntersectionObserver(function(entries){
         entries.forEach(function(entry){
           if (entry.isIntersecting) {
-            trackOnce("viewcontent_precos", "ViewContent", {
+            trackMetaOnce("viewcontent_precos", "ViewContent", {
               content_name: "Sessao de Precos",
               content_category: "Landing Page"
             });
@@ -147,12 +171,13 @@ fbq('track','PageView');
       var checkoutUrl = button.getAttribute("href");
       if (!checkoutUrl || checkoutUrl === "#") return;
       event.preventDefault();
-      trackOnce("lead_qualificado", "Lead", {
+      event.stopImmediatePropagation();
+      trackMetaOnce("lead_qualificado", "Lead", {
         content_name: "Lead Qualificado",
         content_category: "Clique para Checkout",
         lead_type: "qualified_checkout_click"
       });
-      setTimeout(function(){ window.location.href = checkoutUrl; }, 150);
+      setTimeout(function(){ window.location.href = checkoutUrl; }, 250);
     }, true);
   }
 

@@ -263,8 +263,8 @@ function Landing() {
           <img
             src={tagSuperior.url}
             alt="+200 Rodas Matemáticas"
-            width={600}
-            height={120}
+            width={300}
+            height={48}
             className="w-auto h-10 md:h-12"
           />
 
@@ -272,8 +272,8 @@ function Landing() {
           <img
             src={heroMockup.url}
             alt="Rodas matemáticas mockup"
-            width={680}
-            height={762}
+            width={580}
+            height={650}
             fetchPriority="high"
             decoding="async"
             className="w-full max-w-[288px] md:max-w-[336px] drop-shadow-2xl"
@@ -339,7 +339,7 @@ function Landing() {
           </p>
 
           <div className="flex justify-center mt-8">
-            <img src={mockupRodas.url} alt="Material completo Rodas Matemáticas" loading="lazy" decoding="async" width={880} height={960} className="w-full max-w-[432px] h-auto" />
+            <img src={mockupRodas.url} alt="Material completo Rodas Matemáticas" loading="lazy" decoding="async" width={680} height={742} className="w-full max-w-[432px] h-auto" />
           </div>
 
           <div className="mt-10 max-w-3xl mx-auto bg-white text-purple-deep rounded-2xl border-4 border-orange-badge p-6 md:p-8 flex items-center gap-4">

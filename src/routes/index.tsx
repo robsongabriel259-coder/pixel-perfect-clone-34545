@@ -126,7 +126,7 @@ function WheelsCarousel() {
         <h2 className="text-center text-purple-deep font-black uppercase mb-8 px-4" style={{ fontSize: "28px", lineHeight: "28px" }}>
           Conheça algumas das 210 rodas<br className="hidden md:block" /> matemáticas que você vai receber
         </h2>
-        <div className="relative mx-auto max-w-[320px] md:max-w-[360px]">
+        <div className="relative mx-auto max-w-[318px] md:max-w-[360px]">
           <button
             type="button"
             aria-label="Anterior"
@@ -419,16 +419,16 @@ function Landing() {
             {/* Básico */}
             <div className="rounded-2xl border-2 border-purple-deep/20 p-6 flex flex-col shadow-lg bg-white">
               <h3 className="text-center font-black uppercase" style={{ fontSize: "28px" }}>Acesso Básico</h3>
-              <p className="text-center text-purple-deep/70 mt-1" style={{ fontSize: "20px", lineHeight: "20px" }}>Para quem quer as 210 rodas prontas para imprimir e aplicar.</p>
+              <p className="text-center text-purple-deep/70 mt-1" style={{ fontSize: "18px", lineHeight: "18px" }}>Para quem quer as 210 rodas prontas para imprimir e aplicar.</p>
               <img src={wheel} alt="" loading="lazy" width={512} height={512} className="w-40 h-40 object-cover mx-auto my-4 rounded-xl" />
-              <p className="text-center" style={{ fontSize: "20px", lineHeight: "20px" }}>✓ 210 Rodas de matemática prontas para imprimir e aplicar (em PDF)</p>
+              <p className="text-center" style={{ fontSize: "18px", lineHeight: "18px" }}>✓ 210 Rodas de matemática prontas para imprimir e aplicar (em PDF)</p>
               <div className="text-center my-4">
                 <div className="text-sm font-bold">R$</div>
                 <div className="text-5xl font-black text-neon-dark leading-none">17,90</div>
-                <div className="mt-1" style={{ fontSize: "20px", lineHeight: "20px" }}>ou 3X de R$ 6,92 no cartão</div>
+                <div className="mt-1" style={{ fontSize: "18px", lineHeight: "18px" }}>ou 3X de R$ 6,92 no cartão</div>
               </div>
               <a href={CHECKOUT_BASIC} target="_blank" rel="noopener noreferrer" className="btn-cta btn-cta-hover text-sm w-full">ESCOLHER ACESSO BASICO</a>
-              <p className="text-center mt-4 text-purple-deep/70 uppercase" style={{ fontSize: "20px", lineHeight: "20px" }}>
+              <p className="text-center mt-4 text-purple-deep/70 uppercase" style={{ fontSize: "18px", lineHeight: "18px" }}>
                 Atenção: temos uma oferta ainda mais vantajosa para você! Veja logo abaixo
               </p>
             </div>
@@ -440,7 +440,7 @@ function Landing() {
               </div>
               <h3 className="text-center font-black uppercase mt-2" style={{ fontSize: "28px", lineHeight: "26px" }}>Acesso</h3>
               <h3 className="text-center font-black uppercase text-neon-dark" style={{ fontSize: "28px", lineHeight: "26px" }}>Pro Premium</h3>
-              <p className="text-center text-purple-deep/70 mt-1" style={{ fontSize: "20px", lineHeight: "20px" }}>Para quem quer as 210 rodas e os 3 bônus para revisar e acompanhar.</p>
+              <p className="text-center text-purple-deep/70 mt-1" style={{ fontSize: "18px", lineHeight: "18px" }}>Para quem quer as 210 rodas e os 3 bônus para revisar e acompanhar.</p>
               <div className="bg-purple-deep rounded-xl p-3 my-4">
                 <div className="text-center text-white text-xs font-bold mb-2">MATERIAL COMPLETO</div>
                 <img src={bundle} alt="" loading="lazy" width={1024} height={768} className="w-full rounded-md" />
@@ -450,12 +450,12 @@ function Landing() {
                 <span className="inline-block bg-orange-badge text-white text-xs font-black px-2 py-0.5 rounded">30% OFF</span>
                 <div className="text-sm font-bold mt-1">R$</div>
                 <div className="text-5xl font-black text-neon-dark leading-none">27,90</div>
-                <div className="mt-1" style={{ fontSize: "20px", lineHeight: "20px" }}>ou 6X de R$ 6,52 no cartão</div>
+                <div className="mt-1" style={{ fontSize: "18px", lineHeight: "18px" }}>ou 6X de R$ 6,52 no cartão</div>
               </div>
               <p className="text-center text-[11px] font-bold uppercase mb-3">
                 Tudo do ACESSO básico + BONUS EXCLUSIVOS EM PDF (Receba Imediatamente)
               </p>
-              <ul className="mb-4" style={{ fontSize: "20px", lineHeight: "20px" }}>
+              <ul className="mb-4" style={{ fontSize: "18px", lineHeight: "18px" }}>
                 {PREMIUM_LIST.map((i) => (
                   <li key={i} className="flex gap-2 mb-2"><span className="text-neon-dark font-black">✓</span>{i}</li>
                 ))}

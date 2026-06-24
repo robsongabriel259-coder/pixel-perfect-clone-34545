@@ -386,11 +386,11 @@ function Landing() {
       {/* BÔNUS */}
       <section className="bg-purple-deep py-14">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-neon font-black uppercase text-xl md:text-2xl">
-            E para facilitar ainda<br />mais a aplicação
+          <h2 className="text-neon font-black uppercase" style={{ fontSize: "26px", lineHeight: "26px" }}>
+            E PARA FACILITAR AINDA<br />MAIS A APLICAÇÃO
           </h2>
-          <p className="text-white/80 italic mt-3">Você também vai receber…</p>
-          <div className="badge-top mt-6 mx-auto" style={{ background: "var(--orange-badge)", color: "#fff" }}>03 BÔNUS EXCLUSIVOS</div>
+          <p className="text-white/80 italic mt-[30px]" style={{ fontSize: "26px", lineHeight: "26px" }}>Você também vai receber…</p>
+          <div className="badge-top mt-[30px] mx-auto" style={{ background: "var(--orange-badge)", color: "#fff", fontSize: "26px", lineHeight: "26px" }}>03 BÔNUS EXCLUSIVOS</div>
 
           <div className="grid md:grid-cols-3 gap-5 mt-8">
             {BONUSES.map((b) => (

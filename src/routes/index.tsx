@@ -14,6 +14,9 @@ import wheel04 from "@/assets/wheels/wheel-04.jpg.asset.json";
 import wheel05 from "@/assets/wheels/wheel-05.jpg.asset.json";
 import wheel06 from "@/assets/wheels/wheel-06.jpg.asset.json";
 import wheel07 from "@/assets/wheels/wheel-07.jpg.asset.json";
+import bonus01 from "@/assets/bonus-01.jpg.asset.json";
+import bonus02 from "@/assets/bonus-02.jpg.asset.json";
+import bonus03 from "@/assets/bonus-03.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Landing,
@@ -214,9 +217,9 @@ const ITEM_LIST = [
 ];
 
 const BONUSES = [
-  { n: "01", title: "REVISÃO MATEMÁTICA EM 5 MIN", cards: "20 CARTÕES", desc: "Revise em 5 minutos o que foi esquecido e reforce os pontos que ainda geram dúvidas." },
-  { n: "02", title: "EXPLIQUE COMO VOCÊ PENSOU", cards: "20 CARTÕES", desc: "Descubra onde a criança se confunde e ajude-a a explicar o próprio raciocínio." },
-  { n: "03", title: "ACOMPANHAMENTO DA APRENDIZAGEM", cards: "20 CARTÕES", desc: "Identifique avanços e dificuldades antes que pequenas dúvidas atrasem a aprendizagem." },
+  { n: "01", img: bonus01.url, desc: "Revise em 5 minutos o que foi esquecido e reforce os pontos que ainda geram dúvidas." },
+  { n: "02", img: bonus02.url, desc: "Descubra onde a criança se confunde e ajude-a a explicar o próprio raciocínio." },
+  { n: "03", img: bonus03.url, desc: "Identifique avanços e dificuldades antes que pequenas dúvidas atrasem a aprendizagem." },
 ];
 
 const PREMIUM_LIST = [
@@ -394,11 +397,11 @@ function Landing() {
 
           <div className="grid md:grid-cols-3 gap-5 mt-[30px]">
             {BONUSES.map((b) => (
-              <div key={b.n} className="bg-purple-card rounded-2xl border-2 border-neon/30 p-5 text-left">
-                <div className="text-neon font-black text-sm">BÔNUS {b.n}</div>
-                <h3 className="font-black uppercase text-base mt-1">{b.title}</h3>
-                <div className="badge-top mt-3" style={{ background: "var(--neon)", color: "#0a2410", borderColor: "#0a2410" }}>{b.cards}</div>
-                <p className="text-white/80 text-sm mt-3 leading-snug">{b.desc}</p>
+              <div key={b.n} className="flex flex-col">
+                <div className="rounded-2xl border-2 border-orange-badge overflow-hidden bg-white">
+                  <img src={b.img} alt={`Bônus ${b.n}`} loading="lazy" className="w-full h-auto block" />
+                </div>
+                <p className="text-white text-center mt-4 leading-snug" style={{ fontSize: "16px" }}>{b.desc}</p>
               </div>
             ))}
           </div>

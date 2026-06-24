@@ -82,7 +82,6 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <link rel="preconnect" href="https://cdn.utmify.com.br" />
         <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
-        <link rel="preconnect" href="https://connect.facebook.net" />
         <script
           dangerouslySetInnerHTML={{
             __html: `window.pixelId = "6a39e17a693fbb4e2be2af2c";
@@ -91,11 +90,6 @@ a.setAttribute("async", "");
 a.setAttribute("defer", "");
 a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
 document.head.appendChild(a);`,
-          }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('set','autoConfig',false,'1044829704880739');fbq('init','1044829704880739');if(!window.__metaPageViewSent){window.__metaPageViewSent=!0;fbq('trackSingle','1044829704880739','PageView');}`,
           }}
         />
         <HeadContent />

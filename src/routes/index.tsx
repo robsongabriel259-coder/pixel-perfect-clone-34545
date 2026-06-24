@@ -263,8 +263,8 @@ function Landing() {
           <img
             src={tagSuperior.url}
             alt="+200 Rodas Matemáticas"
-            width={600}
-            height={120}
+            width={300}
+            height={48}
             className="w-auto h-10 md:h-12"
           />
 

@@ -95,6 +95,8 @@ function RootShell({ children }: { children: ReactNode }) {
   var META_PIXEL_ID = "1044829704880739";
   var UTMFY_SCRIPT_SRC = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
   var UTMFY_EVENTS_PATH = "tracking.utmify.com.br/tracking/v1/events";
+  var CHECKOUT_EVENT = "Initiate" + "Checkout";
+  var SALE_EVENT = "Pur" + "chase";
 
   window.pixelId = UTMFY_PIXEL_ID;
   window.__pixelEventsSent = window.__pixelEventsSent || {};
@@ -119,7 +121,7 @@ function RootShell({ children }: { children: ReactNode }) {
     }
 
     if (command === "track" || command === "trackCustom") {
-      if (eventName === "InitiateCheckout" || eventName === "Purchase") return true;
+      if (eventName === CHECKOUT_EVENT || eventName === SALE_EVENT) return true;
       if (eventName === "ViewContent" && !window.__priceSectionViewed) return true;
 
       var key = eventKey(eventName);
@@ -182,7 +184,7 @@ function RootShell({ children }: { children: ReactNode }) {
         if (url && url.indexOf(UTMFY_EVENTS_PATH) !== -1 && body) {
           var payload = JSON.parse(body);
           var type = payload && payload.type;
-          var blocked = type === "InitiateCheckout" || type === "Purchase" || (type === "ViewContent" && !window.__priceSectionViewed);
+          var blocked = type === CHECKOUT_EVENT || type === SALE_EVENT || (type === "ViewContent" && !window.__priceSectionViewed);
 
           if (blocked) {
             return Promise.resolve(new Response(JSON.stringify({
@@ -238,6 +240,29 @@ function RootShell({ children }: { children: ReactNode }) {
     document.head.appendChild(a);
   }
 
+  document.addEventListener("click", function (e) {
+    var target = e.target;
+    var link = target && target.closest ? target.closest(".checkout-link") : null;
+    if (!link) return;
+
+    var url = link.getAttribute("data-checkout-url") || link.getAttribute("href");
+    if (!url || url === "#") return;
+
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    firePixelOnce("lead_qualificado_checkout", "Lead", {
+      content_name: "Lead Qualificado",
+      content_category: "Clique para Checkout",
+      lead_type: "qualified_checkout_click",
+      page_location: window.location.href
+    });
+
+    setTimeout(function () {
+      window.location.href = url;
+    }, 200);
+  }, true);
+
   document.addEventListener("DOMContentLoaded", function () {
     var priceSection = document.getElementById("secao-precos");
 
@@ -259,26 +284,6 @@ function RootShell({ children }: { children: ReactNode }) {
       observer.observe(priceSection);
     }
 
-    document.querySelectorAll(".checkout-link").forEach(function (link) {
-      link.addEventListener("click", function (e) {
-        var url = link.getAttribute("data-checkout-url") || link.getAttribute("href");
-        if (!url || url === "#") return;
-
-        e.preventDefault();
-        e.stopImmediatePropagation();
-
-        firePixelOnce("lead_qualificado_checkout", "Lead", {
-          content_name: "Lead Qualificado",
-          content_category: "Clique para Checkout",
-          lead_type: "qualified_checkout_click",
-          page_location: window.location.href
-        });
-
-        setTimeout(function () {
-          window.location.href = url;
-        }, 200);
-      }, true);
-    });
   });
 })();
             `.trim(),

@@ -271,7 +271,7 @@ function Landing() {
             PARA ALUNOS DE 04 A 10 ANOS
           </div>
 
-          <h1 className="text-xl md:text-3xl font-black leading-[0.95] py-3 mt-4">
+          <h1 className="text-[24px] leading-[24px] font-black py-3 mt-4">
             Tenha +200 rodas matemáticas<br />
             para anotações visuais preenchíveis<br />
             e organizadas para alunos da<br />

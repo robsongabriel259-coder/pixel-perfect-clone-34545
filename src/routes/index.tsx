@@ -248,6 +248,7 @@ function Landing() {
     const win = window as Window & {
       __lpEventsSent?: Record<string, boolean>;
       fbq?: (...args: unknown[]) => void;
+      __trackLandingMeta?: (eventName: string, params?: Record<string, string>) => void;
     };
 
     win.__lpEventsSent = win.__lpEventsSent || {};
@@ -257,9 +258,13 @@ function Landing() {
       win.__lpEventsSent![key] = true;
 
       function send() {
+        if (typeof win.__trackLandingMeta === "function") {
+          win.__trackLandingMeta(eventName, params || {});
+          return true;
+        }
+
         if (typeof win.fbq === "function") {
           win.fbq("track", eventName, params || {});
-          console.log("Meta Pixel event fired:", eventName, params || {});
           return true;
         }
         return false;

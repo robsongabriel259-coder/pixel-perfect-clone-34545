@@ -151,19 +151,30 @@ function Landing() {
 
 
       {/* WHEELS CAROUSEL */}
-      <section className="bg-purple-deep pb-12">
+      <section className="bg-white py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-center text-white font-black text-xl md:text-2xl uppercase mb-6">
+          <h2 className="text-center text-purple-deep font-black text-2xl md:text-3xl uppercase mb-8">
             Conheça algumas das 210 rodas<br className="hidden md:block" /> matemáticas que você vai receber
           </h2>
-          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-4 md:overflow-visible">
-            {WHEELS.map((w) => (
-              <div key={w.title} className="snap-center shrink-0 w-[240px] md:w-auto">
-                <WheelCard {...w} />
-              </div>
+          <div className="relative">
+            <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-4 md:overflow-visible justify-start md:justify-center">
+              {WHEELS.map((w, i) => (
+                <div
+                  key={w.title}
+                  className="snap-center shrink-0 w-full md:w-auto flex justify-center px-2"
+                  style={{ scrollSnapAlign: "center" }}
+                >
+                  <WheelCard {...w} />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex justify-center gap-2 mt-4 md:hidden">
+            {WHEELS.map((_, i) => (
+              <span key={i} className="w-2 h-2 rounded-full bg-purple-deep/30" />
             ))}
           </div>
-          <p className="text-center text-white/70 text-xs mt-4">ARRASTE PARA O LADO</p>
+          <p className="text-center text-purple-deep/70 text-xs mt-4 uppercase tracking-wide">← Arraste para o lado →</p>
         </div>
       </section>
 

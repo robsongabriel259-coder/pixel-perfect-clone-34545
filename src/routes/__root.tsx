@@ -84,109 +84,42 @@ function RootShell({ children }: { children: ReactNode }) {
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
         <link rel="preconnect" href="https://cdn.utmify.com.br" />
         <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
+        {/* Meta Pixel Base */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','1044829704880739');
+!function(f,b,e,v,n,t,s){
+  if(f.fbq)return;
+  n=f.fbq=function(){
+    n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+  };
+  if(!f._fbq)f._fbq=n;
+  n.push=n;
+  n.loaded=!0;
+  n.version='2.0';
+  n.queue=[];
+  t=b.createElement(e);
+  t.async=!0;
+  t.src=v;
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s);
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1044829704880739');
+fbq('track', 'PageView');
 `.trim(),
           }}
         />
+        {/* UTMFY Pixel */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-(function(){
-  if (window.__utmfyInstalled) return;
-  window.__utmfyInstalled = true;
-  window.pixelId = "6a39e17a693fbb4e2be2af2c";
-  var s = document.createElement("script");
-  s.setAttribute("async","");
-  s.setAttribute("defer","");
-  s.setAttribute("src","https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(s);
-})();
-`.trim(),
-          }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-(function(){
-  if (window.__lpPixelInit) return;
-  window.__lpPixelInit = true;
-  var pixelId = "1044829704880739";
-  window.__lpPixelEvents = window.__lpPixelEvents || {};
-  window.__lpPixelBeacons = window.__lpPixelBeacons || [];
-
-  function trackMetaOnce(key, eventName, params){
-    if (window.__lpPixelEvents[key]) return;
-    window.__lpPixelEvents[key] = true;
-
-    var query = new URLSearchParams();
-    query.set("id", pixelId);
-    query.set("ev", eventName);
-    query.set("dl", window.location.href);
-    query.set("rl", document.referrer || "");
-    query.set("if", "false");
-    query.set("ts", String(Date.now()));
-    query.set("v", "2.9.345");
-    query.set("r", "stable");
-
-    if (params) {
-      Object.keys(params).forEach(function(name){
-        query.set("cd[" + name + "]", String(params[name]));
-      });
-    }
-
-    var img = new Image(1, 1);
-    img.alt = "";
-    img.style.display = "none";
-    img.src = "https://www.facebook.com/tr/?" + query.toString();
-    window.__lpPixelBeacons.push(img);
-  }
-
-  trackMetaOnce("pageview", "PageView");
-
-  function setup(){
-    var priceSection = document.getElementById("secao-precos");
-    if (priceSection && "IntersectionObserver" in window) {
-      var obs = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-          if (entry.isIntersecting) {
-            trackMetaOnce("viewcontent_precos", "ViewContent", {
-              content_name: "Sessao de Precos",
-              content_category: "Landing Page"
-            });
-            obs.disconnect();
-          }
-        });
-      }, { threshold: 0.35 });
-      obs.observe(priceSection);
-    }
-
-    document.addEventListener("click", function(event){
-      var target = event.target;
-      var button = target && target.closest ? target.closest(".checkout-link") : null;
-      if (!button) return;
-      var checkoutUrl = button.getAttribute("href");
-      if (!checkoutUrl || checkoutUrl === "#") return;
-      event.preventDefault();
-      event.stopImmediatePropagation();
-      trackMetaOnce("lead_qualificado", "Lead", {
-        content_name: "Lead Qualificado",
-        content_category: "Clique para Checkout",
-        lead_type: "qualified_checkout_click"
-      });
-      setTimeout(function(){ window.location.href = checkoutUrl; }, 250);
-    }, true);
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", setup);
-  } else {
-    setup();
-  }
-})();
+window.pixelId = "6a39e17a693fbb4e2be2af2c";
+var utmfyScript = document.createElement("script");
+utmfyScript.setAttribute("async", "");
+utmfyScript.setAttribute("defer", "");
+utmfyScript.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+document.head.appendChild(utmfyScript);
 `.trim(),
           }}
         />

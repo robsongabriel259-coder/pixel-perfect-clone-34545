@@ -5,7 +5,7 @@ import heroMockup from "@/assets/hero-mockup.jpg.asset.json";
 import tagSuperior from "@/assets/tag-superior.png.asset.json";
 import bundle from "@/assets/bundle.png";
 import mockupRodas from "@/assets/mockup-rodas.jpg.asset.json";
-import mockupCompleto from "@/assets/mockup-rodas-completo.jpg.asset.json";
+import mockupCompleto from "@/assets/mockup-completo-v2.jpg.asset.json";
 import kids from "@/assets/kids.png";
 import wheel from "@/assets/capa-front.jpg.asset.json";
 import wheel01 from "@/assets/wheels/wheel-01.jpg.asset.json";

@@ -450,14 +450,14 @@ function Landing() {
                 <span className="inline-block bg-orange-badge text-white text-xs font-black px-2 py-0.5 rounded">30% OFF</span>
                 <div className="text-sm font-bold mt-1">R$</div>
                 <div className="text-5xl font-black text-neon-dark leading-none">27,90</div>
-                <div className="text-xs mt-1">ou 6X de R$ 6,52 no cartão</div>
+                <div className="mt-1" style={{ fontSize: "20px", lineHeight: "20px" }}>ou 6X de R$ 6,52 no cartão</div>
               </div>
               <p className="text-center text-[11px] font-bold uppercase mb-3">
                 Tudo do ACESSO básico + BONUS EXCLUSIVOS EM PDF (Receba Imediatamente)
               </p>
-              <ul className="space-y-1.5 text-xs mb-4">
+              <ul className="mb-4" style={{ fontSize: "20px", lineHeight: "20px" }}>
                 {PREMIUM_LIST.map((i) => (
-                  <li key={i} className="flex gap-2"><span className="text-neon-dark font-black">✓</span>{i}</li>
+                  <li key={i} className="flex gap-2 mb-2"><span className="text-neon-dark font-black">✓</span>{i}</li>
                 ))}
               </ul>
               <a href={CHECKOUT_PRO} target="_blank" rel="noopener noreferrer" className="btn-cta btn-cta-hover text-sm w-full">ESCOLHER ACESSO PRO PREMIUM</a>

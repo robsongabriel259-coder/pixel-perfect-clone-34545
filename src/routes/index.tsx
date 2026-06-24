@@ -301,15 +301,17 @@ function Landing() {
       {/* PRONTO PARA APLICAR */}
       <section className="bg-purple-dark py-14">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-black uppercase">
-            <span className="text-neon">Você receberá um material</span><br />
-            <span className="text-white underline decoration-neon decoration-4 underline-offset-4">pronto para aplicar</span>
+          <h2 className="text-3xl md:text-4xl font-black uppercase leading-tight">
+            <span className="text-neon block">VOCÊ RECEBERÁ UM<br />MATERIAL</span>
+            <span className="text-orange-500 underline decoration-orange-500 decoration-4 underline-offset-4 block mt-1">
+              PRONTO PARA<br />APLICAR
+            </span>
           </h2>
-          <p className="text-neon mt-4 italic font-semibold text-sm md:text-base">
-            Tudo organizado por ano escolar e conteúdo para facilitar
+          <p className="text-neon mt-8 italic font-extrabold text-base md:text-lg leading-snug">
+            Tudo organizado por ano<br />escolar e conteúdo para<br />facilitar
           </p>
-          <p className="text-white/80 text-sm md:text-base">
-            sua rotina e transformar cada aula em uma anotação matemática visual.
+          <p className="text-white/85 text-sm md:text-base mt-4 leading-snug">
+            sua rotina e transformar cada aula<br />em uma anotação matemática<br />visual.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">

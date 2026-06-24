@@ -80,7 +80,7 @@ function WheelsCarousel() {
             type="button"
             aria-label="Próximo"
             onClick={() => go(1)}
-            className="absolute -right-8 md:-right-12 top-1/2 -translate-y-1/2 z-10 text-purple-deep text-4xl md:text-5xl font-light select-none disabled:opacity-30"
+            className="absolute -right-3 md:-right-4 top-1/2 -translate-y-1/2 z-10 text-purple-deep text-4xl md:text-5xl font-light select-none disabled:opacity-30"
             disabled={idx === WHEELS.length - 1}
           >
             ›

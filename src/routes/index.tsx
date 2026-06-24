@@ -428,7 +428,7 @@ function Landing() {
                 <div className="mt-1" style={{ fontSize: "18px", lineHeight: "18px" }}>ou 3X de R$ 6,92 no cartão</div>
               </div>
               <a href={CHECKOUT_BASIC} target="_blank" rel="noopener noreferrer" className="btn-cta btn-cta-hover text-sm w-full">ESCOLHER ACESSO BASICO</a>
-              <p className="text-center mt-4 text-purple-deep/70 uppercase" style={{ fontSize: "18px", lineHeight: "18px" }}>
+              <p className="text-center mt-4 uppercase" style={{ fontSize: "22px", lineHeight: "22px", fontWeight: 600, color: "red", textShadow: "0px 3px 6px rgba(255, 0, 0, 0.5)" }}>
                 Atenção: temos uma oferta ainda mais vantajosa para você! Veja logo abaixo
               </p>
             </div>

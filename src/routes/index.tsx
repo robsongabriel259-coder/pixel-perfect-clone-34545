@@ -325,9 +325,14 @@ function Landing() {
           </div>
 
 
-          <p className="mt-12 text-white text-lg md:text-xl font-bold">
-            Mais do que atividades: <span className="italic">anotações matemáticas</span><br />
-            visuais construídas pela própria criança.
+          <p className="text-neon mt-12 text-[22px] font-extrabold leading-tight">
+            Mais do que atividades:<br />
+            anotações matemáticas<br />
+            visuais construídas pela<br />
+            própria criança.
+          </p>
+          <p className="text-neon mt-8 text-[18px] font-semibold underline decoration-neon underline-offset-4">
+            Escolha, imprima, aplique e revise.
           </p>
 
           <div className="flex justify-center mt-8">

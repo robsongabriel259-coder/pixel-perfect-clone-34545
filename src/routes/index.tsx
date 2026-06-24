@@ -119,7 +119,7 @@ function WheelsCarousel() {
   return (
     <section className="bg-white py-12">
       <div className="max-w-6xl mx-auto px-2">
-        <h2 className="text-center text-purple-deep font-black uppercase mb-8 px-4" style={{ fontSize: "28px", lineHeight: "26px" }}>
+        <h2 className="text-center text-purple-deep font-black uppercase mb-8 px-4" style={{ fontSize: "28px", lineHeight: "28px" }}>
           Conheça algumas das 210 rodas<br className="hidden md:block" /> matemáticas que você vai receber
         </h2>
         <div className="relative mx-auto max-w-[320px] md:max-w-[360px]">
@@ -344,7 +344,7 @@ function Landing() {
       {/* IDEAL PARA VOCÊ */}
       <section className="bg-white py-14">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-purple-deep font-black uppercase mb-8" style={{ fontSize: "28px", lineHeight: "26px" }}>Ideal para você que deseja:</h2>
+          <h2 className="text-purple-deep font-black uppercase mb-8" style={{ fontSize: "28px", lineHeight: "28px" }}>Ideal para você que deseja:</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {IDEAL.map((b) => (
               <div key={b.title} className="bg-purple-deep rounded-2xl p-8 border-2 border-orange-badge flex flex-col items-center text-center gap-4">
@@ -362,7 +362,7 @@ function Landing() {
       {/* VOCÊ VAI RECEBER */}
       <section className="bg-purple-dark py-14">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-center font-black uppercase mb-8" style={{ fontSize: "28px", lineHeight: "26px" }}>
+          <h2 className="text-center font-black uppercase mb-8" style={{ fontSize: "28px", lineHeight: "28px" }}>
             🎁 Você vai receber ao adquirir seu produto 🎁
           </h2>
           <div className="grid md:grid-cols-2 gap-6 items-start">
@@ -408,7 +408,7 @@ function Landing() {
       {/* PLANOS */}
       <section id="planos" className="bg-white text-purple-deep py-14">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-center font-black uppercase mb-10" style={{ fontSize: "28px", lineHeight: "26px" }}>
+          <h2 className="text-center font-black uppercase mb-10" style={{ fontSize: "28px", lineHeight: "28px" }}>
             Escolha a melhor opção<br />para você
           </h2>
           <div className="grid md:grid-cols-2 gap-6">

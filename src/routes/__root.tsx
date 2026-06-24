@@ -71,11 +71,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       } as any,
     ],
     styles: [{ children: appCss }] as any,
-    scripts: [
+    headScripts: [
       {
         type: "text/javascript",
-        dangerouslySetInnerHTML: {
-          __html: `
+        children: `
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -86,14 +85,11 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '${FB_PIXEL_ID}');
 fbq('track', 'PageView');
-          `,
-        },
+        `,
       } as any,
       {
         type: "text/javascript",
-        dangerouslySetInnerHTML: {
-          __html: `window.__fbqEventsSent = window.__fbqEventsSent || {};`,
-        },
+        children: `window.__fbqEventsSent = window.__fbqEventsSent || {};`,
       } as any,
     ],
   }),

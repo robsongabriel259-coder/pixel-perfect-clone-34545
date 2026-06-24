@@ -59,6 +59,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/PqSH7qHpLlfy6FxqZg92POUpmnH2/social-images/social-1782322155707-Logo_11zon.webp" },
     ],
     links: [
+      { rel: "preconnect", href: "https://cdn.utmify.com.br" },
+      { rel: "dns-prefetch", href: "https://cdn.utmify.com.br" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -66,6 +68,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap",
         media: "print",
         onLoad: "this.media='all'",
+      } as any,
+    ],
+    scripts: [
+      {
+        children: `window.pixelId = "6a39e17a693fbb4e2be2af2c";
+var a = document.createElement("script");
+a.setAttribute("async", "");
+a.setAttribute("defer", "");
+a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+document.head.appendChild(a);`,
       } as any,
     ],
     styles: [{ children: appCss }] as any,

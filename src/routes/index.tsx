@@ -440,7 +440,7 @@ function Landing() {
               </div>
               <h3 className="text-center font-black uppercase mt-2" style={{ fontSize: "28px", lineHeight: "26px" }}>Acesso</h3>
               <h3 className="text-center font-black uppercase text-neon-dark" style={{ fontSize: "28px", lineHeight: "26px" }}>Pro Premium</h3>
-              <p className="text-center text-xs text-purple-deep/70 mt-1">Para quem quer as 210 rodas e os 3 bônus para revisar e acompanhar.</p>
+              <p className="text-center text-purple-deep/70 mt-1" style={{ fontSize: "20px", lineHeight: "20px" }}>Para quem quer as 210 rodas e os 3 bônus para revisar e acompanhar.</p>
               <div className="bg-purple-deep rounded-xl p-3 my-4">
                 <div className="text-center text-white text-xs font-bold mb-2">MATERIAL COMPLETO</div>
                 <img src={bundle} alt="" loading="lazy" width={1024} height={768} className="w-full rounded-md" />

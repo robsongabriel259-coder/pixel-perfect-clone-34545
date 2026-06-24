@@ -95,10 +95,11 @@ const FAQ = [
 function Landing() {
   return (
     <main className="bg-purple-deep text-white overflow-x-hidden">
-      {/* Top fixed bar */}
-      <div className="fixed top-0 inset-x-0 z-50 bg-gradient-to-r from-neon-dark to-neon text-[#0a2410] text-center py-2 px-3 font-extrabold text-xs md:text-sm tracking-wide border-b-2 border-[#0a2410]">
-        RODAS MATEMÁTICAS PRONTAS PARA IMPRIMIR E APLICAR
+      {/* Top bar — purple bg with neon green stacked text */}
+      <div className="bg-purple-deep text-neon text-center py-4 px-3 font-black uppercase text-lg leading-tight tracking-wide border-b-2 border-neon">
+        RODAS MATEMÁTICAS<br />PRONTAS PARA<br />IMPRIMIR E APLICAR
       </div>
+
 
       {/* HERO */}
       <section className="pt-12 pb-10 bg-purple-deep relative">

@@ -1,3 +1,10 @@
+declare global {
+  interface Window {
+    fbq?: (...args: any[]) => void;
+    __fbqEventsSent?: Record<string, boolean>;
+  }
+}
+
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDownCircle } from "lucide-react";
 import { useRef, useState, useEffect, useCallback } from "react";

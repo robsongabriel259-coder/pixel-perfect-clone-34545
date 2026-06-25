@@ -244,55 +244,7 @@ const FAQ = [
 ];
 
 
-function usePixelEvents() {
-  const trackedRef = useRef<Record<string, boolean>>({});
-
-  const trackOnce = useCallback((event: string, data?: Record<string, any>) => {
-    if (typeof window === "undefined" || !window.fbq) return;
-    if (trackedRef.current[event]) return;
-    trackedRef.current[event] = true;
-    window.fbq("track", event, data);
-  }, []);
-
-  useEffect(() => {
-    // ViewContent on pricing section visibility
-    const pricingSection = document.getElementById("secao-precos");
-    if (!pricingSection) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            trackOnce("ViewContent", { content_name: "Planos" });
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    observer.observe(pricingSection);
-    return () => observer.disconnect();
-  }, [trackOnce]);
-
-  useEffect(() => {
-    // Lead on checkout link clicks
-    const handler = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const link = target.closest("a.checkout-link") as HTMLAnchorElement | null;
-      if (link) {
-        window.fbq?.("track", "Lead", {
-          content_name: link.textContent?.trim() || "Checkout",
-        });
-      }
-    };
-
-    document.addEventListener("click", handler);
-    return () => document.removeEventListener("click", handler);
-  }, []);
-}
-
 function Landing() {
-  usePixelEvents();
   return (
     <main className="bg-purple-deep text-white overflow-x-hidden">
       {/* Top bar — purple bg with neon green stacked text */}

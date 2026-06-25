@@ -84,7 +84,6 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
-        <HeadContent />
         <script dangerouslySetInnerHTML={{ __html: UTMIFY_PIXEL_SCRIPT }} />
         <script
           src="https://cdn.utmify.com.br/scripts/utms/latest.js"
@@ -93,6 +92,7 @@ function RootShell({ children }: { children: ReactNode }) {
           async
           defer
         ></script>
+        <HeadContent />
       </head>
       <body>
         {children}

@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import heroMockup from "@/assets/hero-mockup.webp";
 import tagSuperior from "@/assets/tag-superior.png.asset.json";
 import bundle from "@/assets/bundle.webp";
+import mockupCheckoutPremium from "@/assets/mockup-checkout-premium.jpg.asset.json";
 import mockupRodas from "@/assets/mockup-rodas.jpg.asset.json";
 import mockupCompleto from "@/assets/mockup-rodas-completo.jpg.asset.json";
 import kids from "@/assets/kids.webp";

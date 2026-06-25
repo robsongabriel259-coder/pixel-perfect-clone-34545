@@ -281,7 +281,7 @@ function Landing() {
           </div>
 
           <h1 className="text-[24px] leading-[24px] font-black py-3 mt-4 text-balance -mx-3 md:mx-0 px-3 md:px-0">
-            Tenha Acesso completo a +200 rodas matemáticas para anotações visuais preenchíveis e organizadas para alunos da educação infantil ao 5° ano divididas ano a ano. Basta escolher, imprimir e aplicar.
+            Receba +200 rodas matemáticas em PDF, prontas para imprimir e aplicar com alunos de 4 a 10 anos. Os materiais são organizados por idade e ano escolar para você escolher, baixar e usar em sala de aula.
           </h1>
 
 

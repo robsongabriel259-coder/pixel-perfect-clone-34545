@@ -64,6 +64,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         onLoad: "this.media='all'",
       } as any,
     ],
+    scripts: [
+      { children: UTMIFY_PIXEL_SCRIPT } as any,
+      { src: "https://cdn.utmify.com.br/scripts/utms/latest.js", async: true, defer: true, "data-utmify-prevent-xcod-sck": true, "data-utmify-prevent-subids": true } as any,
+    ],
     styles: [{ children: appCss }] as any,
   }),
   shellComponent: RootShell,
@@ -85,14 +89,6 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="pt-BR">
       <head>
         <HeadContent />
-        <script dangerouslySetInnerHTML={{ __html: UTMIFY_PIXEL_SCRIPT }} />
-        <script
-          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-          data-utmify-prevent-xcod-sck
-          data-utmify-prevent-subids
-          async
-          defer
-        ></script>
       </head>
       <body>
         {children}

@@ -245,8 +245,6 @@ const FAQ = [
 
 
 function Landing() {
-  usePixelEvents();
-
   return (
     <main className="bg-purple-deep text-white overflow-x-hidden">
       {/* Top bar — purple bg with neon green stacked text */}

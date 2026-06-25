@@ -23,8 +23,8 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
-const CHECKOUT_BASIC = "https://pay.wiapy.com/TGNuxQv8M3?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
-const CHECKOUT_PRO = "https://pay.wiapy.com/v9vc0UDffDz?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
+const CHECKOUT_BASIC = "https://pay.wiapy.com/Rhw-89WaTU";
+const CHECKOUT_PRO = "https://pay.wiapy.com/v936wChw0E-";
 
 function CtaButton({ href = "#secao-precos", children = "QUERO ADQUIRIR O MEU" }: { href?: string; children?: React.ReactNode }) {
   return (

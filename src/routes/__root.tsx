@@ -84,6 +84,15 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
+        <script>{`window.pixelId = "6a3c8e30b967e34a5ea4e208";`}</script>
+        <script src="https://cdn.utmify.com.br/scripts/pixel/pixel.js" async defer />
+        <script
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          data-utmify-prevent-xcod-sck
+          data-utmify-prevent-subids
+          async
+          defer
+        />
         <HeadContent />
       </head>
       <body>

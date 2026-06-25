@@ -29,7 +29,7 @@ const CHECKOUT_PRO = "https://pay.wiapy.com/v936wChw0E-";
 
 function CtaButton({ href = "#secao-precos", children = "QUERO ADQUIRIR O MEU" }: { href?: string; children?: React.ReactNode }) {
   return (
-    <a href={href} className="btn-cta btn-cta-hover text-sm md:text-base">{children}</a>
+    <a href={href} className="btn-cta btn-cta-hover btn-cta-pulse text-sm md:text-base">{children}</a>
   );
 }
 

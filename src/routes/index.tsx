@@ -210,16 +210,16 @@ const IDEAL = [
 ];
 
 const ITEM_LIST = [
-  "210 Rodas de Anotação Matemática",
-  "07 Blocos por Ano Escolar",
-  "30 Rodas em Cada Bloco",
-  "Cartões Visuais Preenchíveis",
-  "Aplicação Rápida em Aula",
-  "Atividades de Registro e Revisão",
-  "Rodas com 6 Fatias Guiadas",
-  "Conteúdos por Ano Escolar",
-  "Arquivos Prontos para Imprimir",
-  "Uso em Casa, Aula ou Reforço",
+  "200 Mapas de Intervenção Visual",
+  "10 Áreas Psicopedagógicas",
+  "20 Mapas em Cada Área",
+  "Cartões em A4 Horizontal",
+  "Prontos para Imprimir",
+  "Aplicação Rápida em Sessão",
+  "Linguagem, Atenção e Cognição",
+  "Sequência, Comandos e Vocabulário",
+  "Funções Executivas e Aprendizagem",
+  "Capas Organizadoras Inclusas",
   "Acesso Digital Imediato",
 ];
 
@@ -375,7 +375,7 @@ function Landing() {
                   <li key={i} className="flex gap-2"><span className="text-neon-dark font-black">✓</span>{i}</li>
                 ))}
               </ul>
-              <p className="text-center font-black uppercase mt-4 text-neon-dark">E muito mais...</p>
+              <p className="text-center font-black uppercase mt-4 text-neon-dark">E MUITO MAIS...</p>
             </div>
           </div>
         </div>

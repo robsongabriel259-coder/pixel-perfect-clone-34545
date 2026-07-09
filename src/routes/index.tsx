@@ -347,7 +347,7 @@ function Landing() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {IDEAL.map((b) => (
               <div key={b.title} className="bg-purple-deep rounded-2xl p-8 border-2 border-orange-badge flex flex-col items-center text-center gap-4">
-                <div className="text-5xl">{typeof b.icon === "string" ? b.icon : <b.icon size={56} className="text-neon" strokeWidth={1.5} />}</div>
+                <div className="text-5xl">{typeof b.icon === "string" ? b.icon : createElement(b.icon, { size: 56, className: "text-neon", strokeWidth: 1.5 })}</div>
                 <h3 className="font-black text-base md:text-lg uppercase text-neon">{b.title}</h3>
                 <p className="text-white text-sm md:text-base leading-snug">{b.desc}</p>
               </div>

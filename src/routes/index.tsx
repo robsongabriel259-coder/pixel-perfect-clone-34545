@@ -370,7 +370,7 @@ function Landing() {
               <div className="bg-orange-badge text-white text-center font-black uppercase py-2 rounded-md mb-4 border-2 border-[#2a1300]">
                 ITEM 01
               </div>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-2 text-[15px] leading-snug font-medium">
                 {ITEM_LIST.map((i) => (
                   <li key={i} className="flex gap-2"><span className="text-neon-dark font-black">✓</span>{i}</li>
                 ))}

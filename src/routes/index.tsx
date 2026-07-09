@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDownCircle } from "lucide-react";
-import { useRef, useState, useEffect } from "react";
+import { ArrowDownCircle, Compass } from "lucide-react";
+import { createElement, useRef, useState, useEffect } from "react";
 import heroMockup from "@/assets/hero-mockup.webp";
 import tagSuperior from "@/assets/tag-superior.png.asset.json";
 import bundle from "@/assets/bundle.webp";
@@ -204,7 +204,7 @@ const BENEFITS = [
 
 const IDEAL = [
   { icon: "🖨️", title: "Ter recursos prontos para a sessão", desc: "Pare de perder tempo criando materiais do zero antes de cada atendimento." },
-  { icon: "🗺️", title: "Conduzir intervenções com mais clareza", desc: "Use mapas visuais para organizar a proposta, o objetivo e a mediação da criança." },
+  { icon: Compass, title: "Conduzir intervenções com mais clareza", desc: "Use mapas visuais para organizar a proposta, o objetivo e a mediação da criança." },
   { icon: "🧩", title: "Apoiar crianças com dificuldades de aprendizagem", desc: "Trabalhe habilidades importantes de forma visual, lúdica e estruturada." },
   { icon: "💼", title: "Deixar seus atendimentos mais profissionais", desc: "Entregue uma experiência mais organizada, bonita e com alto valor percebido." },
 ];
@@ -347,7 +347,7 @@ function Landing() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {IDEAL.map((b) => (
               <div key={b.title} className="bg-purple-deep rounded-2xl p-8 border-2 border-orange-badge flex flex-col items-center text-center gap-4">
-                <div className="text-5xl">{b.icon}</div>
+                <div className="text-5xl">{typeof b.icon === "string" ? b.icon : createElement(b.icon, { size: 48, className: "text-neon", strokeWidth: 1.5 })}</div>
                 <h3 className="font-black text-base md:text-lg uppercase text-neon">{b.title}</h3>
                 <p className="text-white text-sm md:text-base leading-snug">{b.desc}</p>
               </div>

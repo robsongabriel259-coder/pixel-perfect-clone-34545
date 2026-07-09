@@ -127,7 +127,7 @@ function WheelsCarousel() {
   return (
     <section className="bg-white py-12">
       <div className="max-w-6xl mx-auto px-2">
-        <h2 className="text-center text-purple-deep font-black uppercase mb-8 px-4 max-w-[65%] mx-auto" style={{ fontSize: "28px", lineHeight: "28px" }}>
+        <h2 className="text-center text-purple-deep font-black uppercase mb-8 px-4 max-w-[90%] md:max-w-[65%] mx-auto" style={{ fontSize: "28px", lineHeight: "28px" }}>
           Veja alguns dos 200 mapas de intervenção terapeutica que você vai receber
         </h2>
         <div className="relative mx-auto max-w-[318px] md:max-w-[360px]">

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDownCircle, Compass } from "lucide-react";
+import { ArrowDownCircle, Briefcase, Compass } from "lucide-react";
 import { createElement, useRef, useState, useEffect } from "react";
 import heroMockup from "@/assets/hero-mockup.webp";
 import tagSuperior from "@/assets/tag-superior.png.asset.json";
@@ -206,7 +206,7 @@ const IDEAL = [
   { icon: "🖨️", title: "Ter recursos prontos para a sessão", desc: "Pare de perder tempo criando materiais do zero antes de cada atendimento." },
   { icon: Compass, title: "Conduzir intervenções com mais clareza", desc: "Use mapas visuais para organizar a proposta, o objetivo e a mediação da criança." },
   { icon: "🧩", title: "Apoiar crianças com dificuldades de aprendizagem", desc: "Trabalhe habilidades importantes de forma visual, lúdica e estruturada." },
-  { icon: "💼", title: "Deixar seus atendimentos mais profissionais", desc: "Entregue uma experiência mais organizada, bonita e com alto valor percebido." },
+  { icon: Briefcase, title: "Deixar seus atendimentos mais profissionais", desc: "Entregue uma experiência mais organizada, bonita e com alto valor percebido." },
 ];
 
 const ITEM_LIST = [

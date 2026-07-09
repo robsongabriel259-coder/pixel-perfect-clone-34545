@@ -256,7 +256,7 @@ function Landing() {
     <main className="bg-purple-deep text-white overflow-x-hidden">
       {/* Top bar — purple bg with neon green stacked text */}
       <div className="bg-purple-deep text-neon text-center py-[2px] px-3 font-black uppercase text-[1.40625rem] leading-none tracking-wide border-b-2 border-neon">
-        MAPAS DE INTERVENÇÃO<br />PARA<br />PSICOPEDAGOGAS
+        Mapas de intervenção terapeutica<br />para psicopedagogas.
       </div>
 
 

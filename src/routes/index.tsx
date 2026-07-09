@@ -197,10 +197,10 @@ const WHEELS = [
 ];
 
 const BENEFITS = [
-  { icon: "📚", title: "PRONTO PARA IMPRIMIR", desc: "Escolha a roda, imprima e aplique sem criar do zero." },
-  { icon: "👍", title: "MUITO FÁCIL DE APLICAR", desc: "A criança completa, registra e revisa o conteúdo." },
-  { icon: "⭐", title: "MATERIAL LÚDICO E VISUAL", desc: "Cada roda vira um mapa visual criado pela criança." },
-  { icon: "🏠", title: "IDEAL PARA CASA OU ESCOLA", desc: "Use nas aulas, no reforço ou na revisão diária." },
+  { icon: "📚", title: "PRONTO PARA IMPRIMIR", desc: "Receba os mapas em PDF, organizados por áreas de intervenção, para usar com praticidade no atendimento." },
+  { icon: "👍", title: "DIRETO PARA APLICAR", desc: "Você não precisa criar materiais do zero. Basta escolher o mapa conforme o objetivo da criança e conduzir a sessão." },
+  { icon: "⭐", title: "VISUAL, LÚDICO E ORGANIZADO", desc: "Mapas com cores, ilustrações e estrutura clara para facilitar o engajamento e a compreensão infantil." },
+  { icon: "🏠", title: "FEITO PARA INTERVENÇÃO PSICOPEDAGÓGICA", desc: "Recursos pensados para apoiar habilidades como atenção, linguagem, comandos, sequência lógica, vocabulário e funções executivas." },
 ];
 
 const IDEAL = [
@@ -296,16 +296,13 @@ function Landing() {
       <section className="bg-purple-dark py-14">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-black uppercase leading-[0.875]">
-            <span className="text-neon block">VOCÊ RECEBERÁ UM<br />MATERIAL</span>
+            <span className="text-neon block">VOCÊ RECEBERÁ UM MATERIAL</span>
             <span className="text-orange-soft underline decoration-orange-soft decoration-4 underline-offset-4 block mt-[5px] leading-[1.1]">
-              PRONTO PARA<br />APLICAR
+              PRONTO PARA CONDUZIR<br />SUAS SESSÕES
             </span>
           </h2>
           <p className="text-neon mt-[38px] italic font-extrabold text-[22px] leading-tight">
-            Tudo organizado por ano<br />escolar e conteúdo para<br />facilitar
-          </p>
-          <p className="text-white text-lg md:text-xl mt-[19px] leading-snug font-medium">
-            sua rotina e transformar cada aula<br />em uma anotação matemática<br />visual.
+            Tudo organizado para você imprimir,<br />escolher o objetivo da intervenção<br />e aplicar com mais segurança.
           </p>
 
           <div className="grid grid-cols-1 gap-5 mt-10 max-w-sm mx-auto">
@@ -320,13 +317,7 @@ function Landing() {
 
 
           <p className="text-neon mt-12 text-[22px] font-extrabold leading-tight">
-            Mais do que atividades:<br />
-            anotações matemáticas<br />
-            visuais construídas pela<br />
-            própria criança.
-          </p>
-          <p className="text-neon mt-8 text-[18px] font-semibold underline decoration-neon underline-offset-4">
-            Escolha, imprima, aplique e revise.
+            Mais do que simples folhas para preencher, este material foi criado para ajudar a psicopedagoga a conduzir intervenções com mais clareza, intencionalidade e organização.
           </p>
 
           <div className="flex justify-center mt-8">

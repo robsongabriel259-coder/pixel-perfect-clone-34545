@@ -151,12 +151,12 @@ function WheelsCarousel() {
           <div
             ref={ref}
             onScroll={onScroll}
-            className="flex overflow-x-auto scrollbar-none"
+            className="flex overflow-x-auto scrollbar-none gap-5"
             style={{ scrollbarWidth: "none" }}
           >
             {wheels.map((w, i) => (
               <div key={i} className="shrink-0 w-full flex justify-center">
-                <img src={w.src} alt={w.alt} loading="lazy" decoding="async" width={600} height={825} className="w-full h-auto" />
+                <img src={w.src} alt={w.alt} loading="lazy" decoding="async" width={600} height={825} className="w-full h-auto rounded-[20px]" />
               </div>
             ))}
           </div>

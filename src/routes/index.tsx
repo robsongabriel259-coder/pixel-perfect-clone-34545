@@ -296,13 +296,16 @@ function Landing() {
       <section className="bg-purple-dark py-14">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-black uppercase leading-[0.875]">
-            <span className="text-neon block">VOCÊ RECEBERÁ UM MATERIAL</span>
+            <span className="text-neon block">VOCÊ RECEBERÁ UM<br />MATERIAL</span>
             <span className="text-orange-soft underline decoration-orange-soft decoration-4 underline-offset-4 block mt-[5px] leading-[1.1]">
               PRONTO PARA CONDUZIR<br />SUAS SESSÕES
             </span>
           </h2>
           <p className="text-neon mt-[38px] italic font-extrabold text-[22px] leading-tight">
-            Tudo organizado para você imprimir,<br />escolher o objetivo da intervenção<br />e aplicar com mais segurança.
+            Tudo organizado para você imprimir,<br />escolher o objetivo da intervenção
+          </p>
+          <p className="text-white mt-4 text-[17px] leading-snug max-w-xs mx-auto">
+            e aplicar com mais segurança na sua rotina de intervenção psicopedagógica.
           </p>
 
           <div className="grid grid-cols-1 gap-5 mt-10 max-w-sm mx-auto">
@@ -318,6 +321,10 @@ function Landing() {
 
           <p className="text-neon mt-12 text-[22px] font-extrabold leading-tight">
             Mais do que simples folhas para preencher, este material foi criado para ajudar a psicopedagoga a conduzir intervenções com mais clareza, intencionalidade e organização.
+          </p>
+
+          <p className="text-neon mt-6 text-[20px] font-extrabold underline decoration-neon decoration-2 underline-offset-4">
+            Escolha, imprima, aplique e revise.
           </p>
 
           <div className="flex justify-center mt-8">

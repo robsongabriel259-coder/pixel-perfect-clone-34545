@@ -25,8 +25,8 @@
   --purple-deep: #00326f;
   --purple-dark: #00326f;
   --purple-card: #00326f;
-  --neon: oklch(0.88 0.24 140);
-  --neon-dark: oklch(0.78 0.24 140);
+  --neon: #42ff00;
+  --neon-dark: #42ff00;
   --orange-badge: #ff7a00;
   --orange-soft: #ff7a00;
   --cream: oklch(0.97 0.02 90);

@@ -7,7 +7,6 @@ import bundle from "@/assets/bundle.webp";
 import mockupCheckoutPremium from "@/assets/mockup-checkout-premium.jpg.asset.json";
 import mockupRodas from "@/assets/mockup-rodas.jpg.asset.json";
 import mockupCompleto from "@/assets/mockup-rodas-completo.jpg.asset.json";
-import kids from "@/assets/kids.webp";
 import wheel from "@/assets/capa-front.jpg.asset.json";
 import wheel01 from "@/assets/wheels-new/wheel-01.jpg.asset.json";
 import wheel02 from "@/assets/wheels-new/wheel-02.jpg.asset.json";
@@ -331,8 +330,7 @@ function Landing() {
             <img src={mockupRodas.url} alt="Material completo Rodas Matemáticas" loading="lazy" decoding="async" width={680} height={742} className="w-full max-w-[432px] h-auto" />
           </div>
 
-          <div className="mt-10 max-w-3xl mx-auto bg-white text-purple-deep rounded-2xl border-4 border-orange-badge p-6 md:p-8 flex items-center gap-4">
-            <img src={kids} alt="" loading="lazy" width={120} height={120} className="hidden md:block w-24 h-24 object-contain" />
+          <div className="mt-10 max-w-3xl mx-auto bg-white text-purple-deep rounded-2xl border-4 border-orange-badge p-6 md:p-8 flex items-center justify-center">
             <p className="font-black uppercase text-center flex-1" style={{ fontSize: "28px", lineHeight: "28px" }}>
               Este material ajuda a transformar a sessão em uma experiência mais visual, clara e direcionada.
             </p>

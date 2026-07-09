@@ -22,9 +22,9 @@
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.18 0.04 178.74);
-  --purple-deep: #00a7a4;
-  --purple-dark: #00a7a4;
-  --purple-card: #00a7a4;
+  --purple-deep: #00fffa;
+  --purple-dark: #00fffa;
+  --purple-card: #00fffa;
   --neon: oklch(0.88 0.24 140);
   --neon-dark: oklch(0.78 0.24 140);
   --orange-badge: oklch(0.72 0.18 55);
@@ -44,7 +44,7 @@
 
 @utility btn-cta {
   display: inline-block;
-  background: #00ff00;
+  background: #00fffa;
   color: #0a2410;
   font-weight: 900;
   text-transform: uppercase;

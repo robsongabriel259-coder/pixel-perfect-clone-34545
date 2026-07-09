@@ -184,13 +184,16 @@ function WheelsCarousel() {
 }
 
 const WHEELS = [
-  { src: wheel01.url, alt: "Primeiros números aos 4 — Educação Infantil" },
-  { src: wheel02.url, alt: "Descubra os lados aos 5 — Educação Infantil" },
-  { src: wheel03.url, alt: "Simetria divertida aos 6 — 1º Ano" },
-  { src: wheel04.url, alt: "Que horas são? aos 7 — 2º Ano" },
-  { src: wheel05.url, alt: "Probabilidade aos 8 — 3º Ano" },
-  { src: wheel06.url, alt: "Explore as chances aos 9 — 4º Ano" },
-  { src: wheel07.url, alt: "Domine o tempo aos 10 — 5º Ano" },
+  { src: wheel01.url, alt: "Consciência Sonora" },
+  { src: wheel02.url, alt: "Consciência Silábica" },
+  { src: wheel03.url, alt: "Reconhecimento de Palavras" },
+  { src: wheel04.url, alt: "Frases Frequentes" },
+  { src: wheel05.url, alt: "Expansão de Vocabulário" },
+  { src: wheel06.url, alt: "Compreensão de Comandos" },
+  { src: wheel07.url, alt: "Construção de Frases" },
+  { src: wheel08.url, alt: "Consciência Fonológica" },
+  { src: wheel09.url, alt: "Sequência Lógica" },
+  { src: wheel10.url, alt: "Atenção e Funções Executivas" },
 ];
 
 const BENEFITS = [

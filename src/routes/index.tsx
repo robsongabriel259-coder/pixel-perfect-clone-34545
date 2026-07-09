@@ -203,10 +203,10 @@ const BENEFITS = [
 ];
 
 const IDEAL = [
-  { icon: "🎓", title: "AJUDAR NA MATEMÁTICA", desc: "Torne a matemática mais clara e visual." },
-  { icon: "🎈", title: "TORNAR AS AULAS MAIS LEVES E DIVERTIDAS", desc: "Aplicações lúdicas que engajam e motivam." },
-  { icon: "📈", title: "ACOMPANHAR A EVOLUÇÃO COM MAIS CLAREZA", desc: "As rodas mostram o progresso da criança." },
-  { icon: "⏱️", title: "APLICAR SEM CRIAR ATIVIDADES DO ZERO", desc: "Escolha, imprima e aplique em poucos minutos." },
+  { icon: "🖨️", title: "Ter recursos prontos para a sessão", desc: "Pare de perder tempo criando materiais do zero antes de cada atendimento." },
+  { icon: "🗺️", title: "Conduzir intervenções com mais clareza", desc: "Use mapas visuais para organizar a proposta, o objetivo e a mediação da criança." },
+  { icon: "🧩", title: "Apoiar crianças com dificuldades de aprendizagem", desc: "Trabalhe habilidades importantes de forma visual, lúdica e estruturada." },
+  { icon: "💼", title: "Deixar seus atendimentos mais profissionais", desc: "Entregue uma experiência mais organizada, bonita e com alto valor percebido." },
 ];
 
 const ITEM_LIST = [

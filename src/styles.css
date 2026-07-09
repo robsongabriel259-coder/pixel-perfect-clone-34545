@@ -22,9 +22,9 @@
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.18 0.04 178.74);
-  --purple-deep: oklch(0.6632 0.5410 178.74);
-  --purple-dark: oklch(0.6632 0.5410 178.74);
-  --purple-card: oklch(0.6632 0.5410 178.74);
+  --purple-deep: #00a7a4;
+  --purple-dark: #00a7a4;
+  --purple-card: #00a7a4;
   --neon: oklch(0.88 0.24 140);
   --neon-dark: oklch(0.78 0.24 140);
   --orange-badge: oklch(0.72 0.18 55);

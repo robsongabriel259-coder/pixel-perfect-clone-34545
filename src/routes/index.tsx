@@ -348,8 +348,8 @@ function Landing() {
             {IDEAL.map((b) => (
               <div key={b.title} className="bg-purple-deep rounded-2xl p-8 border-2 border-orange-badge flex flex-col items-center text-center gap-4">
                 <div className="text-5xl">{b.icon}</div>
-                <h3 className="font-black text-base md:text-lg uppercase text-neon">{b.title}</h3>
-                <p className="text-white text-sm md:text-base leading-snug">{b.desc}</p>
+                <h3 className="font-black text-lg uppercase text-neon leading-tight">{b.title}</h3>
+                <p className="text-white text-[17px] font-medium leading-snug">{b.desc}</p>
               </div>
             ))}
           </div>

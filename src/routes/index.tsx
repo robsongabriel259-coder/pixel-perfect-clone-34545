@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDownCircle, Compass } from "lucide-react";
-import { useRef, useState, useEffect } from "react";
+import { createElement, useRef, useState, useEffect } from "react";
 import heroMockup from "@/assets/hero-mockup.webp";
 import tagSuperior from "@/assets/tag-superior.png.asset.json";
 import bundle from "@/assets/bundle.webp";

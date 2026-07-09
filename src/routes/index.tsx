@@ -258,15 +258,6 @@ function Landing() {
       <section className="pt-5 pb-10 bg-purple-deep relative">
         <div className="max-w-md md:max-w-3xl mx-auto px-1 md:px-5 pt-2 flex flex-col items-center text-center gap-5">
           <img
-            src={tagSuperior.url}
-            alt="+200 Rodas Matemáticas"
-            width={300}
-            height={48}
-            className="w-auto h-10 md:h-12"
-          />
-
-
-          <img
             src={heroMockup}
             alt="Rodas matemáticas mockup"
             width={504}
@@ -276,9 +267,6 @@ function Landing() {
             className="w-full max-w-[288px] md:max-w-[336px] drop-shadow-2xl"
           />
 
-          <div className="btn-cta text-xs md:text-sm cursor-default !py-2 !px-5">
-            PARA ALUNOS DE 04 A 10 ANOS
-          </div>
 
           <h1 className="text-[24px] leading-[24px] font-black py-3 mt-4 text-balance -mx-3 md:mx-0 px-3 md:px-0">
             Receba +200 mapas visuais separados por objetivo, prontos para imprimir, aplicar e conduzir sessões com mais clareza, organização e segurança profissional.

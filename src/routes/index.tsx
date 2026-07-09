@@ -375,7 +375,7 @@ function Landing() {
                   <li key={i} className="flex gap-2"><span className="text-neon-dark font-black">✓</span>{i}</li>
                 ))}
               </ul>
-              <p className="text-center font-black uppercase mt-4 text-neon-dark">E MUITO MAIS...</p>
+              <p className="text-center font-black uppercase mt-4 text-[19px] text-[#2eb800]">E MUITO MAIS...</p>
             </div>
           </div>
         </div>

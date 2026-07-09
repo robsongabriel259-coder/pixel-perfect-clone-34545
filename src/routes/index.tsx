@@ -344,7 +344,7 @@ function Landing() {
       <section className="bg-white py-14">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-purple-deep font-black uppercase mb-8" style={{ fontSize: "28px", lineHeight: "28px" }}>Ideal para você que deseja:</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px]">
             {IDEAL.map((b) => (
               <div key={b.title} className="bg-purple-deep rounded-2xl p-8 border-2 border-orange-badge flex flex-col items-center text-center gap-4">
                 <div className="text-5xl">{b.icon}</div>

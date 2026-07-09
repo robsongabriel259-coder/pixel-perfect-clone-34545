@@ -382,25 +382,25 @@ function Landing() {
       </section>
 
       {/* BÔNUS */}
-      <section className="bg-purple-deep py-14">
+      <section className="bg-purple-deep py-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-neon font-black uppercase" style={{ fontSize: "26px", lineHeight: "26px" }}>
             E PARA FACILITAR AINDA<br />MAIS A APLICAÇÃO
           </h2>
-          <p className="text-white/80 italic mt-[30px]" style={{ fontSize: "26px", lineHeight: "26px" }}>Você também vai receber…</p>
-          <div className="badge-top mt-[30px] mx-auto" style={{ background: "var(--orange-badge)", color: "#fff", fontSize: "26px", lineHeight: "26px" }}>03 BÔNUS EXCLUSIVOS</div>
+          <p className="text-white/80 italic mt-5" style={{ fontSize: "26px", lineHeight: "26px" }}>Você também vai receber…</p>
+          <div className="badge-top mt-6 mx-auto" style={{ background: "var(--orange-badge)", color: "#fff", fontSize: "26px", lineHeight: "26px" }}>03 BÔNUS EXCLUSIVOS</div>
 
-          <div className="grid md:grid-cols-3 gap-5 mt-[30px]">
+          <div className="grid md:grid-cols-3 gap-6 mt-10">
             {BONUSES.map((b) => (
               <div key={b.n} className="flex flex-col">
                 <div className="rounded-2xl border-2 border-orange-badge overflow-hidden bg-white">
                   <img src={b.img} alt={`Bônus ${b.n}`} loading="lazy" decoding="async" width={708} height={1000} className="w-full h-auto block" />
                 </div>
-                <p className="text-white text-center mt-4 leading-snug" style={{ fontSize: "16px" }}>{b.desc}</p>
+                <p className="text-white text-center mt-5 leading-snug" style={{ fontSize: "16px" }}>{b.desc}</p>
               </div>
             ))}
           </div>
-          <div className="mt-[30px]"><CtaButton /></div>
+          <div className="mt-10"><CtaButton /></div>
         </div>
       </section>
 

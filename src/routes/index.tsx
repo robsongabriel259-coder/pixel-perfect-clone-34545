@@ -291,7 +291,7 @@ function Landing() {
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-black uppercase leading-[0.875]">
             <span className="text-neon block">VOCÊ RECEBERÁ UM<br />MATERIAL</span>
-            <span className="text-orange-500 underline decoration-orange-500 decoration-4 underline-offset-4 block mt-[5px] leading-[1.1]">
+            <span className="text-orange-soft underline decoration-orange-soft decoration-4 underline-offset-4 block mt-[5px] leading-[1.1]">
               PRONTO PARA<br />APLICAR
             </span>
           </h2>
@@ -304,7 +304,7 @@ function Landing() {
 
           <div className="grid grid-cols-1 gap-5 mt-10 max-w-sm mx-auto">
             {BENEFITS.map((b) => (
-              <div key={b.title} className="bg-white rounded-2xl p-6 border-2 border-orange-500 flex flex-col items-center text-center gap-3 shadow-lg">
+              <div key={b.title} className="bg-white rounded-2xl p-6 border-2 border-orange-soft flex flex-col items-center text-center gap-3 shadow-lg">
                 <div className="text-5xl">{b.icon}</div>
                 <h3 className="font-extrabold text-lg uppercase text-purple-deep leading-tight">{b.title}</h3>
                 <p className="text-purple-deep text-[17px] font-medium leading-snug">{b.desc}</p>

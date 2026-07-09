@@ -304,9 +304,6 @@ function Landing() {
           <p className="text-neon mt-[38px] italic font-extrabold text-[22px] leading-tight">
             Tudo organizado para você imprimir,<br />escolher o objetivo da intervenção<br />e aplicar com mais segurança.
           </p>
-          <p className="text-white text-lg md:text-xl mt-[19px] leading-snug font-medium">
-            sua rotina e transformar cada aula<br />em uma anotação matemática<br />visual.
-          </p>
 
           <div className="grid grid-cols-1 gap-5 mt-10 max-w-sm mx-auto">
             {BENEFITS.map((b) => (

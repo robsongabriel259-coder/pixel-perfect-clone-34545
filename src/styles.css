@@ -21,10 +21,10 @@
 
 :root {
   --background: oklch(1 0 0);
-  --foreground: oklch(0.18 0.04 210);
-  --purple-deep: oklch(0.22 0.13 210);
-  --purple-dark: oklch(0.27 0.16 210);
-  --purple-card: oklch(0.32 0.17 210);
+  --foreground: oklch(0.18 0.04 178.74);
+  --purple-deep: oklch(0.22 0.13 178.74);
+  --purple-dark: oklch(0.27 0.16 178.74);
+  --purple-card: oklch(0.32 0.17 178.74);
   --neon: oklch(0.88 0.24 140);
   --neon-dark: oklch(0.78 0.24 140);
   --orange-badge: oklch(0.72 0.18 55);

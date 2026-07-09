@@ -269,7 +269,7 @@ function Landing() {
 
 
           <h1 className="text-[24px] leading-[24px] font-black py-3 mt-4 text-balance -mx-3 md:mx-0 px-3 md:px-0">
-            Receba +200 mapas visuais separados por objetivo, prontos para imprimir, aplicar e conduzir sessões com mais clareza, organização e segurança profissional.
+            Receba +200 Mapas Visuais separados por objetivo, prontos para imprimir e aplicar na sua sessão terapeutica com mais clareza, organização e segurança profissional.
           </h1>
 
 

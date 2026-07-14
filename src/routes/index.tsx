@@ -18,9 +18,9 @@ import wheel07 from "@/assets/wheels-new/wheel-07.jpg.asset.json";
 import wheel08 from "@/assets/wheels-new/wheel-08.jpg.asset.json";
 import wheel09 from "@/assets/wheels-new/wheel-09.jpg.asset.json";
 import wheel10 from "@/assets/wheels-new/wheel-10.jpg.asset.json";
-import bonus01 from "@/assets/bonus-01.jpg.asset.json";
-import bonus02 from "@/assets/bonus-02.jpg.asset.json";
-import bonus03 from "@/assets/bonus-03.jpg.asset.json";
+import bonus01 from "@/assets/bonus-new-01.png.asset.json";
+import bonus02 from "@/assets/bonus-new-02.png.asset.json";
+import bonus03 from "@/assets/bonus-new-03.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Landing,

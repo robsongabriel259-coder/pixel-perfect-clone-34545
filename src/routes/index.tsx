@@ -224,9 +224,9 @@ const ITEM_LIST = [
 ];
 
 const BONUSES = [
-  { n: "01", img: bonus01.url, desc: "Revise conteúdos com rapidez, clareza e aplicação imediata." },
-  { n: "02", img: bonus02.url, desc: "Ajude a criança a mostrar e organizar o próprio raciocínio." },
-  { n: "03", img: bonus03.url, desc: "Registre avanços, dificuldades e próximos passos com clareza." },
+  { n: "01", img: bonus01.url, desc: "Modelos visuais para registrar a sessão e organizar a continuidade." },
+  { n: "02", img: bonus02.url, desc: "Fichas visuais para acompanhar avanços, dificuldades e próximos passos." },
+  { n: "03", img: bonus03.url, desc: "Materiais visuais para investigar habilidades e definir prioridades." },
 ];
 
 const PREMIUM_LIST = [

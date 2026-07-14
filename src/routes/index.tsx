@@ -393,7 +393,7 @@ function Landing() {
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {BONUSES.map((b) => (
               <div key={b.n} className="flex flex-col">
-                <div className="rounded-2xl border-2 border-orange-badge overflow-hidden bg-white">
+                <div className="rounded-2xl overflow-hidden bg-white">
                   <img src={b.img} alt={`Bônus ${b.n}`} loading="lazy" decoding="async" width={708} height={1000} className="w-full h-auto block" />
                 </div>
                 <p className="text-white text-center mt-5 leading-snug" style={{ fontSize: "16px" }}>{b.desc}</p>

@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDownCircle } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
-import heroMockup from "@/assets/mockup-novo-hero.jpg.asset.json";
+import heroMockup from "@/assets/mockup-novo-hero.png.asset.json";
 import tagSuperior from "@/assets/tag-superior.png.asset.json";
 import bundle from "@/assets/bundle.webp";
 import mockupCheckoutPremium from "@/assets/mockup-checkout-premium.jpg.asset.json";

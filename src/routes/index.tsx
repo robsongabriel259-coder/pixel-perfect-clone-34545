@@ -305,7 +305,7 @@ function Landing() {
 
 
       {/* PRONTO PARA APLICAR */}
-      <section className="bg-purple-dark py-14">
+      <section className="bg-purple-glow py-14">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-black uppercase leading-[0.875]">
             <span className="text-neon block">VOCÊ RECEBERÁ UM<br />MATERIAL</span>
@@ -372,7 +372,7 @@ function Landing() {
       </section>
 
       {/* VOCÊ VAI RECEBER */}
-      <section className="bg-purple-dark py-14">
+      <section className="bg-purple-glow py-14">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-center font-black uppercase mb-8" style={{ fontSize: "28px", lineHeight: "28px" }}>
             🎁 Você vai receber ao adquirir seu produto 🎁
@@ -395,7 +395,7 @@ function Landing() {
       </section>
 
       {/* BÔNUS */}
-      <section className="bg-purple-deep py-16">
+      <section className="bg-purple-glow py-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-neon font-black uppercase" style={{ fontSize: "26px", lineHeight: "26px" }}>
             E PARA FACILITAR AINDA<br />MAIS A APLICAÇÃO
@@ -475,7 +475,7 @@ function Landing() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-purple-deep py-14">
+      <section className="bg-purple-glow py-14">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-center font-black uppercase text-2xl md:text-3xl">Perguntas Frequentes</h2>
           <p className="text-center text-white/70 mt-2 mb-8 text-sm">Suas principais dúvidas respondidas abaixo</p>

@@ -91,4 +91,14 @@
   border: 1.5px solid #2a1300;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+@utility bg-purple-glow {
+  background-color: #180338;
+  background-image:
+    radial-gradient(ellipse 70% 45% at 50% 20%, rgba(210, 70, 230, 0.45), transparent 65%),
+    radial-gradient(ellipse 90% 60% at 50% 60%, rgba(150, 50, 220, 0.38), transparent 70%),
+    radial-gradient(circle at 15% 30%, rgba(255, 60, 180, 0.22), transparent 45%),
+    radial-gradient(circle at 85% 40%, rgba(180, 60, 255, 0.25), transparent 45%),
+    radial-gradient(ellipse 130% 100% at 50% 50%, transparent 55%, rgba(0,0,0,0.55) 100%),
+    linear-gradient(180deg, #1c0342 0%, #35098a 35%, #2a0670 65%, #180338 100%);
 }
+

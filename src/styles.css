@@ -91,6 +91,8 @@
   border: 1.5px solid #2a1300;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
 @utility bg-purple-glow {
   background-color: #180338;
   background-image:

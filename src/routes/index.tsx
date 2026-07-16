@@ -283,6 +283,10 @@ function Landing() {
             fetchPriority="high"
             decoding="async"
             className="w-full max-w-[288px] md:max-w-[336px] drop-shadow-2xl"
+            style={{
+              boxShadow: "0 0 22px rgba(66, 255, 0, 0.32), 0 0 44px rgba(66, 255, 0, 0.18), 0 0 72px rgba(66, 255, 0, 0.10)",
+              borderRadius: "18px"
+            }}
           />
 
 

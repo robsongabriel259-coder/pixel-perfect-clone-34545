@@ -340,7 +340,7 @@ function Landing() {
           </p>
 
           <div className="flex justify-center mt-8">
-            <img src={mockupRodas.url} alt="Material completo Rodas Matemáticas" loading="lazy" decoding="async" width={680} height={742} className="w-full max-w-[432px] h-auto border-[3px] border-neon rounded-[30px]" />
+            <img src={mockupRodas.url} alt="Material completo Rodas Matemáticas" loading="lazy" decoding="async" width={680} height={742} className="w-full max-w-[432px] h-auto border-[3px] border-neon rounded-[15px]" />
           </div>
 
           <div className="mt-10 max-w-3xl mx-auto bg-white text-purple-deep rounded-2xl border-4 border-orange-badge p-6 md:p-8 flex items-center justify-center">

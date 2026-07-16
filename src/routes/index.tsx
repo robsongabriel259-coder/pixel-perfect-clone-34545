@@ -331,7 +331,7 @@ function Landing() {
           </div>
 
 
-          <p className="text-neon mt-12 text-[22px] font-extrabold leading-tight">
+          <p className="text-white mt-12 text-[22px] font-extrabold leading-[1.05]">
             Mais do que simples folhas para preencher, este material foi criado para ajudar a psicopedagoga a conduzir intervenções com mais clareza, intencionalidade e organização.
           </p>
 

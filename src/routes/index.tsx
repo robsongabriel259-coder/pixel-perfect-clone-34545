@@ -252,15 +252,28 @@ const FAQ = [
 
 function Landing() {
   return (
-    <main className="bg-purple-deep text-white overflow-x-hidden">
+    <main className="text-white overflow-x-hidden relative">
       {/* Top bar — purple bg with neon green stacked text */}
-      <div className="bg-purple-deep text-neon text-center py-[2px] px-3 font-black uppercase text-[1.40625rem] leading-none tracking-wide border-b-2 border-neon">
+      <div className="text-neon text-center py-[2px] px-3 font-black uppercase text-[1.40625rem] leading-none tracking-wide border-b-2 border-neon relative z-10" style={{ background: "#12002e" }}>
         Mapas de intervenção terapeutica<br />para psicopedagogas.
       </div>
 
 
       {/* HERO */}
-      <section className="pt-5 pb-10 bg-purple-deep relative">
+      <section className="pt-5 pb-10 relative overflow-hidden" style={{
+        background: `
+          radial-gradient(ellipse 70% 45% at 50% 20%, rgba(210, 70, 230, 0.55), transparent 65%),
+          radial-gradient(ellipse 90% 60% at 50% 55%, rgba(150, 50, 220, 0.45), transparent 70%),
+          radial-gradient(circle at 15% 30%, rgba(255, 60, 180, 0.28), transparent 40%),
+          radial-gradient(circle at 85% 40%, rgba(180, 60, 255, 0.3), transparent 45%),
+          radial-gradient(ellipse 130% 100% at 50% 50%, transparent 50%, rgba(0,0,0,0.6) 100%),
+          linear-gradient(180deg, #1c0342 0%, #35098a 30%, #2a0670 60%, #180338 100%)
+        `
+      }}>
+        <div aria-hidden className="pointer-events-none absolute inset-0" style={{
+          background: "radial-gradient(ellipse 50% 30% at 50% 45%, rgba(255,180,255,0.15), transparent 70%)"
+        }} />
+
         <div className="max-w-md md:max-w-3xl mx-auto px-1 md:px-5 pt-2 flex flex-col items-center text-center gap-5">
           <img
             src={heroMockup}

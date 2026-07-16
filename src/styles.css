@@ -20,25 +20,33 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.18 0.04 178.74);
-  --purple-deep: #00326f;
-  --purple-dark: #00326f;
-  --purple-card: #00326f;
+  --background: #1a0333;
+  --foreground: #ffffff;
+  --purple-deep: #12002e;
+  --purple-dark: #1f0547;
+  --purple-card: #2a0a5e;
   --neon: #42ff00;
-  --neon-dark: #42ff00;
+  --neon-dark: #35d400;
   --orange-badge: #ff7a00;
-  --orange-soft: #ff7a00;
+  --orange-soft: #ff9a3c;
   --cream: oklch(0.97 0.02 90);
 }
 
 @layer base {
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; background-color: #12002e; }
   body {
-    background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    background-color: #12002e;
+    background-image:
+      radial-gradient(ellipse 60% 40% at 50% 15%, rgba(180, 60, 220, 0.35), transparent 70%),
+      radial-gradient(ellipse 70% 50% at 50% 55%, rgba(120, 30, 200, 0.28), transparent 75%),
+      radial-gradient(ellipse 80% 60% at 50% 90%, rgba(220, 40, 160, 0.22), transparent 75%),
+      radial-gradient(ellipse 120% 100% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.55) 100%),
+      linear-gradient(180deg, #1a0340 0%, #2a0864 35%, #1c0448 65%, #12002e 100%);
+    background-attachment: fixed;
   }
 }
 

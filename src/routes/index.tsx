@@ -282,7 +282,7 @@ function Landing() {
             height={565}
             fetchPriority="high"
             decoding="async"
-            className="w-full max-w-[288px] md:max-w-[336px] drop-shadow-2xl"
+            className="w-full max-w-[331px] md:max-w-[387px] drop-shadow-2xl"
           />
 
 

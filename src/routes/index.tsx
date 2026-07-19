@@ -21,6 +21,7 @@ import wheel10 from "@/assets/wheels-new/wheel-10.jpg.asset.json";
 import bonus01 from "@/assets/bonus-new-01.png.asset.json";
 import bonus02 from "@/assets/bonus-new-02.png.asset.json";
 import bonus03 from "@/assets/bonus-new-03.png.asset.json";
+import capaPrincipalAcessoBasico from "@/assets/capa-principal-acesso-basico.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Landing,
@@ -428,7 +429,7 @@ function Landing() {
             <div className="rounded-2xl border-2 border-purple-deep/20 p-6 flex flex-col shadow-lg bg-white">
               <h3 className="text-center font-black uppercase" style={{ fontSize: "28px" }}>Acesso Básico</h3>
               <p className="text-center text-purple-deep/70 mt-1 mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>Para quem quer as 210 rodas prontas para imprimir e aplicar.</p>
-              <img src={wheel.url} alt="" loading="lazy" decoding="async" width={500} height={500} className="w-[134px] h-auto mx-auto mb-[30px] rounded-xl" />
+              <img src={capaPrincipalAcessoBasico.url} alt="Capa do Acesso Básico - Mapas de intervenção para psicopedagogas" loading="lazy" decoding="async" width={500} height={500} className="w-full max-w-[260px] h-auto mx-auto mb-[30px] rounded-xl" />
               <p className="text-center mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>✓ 210 Rodas de matemática prontas para imprimir e aplicar (em PDF)</p>
               <div className="text-center mb-[30px]">
                 <div className="text-sm font-bold">R$</div>

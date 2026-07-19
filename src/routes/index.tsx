@@ -378,7 +378,7 @@ function Landing() {
             🎁 Você vai receber ao adquirir seu produto 🎁
           </h2>
           <div className="grid md:grid-cols-2 gap-6 items-start">
-            <img src={mockupCompleto.url} alt="Mockup material completo Rodas Matemáticas" loading="lazy" decoding="async" width={700} height={700} className="w-[85%] mx-auto h-auto" />
+            <img src={mockupCompleto.url} alt="Mockup material completo Rodas Matemáticas" loading="lazy" decoding="async" width={700} height={700} className="w-[95%] mx-auto h-auto" />
             <div className="bg-white text-purple-deep rounded-2xl p-6 border-2 border-orange-badge">
               <div className="bg-orange-badge text-white text-center font-black uppercase py-2 rounded-md mb-4 border-2 border-[#2a1300]">
                 ITEM 01

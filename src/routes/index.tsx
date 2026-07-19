@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import heroMockup from "@/assets/mockup-novo-hero.png.asset.json";
 import tagSuperior from "@/assets/tag-superior.png.asset.json";
 import bundle from "@/assets/bundle.webp";
-import mockupCheckoutPremium from "@/assets/mockup-checkout-premium.jpg.asset.json";
+import mockupCheckoutPremium from "@/assets/mockup-checkout-premium-v2.png.asset.json";
 import mockupRodas from "@/assets/mockup-rodas.png.asset.json";
 import mockupCompleto from "@/assets/mockup-receber.png.asset.json";
 import wheel from "@/assets/capa-front.jpg.asset.json";
@@ -454,7 +454,7 @@ function Landing() {
               <h3 className="text-center font-black uppercase text-neon-dark mb-[30px]" style={{ fontSize: "28px", lineHeight: "26px" }}>Pro Premium</h3>
               <p className="text-center text-purple-deep/70 mt-1 mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>Para quem quer as 210 rodas e os 3 bônus para revisar e acompanhar.</p>
               <div className="mb-[30px]">
-                <img src={mockupCheckoutPremium.url} alt="Material completo - Rodas Matemáticas e bônus" loading="lazy" decoding="async" width={1228} height={760} className="w-full h-auto rounded-md" />
+                <img src={mockupCheckoutPremium.url} alt="200 Mapas de Intervenção e 3 bônus exclusivos para psicopedagogas" loading="lazy" decoding="async" width={1228} height={760} className="w-full h-auto rounded-md" />
               </div>
               <div className="text-center mb-[30px]">
                 <div className="text-sm line-through text-purple-deep/60">R$ 39,90</div>

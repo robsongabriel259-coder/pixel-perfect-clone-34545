@@ -231,16 +231,16 @@ const BONUSES = [
 ];
 
 const PREMIUM_LIST = [
-  "200 Mapas de Intervenção Psicopedagógica;",
-  "10 áreas organizadas por objetivo de intervenção;",
-  "20 mapas visuais em cada área;",
-  "Materiais para linguagem, atenção e cognição;",
-  "Mapas para comandos, frases e vocabulário;",
-  "Recursos visuais para conduzir sessões com clareza;",
-  "20 Cartões de Checklist de Evolução Infantil;",
-  "20 Cartões de Sondagem de Habilidades Inicial;",
-  "20 Cartões de Fechamento de Sessão Prontas;",
-  "Material digital pronto para imprimir e aplicar.",
+  "200 Mapas Visuais de Intervenção;",
+  "10 áreas psicopedagógicas organizadas;",
+  "20 mapas prontos em cada área;",
+  "Recursos para aplicar em sessões infantis;",
+  "Mapas para linguagem, comandos e cognição;",
+  "Materiais para atenção, sequência e funções executivas;",
+  "Bônus: Checklist de Evolução Infantil;",
+  "Bônus: Sondagem de Habilidades Inicial;",
+  "Bônus: Fechamento de Sessão Prontas;",
+  "Acesso digital imediato para imprimir e usar.",
 ];
 
 const FAQ = [

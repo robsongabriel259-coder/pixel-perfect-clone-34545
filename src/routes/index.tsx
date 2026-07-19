@@ -231,15 +231,15 @@ const BONUSES = [
 ];
 
 const PREMIUM_LIST = [
-  "210 Rodas de Anotação Matemática Visual;",
-  "07 Blocos organizados por idade e ano escolar;",
-  "30 Rodas Matemáticas em cada bloco;",
-  "Conteúdos da Educação Infantil ao 5º ano;",
-  "Rodas preenchíveis com 06 partes guiadas;",
-  "Mapas visuais para registrar e revisar as aulas;",
-  "20 Cartões de Revisão Matemática em 5 Minutos;",
-  "20 Cartões \u201CExplique Como Você Pensou\u201D;",
-  "20 Cartões de Acompanhamento da Aprendizagem;",
+  "200 Mapas de Intervenção Psicopedagógica;",
+  "10 áreas organizadas por objetivo de intervenção;",
+  "20 mapas visuais em cada área;",
+  "Materiais para linguagem, atenção e cognição;",
+  "Mapas para comandos, frases e vocabulário;",
+  "Recursos visuais para conduzir sessões com clareza;",
+  "20 Cartões de Checklist de Evolução Infantil;",
+  "20 Cartões de Sondagem de Habilidades Inicial;",
+  "20 Cartões de Fechamento de Sessão Prontas;",
   "Material digital pronto para imprimir e aplicar.",
 ];
 

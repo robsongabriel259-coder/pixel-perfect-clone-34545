@@ -421,7 +421,7 @@ function Landing() {
       <section id="secao-precos" className="bg-white text-purple-deep py-14">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-center font-black uppercase mb-10" style={{ fontSize: "28px", lineHeight: "28px" }}>
-            Escolha a melhor opção<br />para você
+            Escolha a melhor<br />opção para você
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {/* Básico */}

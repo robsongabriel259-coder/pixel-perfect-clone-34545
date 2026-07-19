@@ -429,6 +429,9 @@ function Landing() {
             <div className="rounded-2xl border-2 border-purple-deep/20 p-6 flex flex-col shadow-lg bg-white">
               <h3 className="text-center font-black uppercase" style={{ fontSize: "28px" }}>Acesso Básico</h3>
               <p className="text-center text-purple-deep/70 mt-1 mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>Para quem quer 200 mapas de intervenção prontos para imprimir e aplicar.</p>
+              <div className="flex justify-center mb-[30px]">
+                <img src={capaPrincipalAcessoBasico.url} alt="Capa principal Mapas de Intervenção para Psicopedagogas" loading="lazy" decoding="async" width={520} height={736} className="w-full max-w-[130px] h-auto rounded-md shadow-lg" />
+              </div>
               <p className="text-center mb-[30px]" style={{ fontSize: "18px", lineHeight: "18px" }}>✓ 200 mapas de intervenção para psicopedagogas prontos para imprimir e aplicar (em PDF)</p>
               <div className="text-center mb-[30px]">
                 <div className="text-sm font-bold">R$</div>

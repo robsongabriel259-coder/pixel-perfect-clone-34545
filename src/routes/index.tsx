@@ -287,8 +287,7 @@ function Landing() {
             width={500}
             height={524}
             fetchPriority="high"
-            decoding="sync"
-            loading="eager"
+            decoding="async"
             className="w-full max-w-[331px] md:max-w-[387px] drop-shadow-2xl"
           />
 

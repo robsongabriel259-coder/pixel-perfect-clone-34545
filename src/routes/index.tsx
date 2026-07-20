@@ -284,10 +284,11 @@ function Landing() {
           <img
             src={heroMockup.url}
             alt="Mapas de intervenção terapêutica para psicopedagogas"
-            width={504}
-            height={565}
+            width={500}
+            height={524}
             fetchPriority="high"
-            decoding="async"
+            decoding="sync"
+            loading="eager"
             className="w-full max-w-[331px] md:max-w-[387px] drop-shadow-2xl"
           />
 

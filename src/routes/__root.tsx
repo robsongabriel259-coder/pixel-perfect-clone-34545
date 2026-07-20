@@ -66,6 +66,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         onLoad: "this.media='all'",
       } as any,
     ],
+    scripts: [
+      { children: UTMIFY_PIXEL_SCRIPT } as any,
+    ],
     styles: [{ children: appCss }] as any,
   }),
   shellComponent: RootShell,
@@ -74,8 +77,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
-
-
+const UTMIFY_PIXEL_SCRIPT = `window.pixelId = "6a5e191d6ed711b0cb9f87d4";
+var a = document.createElement("script");
+a.setAttribute("async", "");
+a.setAttribute("defer", "");
+a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+document.head.appendChild(a);`;
 
 function RootShell({ children }: { children: ReactNode }) {
   return (

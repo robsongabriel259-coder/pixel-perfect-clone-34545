@@ -81,6 +81,7 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
+        <meta name="facebook-domain-verification" content="s4nik4vv1d3bmlfyxnscrv9qh23e5r" />
         <HeadContent />
       </head>
       <body>

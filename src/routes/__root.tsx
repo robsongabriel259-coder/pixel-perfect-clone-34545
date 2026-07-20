@@ -10,6 +10,7 @@ import {
 import { type ReactNode } from "react";
 
 import appCss from "../styles.css?inline";
+import faviconAsset from "../assets/favicon.png.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -43,18 +44,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "+200 Rodas Matemáticas" },
-      { name: "description", content: "Tenha +200 rodas matemáticas preenchíveis, organizadas da Educação Infantil ao 5º ano, para ensinar, praticar e revisar conteúdos sem criar atividades do zero." },
-      { property: "og:title", content: "+200 Rodas Matemáticas" },
-      { property: "og:description", content: "Tenha +200 rodas matemáticas preenchíveis, organizadas da Educação Infantil ao 5º ano, para ensinar, praticar e revisar conteúdos sem criar atividades do zero." },
+      { title: "Neuralkids — Mapas de Intervenção para Psicopedagogas" },
+      { name: "description", content: "Tenha +200 mapas de intervenção psicopedagógica prontos para imprimir e aplicar, organizados em 10 áreas para conduzir sessões com mais clareza e profissionalismo." },
+      { property: "og:title", content: "Neuralkids — Mapas de Intervenção para Psicopedagogas" },
+      { property: "og:description", content: "Tenha +200 mapas de intervenção psicopedagógica prontos para imprimir e aplicar, organizados em 10 áreas para conduzir sessões com mais clareza e profissionalismo." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "+200 Rodas Matemáticas" },
-      { name: "twitter:description", content: "Tenha +200 rodas matemáticas preenchíveis, organizadas da Educação Infantil ao 5º ano, para ensinar, praticar e revisar conteúdos sem criar atividades do zero." },
+      { name: "twitter:title", content: "Neuralkids — Mapas de Intervenção para Psicopedagogas" },
+      { name: "twitter:description", content: "Tenha +200 mapas de intervenção psicopedagógica prontos para imprimir e aplicar, organizados em 10 áreas para conduzir sessões com mais clareza e profissionalismo." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/PqSH7qHpLlfy6FxqZg92POUpmnH2/social-images/social-1782322155707-Logo_11zon.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/PqSH7qHpLlfy6FxqZg92POUpmnH2/social-images/social-1782322155707-Logo_11zon.webp" },
     ],
     links: [
+      { rel: "icon", type: "image/png", href: faviconAsset.url },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

@@ -341,7 +341,7 @@ function Landing() {
           </p>
 
           <div className="flex justify-center mt-8">
-            <img src={mockupRodas.url} alt="Material completo Rodas Matemáticas" loading="lazy" decoding="async" width={680} height={742} className="w-full max-w-[389px] h-auto border-[2px] border-neon rounded-[15px]" />
+            <img src={mockupRodas.url} alt="Material completo Neuralkids" loading="lazy" decoding="async" width={680} height={742} className="w-full max-w-[389px] h-auto border-[2px] border-neon rounded-[15px]" />
           </div>
 
           <div className="mt-10 max-w-3xl mx-auto bg-white text-purple-deep rounded-2xl border-4 border-orange-badge p-6 md:p-8 flex items-center justify-center">
@@ -379,7 +379,7 @@ function Landing() {
             🎁 Você vai receber ao adquirir seu produto 🎁
           </h2>
           <div className="grid md:grid-cols-2 gap-6 items-start">
-            <img src={mockupCompleto.url} alt="Mockup material completo Rodas Matemáticas" loading="lazy" decoding="async" width={700} height={700} className="w-full mx-auto h-auto" />
+            <img src={mockupCompleto.url} alt="Mockup material completo Neuralkids" loading="lazy" decoding="async" width={700} height={700} className="w-full mx-auto h-auto" />
             <div className="bg-white text-purple-deep rounded-2xl p-6 border-2 border-orange-badge">
               <div className="bg-orange-badge text-white text-center font-black uppercase py-2 rounded-md mb-4 border-2 border-[#2a1300]">
                 ITEM 01

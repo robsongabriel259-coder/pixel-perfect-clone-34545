@@ -25,6 +25,11 @@ import capaPrincipalAcessoBasico from "@/assets/capa-principal-acesso-basico.jpg
 
 export const Route = createFileRoute("/")({
   component: Landing,
+  head: () => ({
+    links: [
+      { rel: "preload", as: "image", href: heroMockup.url, fetchpriority: "high" } as any,
+    ],
+  }),
 });
 
 const CHECKOUT_BASIC = "https://pay.wiapy.com/pAW3Ax7fzef";

@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
 });
 
 const CHECKOUT_BASIC = "https://pay.wiapy.com/pAW3Ax7fzef";
-const CHECKOUT_PRO = "https://pay.wiapy.com/v936wChw0E-";
+const CHECKOUT_PRO = "https://pay.wiapy.com/1SVsLd2ibFFP";
 
 function CtaButton({ href = "#secao-precos", children = "QUERO ADQUIRIR O MEU" }: { href?: string; children?: React.ReactNode }) {
   return (

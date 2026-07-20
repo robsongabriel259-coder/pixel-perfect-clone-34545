@@ -79,17 +79,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
-const UTMIFY_PIXEL_SCRIPT = `window.pixelId = "6a5e191d6ed711b0cb9f87d4";
-try {
-  var _lead = JSON.parse(localStorage.getItem("lead") || "null");
-  if (_lead && _lead.pixelId && _lead.pixelId !== window.pixelId) {
-    localStorage.removeItem("lead");
+const UTMIFY_BOOTSTRAP = `(function(){
+  function load(){
+    try {
+      window.pixelId = "6a5e191d6ed711b0cb9f87d4";
+      try {
+        var _lead = JSON.parse(localStorage.getItem("lead") || "null");
+        if (_lead && _lead.pixelId && _lead.pixelId !== window.pixelId) {
+          localStorage.removeItem("lead");
+        }
+      } catch (e) { try { localStorage.removeItem("lead"); } catch(_) {} }
+      var p = document.createElement("script");
+      p.async = true;
+      p.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
+      document.head.appendChild(p);
+      var u = document.createElement("script");
+      u.async = true;
+      u.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
+      u.setAttribute("data-utmify-prevent-xcod-sck", "");
+      u.setAttribute("data-utmify-prevent-subids", "");
+      document.head.appendChild(u);
+    } catch(e) {}
   }
-} catch (e) { localStorage.removeItem("lead"); }
-var a = document.createElement("script");
-a.async = true;
-a.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
-document.head.appendChild(a);`;
+  if (document.readyState === "complete") { setTimeout(load, 0); }
+  else { window.addEventListener("load", function(){ setTimeout(load, 0); }); }
+})();`;
 
 function RootShell({ children }: { children: ReactNode }) {
   return (

@@ -59,6 +59,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", type: "image/png", href: faviconAsset.url },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "preconnect", href: "https://cdn.utmify.com.br", crossOrigin: "anonymous" },
+      { rel: "dns-prefetch", href: "https://cdn.utmify.com.br" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap",
@@ -71,7 +73,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         src: "https://cdn.utmify.com.br/scripts/utms/latest.js",
         async: true,
-        defer: true,
         "data-utmify-prevent-xcod-sck": true,
         "data-utmify-prevent-subids": true,
       } as any,

@@ -93,9 +93,8 @@ try {
   }
 } catch (e) { localStorage.removeItem("lead"); }
 var a = document.createElement("script");
-a.setAttribute("async", "");
-a.setAttribute("defer", "");
-a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+a.async = true;
+a.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
 document.head.appendChild(a);`;
 
 function RootShell({ children }: { children: ReactNode }) {

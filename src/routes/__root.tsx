@@ -69,13 +69,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       } as any,
     ],
     scripts: [
-      { children: UTMIFY_PIXEL_SCRIPT } as any,
-      {
-        src: "https://cdn.utmify.com.br/scripts/utms/latest.js",
-        async: true,
-        "data-utmify-prevent-xcod-sck": true,
-        "data-utmify-prevent-subids": true,
-      } as any,
+      { children: UTMIFY_BOOTSTRAP } as any,
     ],
     styles: [{ children: appCss }] as any,
   }),

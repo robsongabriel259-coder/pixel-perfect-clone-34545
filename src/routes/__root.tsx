@@ -78,6 +78,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 const UTMIFY_PIXEL_SCRIPT = `window.pixelId = "6a5e191d6ed711b0cb9f87d4";
+try {
+  var _lead = JSON.parse(localStorage.getItem("lead") || "null");
+  if (_lead && _lead.pixelId && _lead.pixelId !== window.pixelId) {
+    localStorage.removeItem("lead");
+  }
+} catch (e) { localStorage.removeItem("lead"); }
 var a = document.createElement("script");
 a.setAttribute("async", "");
 a.setAttribute("defer", "");

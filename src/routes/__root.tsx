@@ -66,10 +66,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         onLoad: "this.media='all'",
       } as any,
     ],
-    scripts: [
-      { children: UTMIFY_PIXEL_SCRIPT } as any,
-      { src: "https://cdn.utmify.com.br/scripts/utms/latest.js", async: true, defer: true, "data-utmify-prevent-xcod-sck": true, "data-utmify-prevent-subids": true } as any,
-    ],
     styles: [{ children: appCss }] as any,
   }),
   shellComponent: RootShell,
@@ -79,18 +75,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 
-const UTMIFY_PIXEL_SCRIPT = `window.pixelId = "6a3c8e30b967e34a5ea4e208";
-var a = document.createElement("script");
-a.setAttribute("async", "");
-a.setAttribute("defer", "");
-a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-document.head.appendChild(a);`;
+
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
-        <meta name="facebook-domain-verification" content="s4nik4vv1d3bmlfyxnscrv9qh23e5r" />
         <HeadContent />
       </head>
       <body>

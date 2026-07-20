@@ -66,6 +66,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         onLoad: "this.media='all'",
       } as any,
     ],
+    scripts: [
+      { children: UTMIFY_PIXEL_SCRIPT } as any,
+    ],
     styles: [{ children: appCss }] as any,
   }),
   shellComponent: RootShell,
